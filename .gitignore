@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 账号凭证：只提交示例文件
+douyin_cookie.yaml
+douyin_cookie_*.yaml
+!douyin_cookie.example.yaml
+.env
+.mcp.json
+feishu_cookie.txt
+
+# 运行产生的数据，不入库
+output/
+videos/
+models/
+logs/
+transcription_work/
+generated_images/
+test_markitdown/
+*.db
+*.db-journal
+*.log
+release/
+D:*/
+dxdiag_output.txt
+
+# 本地个人/Agent 配置，不随项目发布
+.claude/
+.claudecrab/
+.agents/
+.aws/
+.codex/
+CLAUDE.md
+IDENTITY.md
+MEMORY.md
+SOUL.md
+TODO.md
+USER.md
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+
+# 与本项目无关的本地应用安装包
+applications/

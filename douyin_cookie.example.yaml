@@ -1,0 +1,17 @@
+douyin:
+  # 填你自己浏览器登录抖音后的完整 Cookie 字符串
+  # 获取方式：浏览器打开 douyin.com 登录 → F12 → 网络(Network) → 点任意请求 → 请求头(Request Headers) → 复制 Cookie: 后面的整串
+  cookie: "在此粘贴你的cookie"
+  mode: "post"                # 主页作品
+  naming: "{desc}"            # 文件名=视频标题；同名标题多的号改成 "{aweme_id}_{desc}"
+  desc: true                  # 同时保存视频文案
+  music: false
+  cover: false
+  folderize: false
+  interval: "all"
+  timeout: 30
+  max_retries: 3
+  max_connections: 5
+  max_tasks: 3
+  page_counts: 20
+  path: "./videos/douyin_download"   # 仅作示例，实际下载目录由脚本 --download-dir 控制

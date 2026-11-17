@@ -1,0 +1,4 @@
+# 可选依赖：只在用 OCR 模式或 doc2md.py 时安装
+easyocr>=1.7
+opencv-python>=4.8
+markitdown>=0.1.9
