@@ -178,7 +178,7 @@ def export_markdown_checkpoint(
 
 def _make_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="云端抖音批量转录：小批量下载、逐个转录、校验后清理视频"
+        description="Social2MD 云端 Douyin 适配器：按批获取抖音作品、逐个下载转录并安全清理视频"
     )
     parser.add_argument("-u", "--url", required=True, help="抖音主页链接")
     parser.add_argument("-b", "--blogger", default="未分类", help="输出目录使用的博主名称")

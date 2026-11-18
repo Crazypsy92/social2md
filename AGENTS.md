@@ -1,7 +1,10 @@
 # AGENTS.md
 
-本仓库是抖音视频批量转文字工具 **douyin2md**。给一个抖音主页链接，下载全部作品，
-用本地 ASR（faster-whisper）或 OCR（easyocr）提取文字，输出 Markdown。
+本仓库项目名为 **Social2MD**，定位为多平台社交视频与图文内容归档工具，目标是把内容、原始描述、媒体和识别文本统一整理为 Markdown。
+
+**当前真实实现范围：** 已接入 Douyin 主页作品下载与云端批处理；Bilibili、小红书尚未接入。视频 ASR、视频帧 OCR、文本清洗和 Markdown 输出属于可复用处理能力。不要把当前 Douyin 专用下载代码描述成通用平台支持。
+
+平台接入应遵循：平台适配器负责 URL/账号解析、内容列表分页、元数据和媒体下载；公共处理层负责视频 ASR、视频帧 OCR、图片 OCR、文本规范化和 Markdown 输出；状态记录必须使用 platform + content_id，避免不同平台 ID 冲突。
 
 ## 环境
 
@@ -25,10 +28,10 @@ pip install -r requirements-optional.txt
 
 | 文件 | 用途 |
 |------|------|
-| `douyin2txt.py` | 主脚本：下载抖音主页视频 → 转录/OCR → Markdown |
+| `douyin2txt.py` | 当前 Douyin 适配器与 CLI：下载抖音主页视频 → 转录/OCR → Markdown |
 | `video2txt.py` | 本地目录视频 → 逐个转 `.txt` |
 | `doc2md.py` | 本地文档 → Markdown（依赖 markitdown） |
-| `cloud_runner.py` | 云端小批量下载、逐个转录、磁盘保护与断点恢复 |
+| `cloud_runner.py` | 当前 Douyin 云端运行器：小批量获取作品、逐个下载转录、磁盘保护与断点恢复 |
 | `cloud_state.py` | 云端作品状态和分页游标持久化 |
 | `storage_guard.py` | 多目录文件系统、空间和 inode 保护 |
 
@@ -58,7 +61,7 @@ python -m unittest discover -s tests -v
 python douyin2txt.py --help >/dev/null
 ```
 
-自动化测试和环境初始化阶段禁止真实下载。只有用户明确授权后，才可使用 cloud_runner.py 执行真实下载；不得在测试中使用真实 Cookie。
+自动化测试和环境初始化阶段禁止真实下载。当前 cloud_runner.py 仅支持 Douyin；只有用户明确授权后才可执行真实下载。不得在测试中使用真实 Cookie。新增平台必须先实现独立适配器并完成端到端验收，不得直接复用 Douyin API。
 
 ## 目录约定
 

@@ -1,8 +1,12 @@
-# 云端批量运行指南
+# Social2MD 云端运行指南（当前 Douyin 适配器）
+
+## 运行范围
+
+当前云端入口 cloud_runner.py 仅连接 Douyin/F2 下载接口。Social2MD 的项目定位是多平台归档，但 Bilibili 和小红书尚未接入这个运行器；不要将它当作通用 URL 下载器。
 
 ## 运行方式
 
-云端入口为 cloud_runner.py，与原有 douyin2txt.py 并存。原有 CLI 用法不变。
+云端入口为 cloud_runner.py，与当前抖音脚本 douyin2txt.py 共用转录和 Markdown 处理能力。
 
 在 Codex Cloud 的安全环境变量中配置 DOUYIN_COOKIE。不要把 Cookie 写进任务提示词、命令参数、日志或 GitHub。也可以使用被 .gitignore 忽略的 douyin_cookie.yaml，但云端优先推荐 Secret 环境变量。
 

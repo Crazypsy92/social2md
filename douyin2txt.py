@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-douyin2txt — 抖音主页视频批量转文本工具
+Social2MD / Douyin adapter — 抖音主页视频批量转 Markdown 工具
 
 流程：
   1. f2 下载该主页全部视频（视频标题作文件名）+ 文案
@@ -564,7 +564,7 @@ def clean_downloads(root: Path) -> None:
 # ── main ─────────────────────────────────────────────────
 
 def main():
-    ap = argparse.ArgumentParser(description='抖音主页视频批量转文本（下载→ASR→md，视频默认保留待校验）')
+    ap = argparse.ArgumentParser(description='Social2MD 当前 Douyin 适配器：抖音主页视频下载 → ASR/OCR → Markdown')
     ap.add_argument('-u', '--url', help='抖音主页链接（--skip-download 时可省略）')
     ap.add_argument('-c', '--config', default='douyin_cookie.yaml',
                     help='f2 配置文件（含 cookie），默认 douyin_cookie.yaml')
