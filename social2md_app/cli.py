@@ -184,13 +184,13 @@ def _make_parser() -> argparse.ArgumentParser:
         description="Social2MD：统一的社交内容采集、媒体处理与 Markdown 归档流水线"
     )
     source = parser.add_mutually_exclusive_group(required=True)
-    source.add_argument("-u", "--url", help="抖音主页链接（当前唯一已接入的平台采集入口）")
+    source.add_argument("-u", "--url", help="抖音主页、Bilibili 空间或 BV/av 视频链接")
     source.add_argument("--input-dir", type=Path, help="待处理视频目录；使用相同队列、状态和安全规则")
     source.add_argument("--document-dir", type=Path, help="待转换文档目录；源文档始终保留")
 
     parser.add_argument("-b", "--blogger", default="未分类", help="作者或任务名称，用于输出分目录")
     parser.add_argument("-c", "--config", default="douyin_cookie.yaml", help="Douyin Cookie YAML；DOUYIN_COOKIE 环境变量优先")
-    parser.add_argument("--download-dir", help="Douyin 视频缓存目录")
+    parser.add_argument("--download-dir", help="平台视频缓存目录")
     parser.add_argument("--out-dir", help="Markdown 输出目录")
     parser.add_argument("--state-dir", default="state", help="统一断点状态目录")
     parser.add_argument("--export-dir", default="exports", help="Markdown 检查点 ZIP 目录")
@@ -568,6 +568,77 @@ def _state_paths(args: argparse.Namespace, project_root: Path) -> tuple[Path, Pa
     return state_dir, export_dir
 
 
+def process_media_task(args, state, guard, video, md_path, content_id, platform, source_metadata=None):
+    """本地目录与平台适配器共用媒体校验、质量判断和源文件保护。"""
+    title = (source_metadata or {}).get("title") or title_of(video)
+    record = state.get_work(content_id, platform=platform)
+    status = record.get("status") if record else None
+    item_out_dir = md_path.parent
+    item_out_dir.mkdir(parents=True, exist_ok=True)
+    if not is_valid_video(video):
+        state.mark_work(
+            content_id, "FAILED", title=title, video_path=str(video),
+            error="源视频无效或 ffprobe 无法读取时长", platform=platform,
+        )
+        return None
+
+    try:
+        guard.assert_can_start(
+            extra_bytes=estimate_temp_bytes(video, args.ocr, args.frame_interval)
+        )
+    except StorageLimitExceeded as exc:
+        state.mark_work(
+            content_id, "PENDING", title=title, video_path=str(video),
+            error=str(exc), platform=platform,
+        )
+        state.set_meta("paused", "1")
+        print(f"PAUSED_STORAGE: {exc}")
+        raise
+
+    if (
+        md_path.exists() and is_valid_markdown(md_path) and not args.force
+        and not (status == "REVIEW_REQUIRED" and args.retry_review)
+    ):
+        state.mark_work(
+            content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
+            md_path=str(md_path),
+            error="发现已有有效 Markdown；为避免覆盖或误删源视频，保留源视频供人工核验",
+            platform=platform,
+        )
+        return None
+    state.mark_work(
+        content_id, "PROCESSING", title=title, video_path=str(video),
+        md_path=str(md_path), platform=platform,
+    )
+    result, quality_record = process_video(
+        video, item_out_dir, set(), args.model, args.language,
+        delete_video=False, force=True, ocr=args.ocr,
+        frame_interval=args.frame_interval, save_frames=args.save_frames,
+        max_frames=args.max_frames, require_transcript=True,
+        output_path=md_path, source_metadata=source_metadata,
+    )
+    if result != "ok" or not is_valid_markdown(md_path):
+        state.mark_work(
+            content_id, "FAILED", title=title, video_path=str(video),
+            md_path=str(md_path), error="媒体处理失败或 Markdown 校验未通过；源视频已保留",
+            platform=platform,
+        )
+    elif is_low_confidence(quality_record):
+        state.mark_work(
+            content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
+            md_path=str(md_path), error="转录质量触发复核阈值；源视频已保留",
+            platform=platform,
+        )
+    else:
+        state.mark_work(
+            content_id, "COMPLETED", title=title, video_path=str(video),
+            md_path=str(md_path), platform=platform,
+        )
+        if not args.keep_source:
+            video.unlink(missing_ok=True)
+    return quality_record
+
+
 def run_video_directory(args: argparse.Namespace) -> int:
     project_root = Path(__file__).resolve().parents[1]
     source_dir = args.input_dir.expanduser().resolve()
@@ -627,79 +698,18 @@ def run_video_directory(args: argparse.Namespace) -> int:
                 processed += 1
                 continue
 
-            if not is_valid_video(video):
-                state.mark_work(
-                    content_id, "FAILED", title=title_of(video), video_path=str(video),
-                    error="源视频无效或 ffprobe 无法读取时长", platform="file",
-                )
-                processed += 1
-                continue
-
-            try:
-                guard.assert_can_start(
-                    extra_bytes=estimate_temp_bytes(video, args.ocr, args.frame_interval)
-                )
-            except StorageLimitExceeded as exc:
-                state.mark_work(
-                    content_id, "PENDING", title=title_of(video), video_path=str(video),
-                    error=str(exc), platform="file",
-                )
-                state.set_meta("paused", "1")
-                print(f"PAUSED_STORAGE: {exc}")
-                return 75
-
             title = title_of(video)
             relative_parent = video.relative_to(source_dir).parent
-            item_out_dir = out_dir / relative_parent
-            md_path = item_out_dir / f"{title}_{content_id[:8]}.md"
-            item_out_dir.mkdir(parents=True, exist_ok=True)
-
-            if (
-                md_path.exists() and is_valid_markdown(md_path) and not args.force
-                and not (status == "REVIEW_REQUIRED" and args.retry_review)
-            ):
-                state.mark_work(
-                    content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
-                    md_path=str(md_path),
-                    error="发现已有有效 Markdown；为避免覆盖或误删源视频，保留源视频供人工核验",
-                    platform="file",
+            md_path = out_dir / relative_parent / f"{title}_{content_id[:8]}.md"
+            try:
+                quality_record = process_media_task(
+                    args, state, guard, video, md_path, content_id, "file"
                 )
-                processed += 1
-                continue
-            state.mark_work(
-                content_id, "PROCESSING", title=title, video_path=str(video),
-                md_path=str(md_path), platform="file",
-            )
-            result, quality_record = process_video(
-                video, item_out_dir, set(), args.model, args.language,
-                delete_video=False, force=True, ocr=args.ocr,
-                frame_interval=args.frame_interval, save_frames=args.save_frames,
-                max_frames=args.max_frames, require_transcript=True,
-                output_path=md_path,
-            )
-            if result != "ok" or not is_valid_markdown(md_path):
-                state.mark_work(
-                    content_id, "FAILED", title=title, video_path=str(video),
-                    md_path=str(md_path), error="媒体处理失败或 Markdown 校验未通过；源视频已保留",
-                    platform="file",
-                )
-            elif is_low_confidence(quality_record):
-                state.mark_work(
-                    content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
-                    md_path=str(md_path), error="转录质量触发复核阈值；源视频已保留",
-                    platform="file",
-                )
-                if quality_record:
-                    quality_records.append(quality_record)
-            else:
-                state.mark_work(
-                    content_id, "COMPLETED", title=title, video_path=str(video),
-                    md_path=str(md_path), platform="file",
-                )
-                if quality_record:
-                    quality_records.append(quality_record)
-                if not args.keep_source:
-                    video.unlink(missing_ok=True)
+            except StorageLimitExceeded as exc:
+                print(f"PAUSED_STORAGE: {exc}")
+                return 75
+            if quality_record:
+                quality_records.append(quality_record)
 
             processed += 1
             if guard.should_pause():
@@ -848,6 +858,10 @@ def main() -> int:
         parser.error("--refresh 仅适用于 Douyin 主页采集")
     try:
         if args.url:
+            from urllib.parse import urlparse
+            if urlparse(args.url).hostname in {"space.bilibili.com", "www.bilibili.com", "bilibili.com"}:
+                from .bilibili_runner import run_bilibili
+                return run_bilibili(args)
             return asyncio.run(run_cloud(args))
         if args.input_dir:
             return run_video_directory(args)

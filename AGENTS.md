@@ -15,7 +15,7 @@
 
 Social2MD 是统一的社交内容归档流水线。所有来源共用同一套任务状态、逐项处理、磁盘保护、质量校验、失败恢复和 Markdown 导出规则。不要重新拆分“云端版 / 本地版”，也不要创建第二套绕过安全规则的处理入口。
 
-当前已接入 Douyin 主页作品采集。Bilibili 和小红书尚未接入。已有视频目录和文档目录可作为统一流水线的输入来源。
+当前已接入 Douyin 主页作品采集。Bilibili 空间和视频适配器已实现，真实端到端验收待站点访问恢复；小红书尚未接入。已有视频目录和文档目录可作为统一流水线的输入来源。
 
 ## 唯一入口
 
@@ -24,7 +24,7 @@ python social2md.py --help
 ```
 
 来源参数三选一：
-- `-u/--url`：Douyin 主页采集。
+- `-u/--url`：Douyin 主页、Bilibili 空间或 BV/av 视频采集。
 - `--input-dir`：已有视频目录，复用同一媒体处理队列。
 - `--document-dir`：文档目录，使用同一状态与磁盘保护机制；源文档永不删除。
 
@@ -36,6 +36,8 @@ python social2md.py --help
 |---|---|
 | `social2md.py` | 唯一 CLI 启动入口 |
 | `social2md_app/cli.py` | 统一调度、Douyin 采集、视频目录与文档目录处理 |
+| `social2md_app/bilibili.py` | Bilibili URL、分页元数据、逐个媒体下载 |
+| `social2md_app/bilibili_runner.py` | Bilibili 队列调度，复用公共媒体任务处理 |
 | `social2md_app/video.py` | 视频校验、ASR、视频帧 OCR、文本规范化、Markdown 写入 |
 | `social2md_app/documents.py` | 可选 MarkItDown 文档转换 |
 | `social2md_app/state.py` | 统一 SQLite 状态库 |
@@ -60,7 +62,7 @@ python social2md.py --help
 - 系统依赖：ffmpeg、ffprobe。
 - 核心依赖见 `requirements.txt`。
 - OCR 和 MarkItDown 为可选依赖，见 `requirements-optional.txt`。
-- Cookie 通过 Codex Cloud 安全环境变量 `DOUYIN_COOKIE` 注入，不得打印或提交。
+- Cookie 通过 Codex Cloud 安全环境变量 `DOUYIN_COOKIE` 注入，不得打印或提交。Bilibili 使用独立的 `BILIBILI_COOKIE` 安全环境变量。
 
 ## 验证命令
 

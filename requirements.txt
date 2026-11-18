@@ -4,3 +4,5 @@ faster-whisper>=1.2.0
 opencc-python-reimplemented>=0.1.7
 sherpa-onnx>=2.0.0
 PyYAML>=6.0
+# Bilibili 空间与视频采集
+yt-dlp>=2026.10.26

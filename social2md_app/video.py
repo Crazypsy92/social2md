@@ -339,9 +339,10 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
                   ocr: bool = False, frame_interval: float = 3.0,
                   save_frames: bool = False, max_frames: int = 12,
                   require_transcript: bool = False,
-                  output_path: Path | None = None) -> tuple[str, dict | None]:
+                  output_path: Path | None = None,
+                  source_metadata: dict | None = None) -> tuple[str, dict | None]:
     """返回 (状态, 质量记录)：状态为 ok / skip / fail；质量记录仅在成功语音转录时存在。"""
-    title = title_of(video)
+    title = (source_metadata or {}).get('title') or title_of(video)
     md_path = output_path or (out_dir / (title + '.md'))
 
     if not force and title in existing:
@@ -352,7 +353,7 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
     wav = None
     quality = None
     try:
-        desc = read_desc(video)
+        desc = source_metadata.get('description', '') if source_metadata else read_desc(video)
         if ocr:
             text = to_simplified(ocr_video(video, frame_interval))
             section = '## 画面文字\n'
@@ -363,6 +364,10 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
             section = '## 口播转录\n'
 
         parts = [f'# {title}\n']
+        if source_metadata:
+            parts.append('## 来源\n\n' + source_metadata['source_url'] + '\n')
+            if source_metadata.get('author'):
+                parts.append('作者：' + source_metadata['author'] + '\n')
         if desc:
             parts.append('## 原文案\n\n' + desc + '\n')
         if require_transcript and not text.strip():
@@ -394,7 +399,8 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
         print(f'✅ {md_path.name}  ({len(text)} 字)')
 
         if save_frames:
-            extract_frames(video, md_path.parent / 'images' / title, max_frames, frame_interval)
+            frame_name = md_path.stem if source_metadata else title
+            extract_frames(video, md_path.parent / 'images' / frame_name, max_frames, frame_interval)
 
         if delete_video:
             cleanup_video(video, title)

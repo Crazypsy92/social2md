@@ -7,7 +7,7 @@ Social2MD 将社交平台视频、已有视频文件和文档统一处理为 Mar
 | 来源 / 平台 | 内容类型 | 状态 |
 |---|---|---|
 | Douyin（抖音） | 主页作品视频 | 已接入，使用 F2 |
-| Bilibili | 视频、UP 主空间 | 尚未接入 |
+| Bilibili | 视频、UP 主空间 | 适配器已实现，真实端到端验收待完成 |
 | Xiaohongshu（小红书） | 视频笔记 | 尚未接入 |
 | Xiaohongshu（小红书） | 图文笔记 | 尚未接入，需图片采集与图片 OCR |
 | 已有视频目录 | 视频文件 | 统一流水线支持 |
@@ -58,6 +58,16 @@ python social2md.py -u "抖音主页链接" -b "作者名称" --batch-size 30 --
 ```
 
 确认结果后，去掉 `--max-items 30` 继续完整扫描。默认每批获取最多 30 个作品元数据，下载、转录和校验始终逐项执行。
+
+### Bilibili 空间与视频采集
+
+使用同一入口，支持空间自动分页与多分 P；默认不限制总数。完整空间运行和当前验收限制见 [Bilibili 运行说明](docs/bilibili_run.md)。
+
+```bash
+python social2md.py -u "https://space.bilibili.com/用户ID/video" -b "任务名称" --keep-source
+```
+
+该适配器使用 yt-dlp。当前固定每页 30 条元数据，媒体逐个下载转录。遇到站点限制时，可在安全环境变量中配置 `BILIBILI_COOKIE`。恢复使用相同命令和目录，按作品状态去重。
 
 ### 2. 处理已有视频目录
 
