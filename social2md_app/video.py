@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Social2MD / Douyin adapter — 抖音主页视频批量转 Markdown 工具
+Social2MD shared video processor — 视频 ASR、OCR 与 Markdown 处理
 
 流程：
   1. f2 下载该主页全部视频（视频标题作文件名）+ 文案
@@ -22,13 +22,10 @@ Social2MD / Douyin adapter — 抖音主页视频批量转 Markdown 工具
   # 转完立即删视频（旧行为）：加 --delete-video
 """
 
-import argparse
-import datetime
 import os
 import re
 import shutil
 import subprocess
-import sys
 import tempfile
 import uuid
 from pathlib import Path
@@ -36,7 +33,7 @@ from pathlib import Path
 VIDEO_EXTS = {'.mp4', '.mkv', '.mov', '.webm', '.flv', '.avi', '.m4v', '.ts'}
 
 # 工程根目录（本脚本所在目录），默认输出/临时目录都放这里
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT_BASE = PROJECT_ROOT / 'output'          # md 成品，按博主分文件夹
 DOWNLOAD_BASE = PROJECT_ROOT / 'videos'             # 视频下载目录，按博主分文件夹（存工程内，不放 /tmp）
 
@@ -159,18 +156,6 @@ def extract_frames(video: Path, dest: Path, max_frames: int = 12, interval: floa
         return count
     finally:
         shutil.rmtree(frames_dir, ignore_errors=True)
-
-
-# ── f2 下载 ──────────────────────────────────────────────
-
-def run_f2(url: str, config: Path, download_dir: Path) -> None:
-    """调用 f2 下载主页全部作品。config 里已含 cookie / mode=post / naming 等。"""
-    download_dir.mkdir(parents=True, exist_ok=True)
-    cmd = ['f2', 'dy', '-c', str(config), '-u', url, '-p', str(download_dir)]
-    print(f'⬇  f2 下载：{url}')
-    print('   ' + ' '.join(cmd))
-    # f2 自带进度输出，直接透传
-    subprocess.run(cmd, check=False)
 
 
 # ── ASR ─────────────────────────────────────────────────
@@ -561,115 +546,3 @@ def clean_downloads(root: Path) -> None:
     print(f'🧹 已清理 {len(files)} 个缓存文件，释放 {size:.1f} MB（{root}）')
 
 
-# ── main ─────────────────────────────────────────────────
-
-def main():
-    ap = argparse.ArgumentParser(description='Social2MD 当前 Douyin 适配器：抖音主页视频下载 → ASR/OCR → Markdown')
-    ap.add_argument('-u', '--url', help='抖音主页链接（--skip-download 时可省略）')
-    ap.add_argument('-c', '--config', default='douyin_cookie.yaml',
-                    help='f2 配置文件（含 cookie），默认 douyin_cookie.yaml')
-    ap.add_argument('-b', '--blogger', default='未分类',
-                    help='博主名，用于按博主分文件夹，默认 "未分类"')
-    ap.add_argument('--download-dir',
-                    help='视频下载目录（存工程内，默认保留待校验），默认 <工程>/videos/<博主名>')
-    ap.add_argument('--out-dir',
-                    help='最终 md 输出目录，默认 <工程>/output/<博主名>')
-    ap.add_argument('--model', default='small',
-                    choices=['tiny', 'base', 'small', 'medium', 'large-v3'],
-                    help='ASR 模型大小，默认 small')
-    ap.add_argument('--language', default='zh', help='转录语言，默认 zh')
-    ap.add_argument('--skip-download', action='store_true', help='跳过 f2 下载，只转已下好的视频')
-    ap.add_argument('--delete-video', action='store_true',
-                    help='转完立即删除视频（默认保留，便于校验后清理）')
-    ap.add_argument('--force', action='store_true', help='覆盖已存在的 md')
-    ap.add_argument('--ocr', action='store_true',
-                    help='OCR 模式：抽帧识别画面文字，不做语音转录（适合文字卡/金句视频）')
-    ap.add_argument('--frame-interval', type=float, default=3.0,
-                    help='OCR 抽帧间隔秒数，默认 3')
-    ap.add_argument('--save-frames', action='store_true',
-                    help='转录同时按间隔抽帧去重，导出关键帧到 md 同级 images/ 目录')
-    ap.add_argument('--frames-only', action='store_true',
-                    help='不转录，只对已下载视频导出关键帧（视频里保留才有用）')
-    ap.add_argument('--max-frames', type=int, default=12,
-                    help='每个视频最多导出关键帧数，默认 12')
-    ap.add_argument('--repair-docs', action='store_true',
-                    help='不下载/转录，只修复已有 md：繁转简、补标点、分段')
-    ap.add_argument('--clean-videos', action='store_true',
-                    help='校验完成后清理临时下载目录里的视频')
-    args = ap.parse_args()
-
-    if args.repair_docs:
-        root = Path(args.out_dir) if args.out_dir else DEFAULT_OUT_BASE / args.blogger
-        repair_docs(root)
-        return
-
-    if args.clean_videos:
-        root = Path(args.download_dir) if args.download_dir else DOWNLOAD_BASE / args.blogger
-        clean_downloads(root)
-        return
-
-    if args.frames_only:
-        download_dir = Path(args.download_dir) if args.download_dir else DOWNLOAD_BASE / args.blogger
-        base = Path(args.out_dir) if args.out_dir else DEFAULT_OUT_BASE / args.blogger / datetime.date.today().isoformat()
-        videos = find_videos(download_dir)
-        if not videos:
-            print(f'❌ 没找到视频：{download_dir}')
-            return
-        total = 0
-        for i, v in enumerate(videos, 1):
-            print(f'[{i}/{len(videos)}] {v.name}')
-            total += extract_frames(v, base / 'images' / title_of(v), args.max_frames, args.frame_interval)
-        print(f'✅ 完成：{len(videos)} 个视频，共导出 {total} 张关键帧 → {base / "images"}')
-        return
-
-    download_dir = Path(args.download_dir) if args.download_dir else DOWNLOAD_BASE / args.blogger
-    if args.out_dir:
-        out_dir = Path(args.out_dir)
-        dedup_root = out_dir
-    else:
-        dedup_root = DEFAULT_OUT_BASE / args.blogger
-        out_dir = dedup_root / datetime.date.today().isoformat()  # 本批次的日期文件夹
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    # 1. 下载
-    if not args.skip_download:
-        if not args.url:
-            print('❌ 需要 -u 主页链接（或用 --skip-download 只转录）')
-            sys.exit(1)
-        if not Path(args.config).exists():
-            print(f'❌ 找不到配置文件：{args.config}')
-            sys.exit(1)
-        run_f2(args.url, Path(args.config), download_dir)
-
-    # 2. 逐个转录
-    videos = find_videos(download_dir)
-    if not videos:
-        print('📭 下载目录里没有视频')
-        return
-    # 跨批次去重：博主目录下所有日期文件夹里的已有 md 都算"已转过"
-    existing = {p.stem for p in dedup_root.rglob('*.md')}
-    total = len(videos)
-    print(f'\n🎬 待处理视频：{total} 个（已有 {len(existing)} 个 md 会被跳过）')
-    print(f'📂 本批输出：{out_dir}\n' + '=' * 50)
-
-    ok = skip = fail = 0
-    records = []
-    for i, v in enumerate(videos, 1):
-        print(f'[{i}/{total}] {v.name}')
-        r, record = process_video(v, out_dir, existing, args.model, args.language,
-                                  args.delete_video, args.force,
-                                  ocr=args.ocr, frame_interval=args.frame_interval,
-                                  save_frames=args.save_frames, max_frames=args.max_frames)
-        ok += r == 'ok'; skip += r == 'skip'; fail += r == 'fail'
-        if record:
-            records.append(record)
-
-    print('\n' + '=' * 50)
-    print(f'✅ 完成：成功 {ok}，跳过 {skip}，失败 {fail}，共 {total}')
-    print(f'📂 文本目录：{out_dir}')
-    if records:
-        write_quality_report(out_dir, records)
-
-
-if __name__ == '__main__':
-    main()

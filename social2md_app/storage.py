@@ -25,7 +25,7 @@ class StorageLimitExceeded(RuntimeError):
 
 
 class StorageGuard:
-    """监控所有实际使用的文件系统，并在达到阈值时阻止新任务。"""
+    """统一任务流水线的磁盘与 inode 保护。"""
 
     def __init__(
         self,

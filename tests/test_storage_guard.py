@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from storage_guard import StorageGuard, StorageLimitExceeded
+from social2md_app.storage import StorageGuard, StorageLimitExceeded
 
 
 class StorageGuardTests(unittest.TestCase):

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 一次性环境安装脚本：可在本地或 Codex Cloud 的 setup 阶段执行
+# 统一流水线环境初始化：安装核心依赖、编译并运行无网络单元测试。
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -18,15 +18,10 @@ install_ffmpeg() {
 }
 
 install_ffmpeg
-
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
-
-python3 -m py_compile douyin2txt.py video2txt.py doc2md.py cloud_runner.py cloud_state.py storage_guard.py
-python3 cloud_runner.py --help >/dev/null
+python3 -m py_compile social2md.py social2md_app/*.py
+python3 social2md.py --help >/dev/null
 python3 -m unittest discover -s tests -v
-python3 douyin2txt.py --help >/dev/null
-python3 video2txt.py --help >/dev/null
-python3 doc2md.py --help >/dev/null
 
-echo "环境安装完成。OCR/doc2md 可选依赖：pip install -r requirements-optional.txt"
+echo "核心环境初始化完成。OCR / 文档转换可选依赖：pip install -r requirements-optional.txt"

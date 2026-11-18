@@ -2,10 +2,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cloud_runner import is_low_confidence, is_valid_markdown
+from social2md_app.cli import is_low_confidence, is_valid_markdown
 
 
-class CloudRunnerHelperTests(unittest.TestCase):
+class PipelineHelperTests(unittest.TestCase):
     def test_valid_transcript_markdown(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "valid.md"

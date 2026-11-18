@@ -1,209 +1,136 @@
-# Social2MD — 多平台社交内容归档工具
+# Social2MD — 统一社交内容归档流水线
 
-Social2MD 面向抖音、Bilibili、小红书等社交平台，目标是将视频、图文笔记、原始描述及媒体信息统一整理为 Markdown。
+Social2MD 将社交平台视频、已有视频文件和文档统一处理为 Markdown。项目采用**一套任务流水线**，不再区分“云端版”和“本地版”：不同来源共用任务状态、逐项处理、磁盘保护、质量校验、失败恢复和导出机制。
 
-详细操作说明见 [使用指南](docs/user_guide.md)。
+## 当前平台支持
 
-**当前实现边界：** 已接入抖音主页作品批量下载、视频 ASR/OCR 与 Markdown 输出；Bilibili 和小红书尚未接入本项目的下载流程。通用的视频转录、视频画面 OCR、Markdown 整理能力可以复用，但各平台仍需独立的内容采集适配器。
-
-## 平台支持现状
-
-| 平台 / 内容 | 当前状态 | 后续接入方式 |
+| 来源 / 平台 | 内容类型 | 状态 |
 |---|---|---|
-| 抖音视频 / 主页作品 | **已接入** | 当前使用 F2 的 Douyin 接口 |
-| Bilibili 视频 / UP 主空间 | 尚未集成 | 可评估 yt-dlp 的视频与空间列表提取器，完成登录、分页和下载验收后接入 |
-| 小红书视频笔记 | 尚未集成 | 可评估 yt-dlp 的 XiaoHongShu 提取器，需实际链接验证 |
-| 小红书图文笔记 | 尚未集成 | 需要单独解析笔记正文和图片列表、下载图片，并增加图片 OCR |
+| Douyin（抖音） | 主页作品视频 | 已接入，使用 F2 |
+| Bilibili | 视频、UP 主空间 | 尚未接入 |
+| Xiaohongshu（小红书） | 视频笔记 | 尚未接入 |
+| Xiaohongshu（小红书） | 图文笔记 | 尚未接入，需图片采集与图片 OCR |
+| 已有视频目录 | 视频文件 | 统一流水线支持 |
+| 文档目录 | PDF、Word、PPT、Excel、HTML 等 | 可选 MarkItDown 转换 |
 
-注意：上游下载器列出某个平台，不等于本项目已经支持该平台；站点结构、登录态和访问限制可能变化。参见 [yt-dlp 支持站点列表](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)。
+上游工具支持某个平台，不代表 Social2MD 已经接入。每个平台必须完成真实链接、登录态、分页、媒体下载和端到端测试后，才能更新为“已接入”。
 
-当前已接入的抖音视频处理支持两种提取模式：
+## 统一处理规则
 
-| 模式 | 适用 | 提取内容 |
-|------|------|----------|
-| **语音模式**（默认） | 口播/讲解类视频 | faster-whisper 本地 ASR 转录语音 |
-| **OCR 模式**（`--ocr`） | 文字卡/金句/图文轮播视频 | 抽帧 + easyocr 识别画面文字 |
-
----
-
-## 功能
-
-- 📥 **抖音采集适配器**：用 [f2](https://github.com/Johnserf-Seed/f2) 抓取抖音主页作品（mp4 + 原文案）；其他平台尚未接入
-- 📝 **标题当文件名**：每个视频产出一个同名 `.md`
-- 🎙️ **语音转文字**：faster-whisper 本地 CPU 转录（无需 GPU、无需联网 API）
-- 🖼️ **画面转文字**（OCR 模式）：定时抽帧 → 感知哈希去重 → easyocr 识别
-- 🖼️ **关键帧导出**：可把视频里的地图/战线图/图表按间隔抽成 jpg，自动去重
-- 🗑️ **校验后清理**：转完默认保留视频便于对照，`--clean-videos` 一键清理；`--delete-video` 可恢复转完即删
-- 🇨🇳 **简体输出**：自动 OpenCC 繁转简，并按停顿补标点、分段
-- ⏭️ **断点续跑**：已存在的 md 自动跳过，`--force` 可强制重做
-
----
+- 所有来源进入同一个任务状态库，唯一键为 `platform + content_id`。
+- 媒体按队列逐项处理；Douyin 元数据默认每批 30 条，但不会并行缓存 30 个视频。
+- 视频依次完成下载/读取、媒体校验、ASR 或 OCR、Markdown 原子写入和质量检查。
+- 只有 Markdown 有效且未触发低置信度复核，才允许自动删除视频源文件。
+- 失败、空转录、损坏媒体和低置信度任务保留源文件，可断点恢复。
+- 文档转换只生成 Markdown，**绝不删除源文档**。
+- 磁盘使用率达到 95% 暂停，低于 90% 才允许恢复，并至少保留 1 GiB 可用空间。
 
 ## 安装
 
+建议在 Codex Cloud / Linux Python 环境中运行。环境初始化只安装依赖、编译代码和执行测试，不会下载真实作品。
+
 ```bash
-git clone <你的仓库地址> social2md
+git clone https://github.com/Crazypsy92/social2md.git
 cd social2md
 bash scripts/setup.sh
 ```
 
-`setup.sh` 会安装 ffmpeg（Debian/Ubuntu）、Python 依赖，并跑一遍 CLI 自检。也可手动安装：
+OCR 和文档转换为可选能力：
 
 ```bash
-pip install -r requirements.txt
-pip install -r requirements-optional.txt   # OCR 模式 / doc2md.py 才需要
+pip install -r requirements-optional.txt
 ```
 
-> 需要 ffmpeg（抽音频/抽帧），并能在命令行直接调用。
+系统需要 `ffmpeg` 和 `ffprobe`。安装脚本会在 Debian/Ubuntu 环境中安装 ffmpeg。
 
-## 云端 Codex
+## 使用方式
 
-仓库已带 `AGENTS.md` 和 `scripts/setup.sh`，可直接接入 Codex Cloud：
+统一入口只有一个：`social2md.py`。
 
-1. 推送仓库到 GitHub，在 Codex 中连接该仓库；
-2. 环境 setup 命令填 `bash scripts/setup.sh`；
-3. 环境安装和自动化测试阶段不要执行真实下载；原有脚本可用 `--skip-download` 验证本地视频。
-4. 用户明确授权真实下载后，使用新增的 cloud_runner.py，不要把 Cookie 写进代码或任务提示词。
+### 1. 抖音主页采集
 
+在运行环境的安全环境变量中配置 `DOUYIN_COOKIE`，不要把 Cookie 写入代码、命令参数、日志或 GitHub。
 
-## 当前抖音云端批量处理（逐个转录）
-
-cloud_runner.py 是当前 Douyin 平台的云端适配入口，不是通用多平台下载器；它与 douyin2txt.py 共用当前抖音处理链。
-
-在 Codex Cloud 的安全环境变量中配置 DOUYIN_COOKIE，勿把 Cookie 写进任务提示词、命令参数、日志或 GitHub。也可以使用被 .gitignore 忽略的 douyin_cookie.yaml，但云端优先推荐 Secret 环境变量。
-
-先执行：
-
-~~~bash
-python cloud_runner.py --help
-python cloud_runner.py -u "主页链接" -b "博主名" --batch-size 30 --max-items 30
-~~~
-
-首次建议先处理 30 个作品验证端到端流程。确认结果正确后，再去掉 --max-items 30 执行完整扫描。
-
-默认策略：
-
-- 每批最多获取 30 个抖音作品元数据，**不是同时缓存 30 个视频**；每次只下载、转录和校验一个视频，成功后删除。
-- 每个作品单独下载、校验、转录和写入 Markdown。
-- 同一时刻只运行一个视频转录任务。
-- Markdown 内容有效且 Whisper 质量指标未触发复核阈值后，才删除视频。
-- 空转录、异常、损坏视频和低置信度作品保留原视频。
-- 以作品 ID 保存状态和分页游标，异常退出后可恢复。
-- 磁盘使用率达到 95% 暂停，低于 90% 才允许恢复，并至少保留 1 GiB 空间。
-- 扫描完成后如需检查新作品，使用 --refresh；已完成作品仍按作品 ID 去重。
-
-输出目录：
-
-- 视频缓存：videos/
-- Markdown：output/
-- 断点状态：state/
-- Markdown 检查点 ZIP：exports/
-
-ZIP 只包含 Markdown，不包含视频、Cookie、模型和运行数据库。云端工作目录可能是临时环境，重要 ZIP 应在任务结束前导出到用户可持久保存的位置。
-
-## 配置 cookie
-
-f2 下载需要登录 cookie。复制 `douyin_cookie.example.yaml` 为 `douyin_cookie.yaml`，
-把 `cookie:` 字段填成你自己浏览器登录抖音后的 cookie 字符串（F12 → 网络 → 任意请求 → 请求头里的 Cookie）。
-
-> ⚠️ `douyin_cookie.yaml` 含账号凭证，已在 `.gitignore` 中忽略，**切勿提交**。
-
----
-
-## 当前抖音适配器使用方法
-
-以下命令均针对当前已接入的抖音适配器，不代表 Bilibili 或小红书已经可以直接使用。
-
-### 1. 语音模式（口播类视频）
+先做小批量验证：
 
 ```bash
-python douyin2txt.py \
-  -u "https://www.douyin.com/user/MS4wLjABAAAA..." \
-  -b "暴躁桃姐" \
-  -c douyin_cookie.yaml \
-  --model small --language zh
+python social2md.py -u "抖音主页链接" -b "作者名称" --batch-size 30 --max-items 30
 ```
 
-默认输出到 `output/<博主名>/<运行日期>/`，视频缓存在 `videos/<博主名>/`。
+确认结果后，去掉 `--max-items 30` 继续完整扫描。默认每批获取最多 30 个作品元数据，下载、转录和校验始终逐项执行。
 
-### 2. OCR 模式（文字卡/金句视频）
+### 2. 处理已有视频目录
+
+已有视频文件也进入同一套任务队列、状态库、磁盘保护和安全删除流程：
 
 ```bash
-python douyin2txt.py \
-  -u "https://www.douyin.com/user/MS4wLjABAAAA..." \
-  -b "文字卡博主" \
-  --ocr --frame-interval 3
+python social2md.py --input-dir "videos/inbox" -b "任务名称"
 ```
 
-### 参数说明
+视频默认只在 Markdown 写入成功、内容有效且转录质量通过后删除。希望保留源视频时添加 `--keep-source`。
 
-| 参数 | 说明 | 默认 |
-|------|------|------|
-| `-u, --url` | 抖音主页链接（含 sec_uid） | 必填（除非 `--skip-download`） |
-| `-b, --blogger` | 博主名，用于分目录 | `未分类` |
-| `-c, --config` | f2 配置文件（含 cookie） | `douyin_cookie.yaml` |
-| `--download-dir` | 视频缓存目录（转完默认保留） | `videos/<博主名>` |
-| `--out-dir` | 最终 md 输出目录 | `output/<博主名>/<日期>` |
-| `--model` | ASR 模型 `tiny/base/small/medium/large-v3` | `small` |
-| `--language` | 转录语言 | `zh` |
-| `--ocr` | 开启 OCR 画面识别模式（代替语音） | 关 |
-| `--frame-interval` | OCR/关键帧抽帧间隔（秒） | `3` |
-| `--save-frames` | 转录同时导出关键帧图片 | 关 |
-| `--frames-only` | 不转录，只对已下载视频导出关键帧 | 关 |
-| `--max-frames` | 每个视频最多导出几张关键帧 | `12` |
-| `--skip-download` | 跳过下载，只处理已下好的视频 | 关 |
-| `--delete-video` | 转完立即删除视频（默认保留） | 关 |
-| `--clean-videos` | 校验完成后清理缓存视频 | 关 |
-| `--repair-docs` | 只修复已有 md（繁转简、补标点、分段） | 关 |
-| `--force` | 覆盖已存在的 md | 关 |
+### 3. 文档转 Markdown
 
-### 转简体与标点（自动）
+需要先安装可选依赖：
 
-转录结果会自动繁转简、补标点、按停顿分段，无需再手动跑 opencc。存量 md 可用 `--repair-docs` 就地修复。
-
----
-
-## 输出格式
-
-每个视频一个 `.md`：
-
-```markdown
-# 视频标题
-
-## 原文案
-（当前适配器写入的平台原始描述）
-
-## 口播转录        ← 语音模式
-（语音识别的全文）
-
-## 画面文字        ← OCR 模式
-（识别出的画面文字）
+```bash
+pip install -r requirements-optional.txt
+python social2md.py --document-dir "documents/inbox" -b "文档归档"
 ```
 
----
+文档转换逐项执行、记录状态并使用磁盘保护；源 PDF、Word、PPT、Excel 等文件始终保留。
 
-## 小贴士
+### 4. 预览和恢复
 
-- **同名标题冲突**：有些号每条视频标题都一样，按标题命名会互相覆盖导致丢视频。
-  把配置里 `naming` 改成 `"{aweme_id}_{desc}"`（用作品ID区分）即可拿全。OCR 示例配置已这么做。
-- **主页链接**：必须是带 `sec_uid`（`MS4wLj...` 那串）的完整主页链接，纯抖音号不行。
-  可用分享短链 `https://v.douyin.com/xxx` 跳转后拿到。
-- **翻页等待**：f2 每翻一页会强制等待约 30 秒，作品多的号下载阶段需要耐心，不要以为它卡死。
-- **ffmpeg 中文路径**：工具内部已处理（复制成临时 ASCII 名再调用 ffmpeg），无需担心 `#`/emoji/中文文件名。
+```bash
+# 只检查参数、输入数量和磁盘，不下载或转换
+python social2md.py --input-dir "videos/inbox" --dry-run
 
-## 依赖
+# 重新处理低置信度任务
+python social2md.py -u "抖音主页链接" -b "作者名称" --retry-review
 
-- [f2](https://github.com/Johnserf-Seed/f2) — 当前抖音平台下载适配器
-- [faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 本地 ASR
-- [easyocr](https://github.com/JaidedAI/EasyOCR) — 画面文字识别
-- [opencc](https://github.com/yichen0831/opencc-python) — 繁简转换
-- [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — 中文标点恢复
-- [markitdown](https://github.com/microsoft/markitdown) — `doc2md.py` 文档转换
-- ffmpeg — 音视频处理
+# 强制重新生成输出
+python social2md.py --input-dir "videos/inbox" --force
+```
 
----
+## 输出目录
 
-## 说明
+| 目录 | 内容 |
+|---|---|
+| `output/` | Markdown 成品、关键帧和质量报告 |
+| `videos/` | Douyin 下载缓存或输入视频 |
+| `state/` | SQLite 任务状态、分页游标和暂停信息 |
+| `exports/` | 只包含 Markdown 的检查点 ZIP |
+| `models/` | 可选的标点恢复模型缓存 |
 
-本项目基于开源项目 [hi5jeff/douyinzhengliu](https://github.com/hi5jeff/douyinzhengliu) 修改，
-原项目未附带许可证；本仓库仅做个人使用向的整理与增强，版权归原作者所有。
+云端工作目录可能是临时环境。重要 ZIP 应在任务结束前导出到可持久保存的位置。
+
+## 项目结构
+
+```text
+social2md/
+├── social2md.py                 # 唯一命令行入口
+├── social2md_app/
+│   ├── cli.py                   # 统一调度与来源入口
+│   ├── video.py                 # 视频 ASR、OCR、文本整理与 Markdown 写入
+│   ├── documents.py             # 文档转换适配
+│   ├── state.py                 # 跨平台任务状态与旧数据库迁移
+│   └── storage.py               # 磁盘 / inode 保护
+├── docs/
+├── scripts/
+└── tests/
+```
+
+## 测试
+
+```bash
+python -m py_compile social2md.py social2md_app/*.py
+python -m unittest discover -s tests -v
+python social2md.py --help
+```
+
+测试不得使用真实 Cookie、真实下载、真实账号或用户数据。
+
+## 版权说明
+
+本项目的历史实现基于开源项目 [hi5jeff/douyinzhengliu](https://github.com/hi5jeff/douyinzhengliu) 修改。原项目未附带许可证；使用和再分发前请自行核实原作者的授权与相关平台规则。

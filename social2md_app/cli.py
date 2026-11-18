@@ -13,23 +13,25 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from cloud_state import CloudState
-from douyin2txt import (
+from .state import TaskState
+from .video import (
     HIGH_COMPRESSION,
     LOW_LOGPROB,
     cleanup_video,
+    find_videos,
     process_video,
     title_of,
     write_quality_report,
 )
-from storage_guard import StorageGuard, StorageLimitExceeded
+from .documents import convert_document, find_documents
+from .storage import StorageGuard, StorageLimitExceeded
 
 
 def _project_path(value: str | None, default: Path) -> Path:
     if not value:
         return default
     path = Path(value).expanduser()
-    return path if path.is_absolute() else Path(__file__).resolve().parent / path
+    return path if path.is_absolute() else Path(__file__).resolve().parents[1] / path
 
 
 def _safe_name(value: str) -> str:
@@ -178,34 +180,41 @@ def export_markdown_checkpoint(
 
 def _make_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Social2MD 云端 Douyin 适配器：按批获取抖音作品、逐个下载转录并安全清理视频"
+        description="Social2MD：统一的社交内容采集、媒体处理与 Markdown 归档流水线"
     )
-    parser.add_argument("-u", "--url", required=True, help="抖音主页链接")
-    parser.add_argument("-b", "--blogger", default="未分类", help="输出目录使用的博主名称")
-    parser.add_argument("-c", "--config", default="douyin_cookie.yaml", help="Cookie YAML；DOUYIN_COOKIE 环境变量优先")
-    parser.add_argument("--download-dir", help="视频缓存根目录，默认 videos/<博主名>")
-    parser.add_argument("--out-dir", help="Markdown 输出目录，默认 output/<博主名>/<日期>")
-    parser.add_argument("--state-dir", default="state", help="断点状态目录")
-    parser.add_argument("--export-dir", default="exports", help="Markdown ZIP 导出目录")
-    parser.add_argument("--batch-size", type=int, default=30, help="每批最多获取的作品数，默认 30（仍逐个下载并转录）")
-    parser.add_argument("--max-items", type=int, default=0, help="本次最多处理作品数；0 表示不限制")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("-u", "--url", help="抖音主页链接（当前唯一已接入的平台采集入口）")
+    source.add_argument("--input-dir", type=Path, help="待处理视频目录；使用相同队列、状态和安全规则")
+    source.add_argument("--document-dir", type=Path, help="待转换文档目录；源文档始终保留")
+
+    parser.add_argument("-b", "--blogger", default="未分类", help="作者或任务名称，用于输出分目录")
+    parser.add_argument("-c", "--config", default="douyin_cookie.yaml", help="Douyin Cookie YAML；DOUYIN_COOKIE 环境变量优先")
+    parser.add_argument("--download-dir", help="Douyin 视频缓存目录")
+    parser.add_argument("--out-dir", help="Markdown 输出目录")
+    parser.add_argument("--state-dir", default="state", help="统一断点状态目录")
+    parser.add_argument("--export-dir", default="exports", help="Markdown 检查点 ZIP 目录")
+    parser.add_argument("--batch-size", type=int, default=30, help="平台元数据批量获取数量，默认 30；媒体始终逐项处理")
+    parser.add_argument("--max-items", type=int, default=0, help="本次最多处理数量；0 表示不限制")
     parser.add_argument("--pause-percent", type=float, default=95.0, help="磁盘暂停阈值")
-    parser.add_argument("--resume-percent", type=float, default=90.0, help="暂停后恢复阈值")
-    parser.add_argument("--min-free-gib", type=float, default=1.0, help="必须保留的最低可用空间")
+    parser.add_argument("--resume-percent", type=float, default=90.0, help="磁盘恢复阈值")
+    parser.add_argument("--min-free-gib", type=float, default=1.0, help="最低可用空间")
     parser.add_argument("--poll-seconds", type=float, default=2.0, help="下载期间磁盘检查间隔")
     parser.add_argument("--model", default="small", choices=["tiny", "base", "small", "medium", "large-v3"])
     parser.add_argument("--language", default="zh")
-    parser.add_argument("--ocr", action="store_true", help="使用 OCR 识别画面文字")
+    parser.add_argument("--ocr", action="store_true", help="使用视频帧 OCR 替代语音转录")
     parser.add_argument("--frame-interval", type=float, default=3.0)
-    parser.add_argument("--save-frames", action="store_true")
+    parser.add_argument("--save-frames", action="store_true", help="同时导出关键帧")
     parser.add_argument("--max-frames", type=int, default=12)
-    parser.add_argument("--refresh", action="store_true", help="从最新作品重新扫描，已完成作品仍按作品 ID 去重")
-    parser.add_argument("--dry-run", action="store_true", help="只检查本地磁盘和参数，不连接抖音")
+    parser.add_argument("--keep-source", action="store_true", help="视频处理成功后仍保留源视频")
+    parser.add_argument("--retry-review", action="store_true", help="重新处理 REVIEW_REQUIRED 任务")
+    parser.add_argument("--force", action="store_true", help="忽略已完成状态并重新生成 Markdown")
+    parser.add_argument("--refresh", action="store_true", help="Douyin 从最新作品重新扫描，已完成作品仍按平台和作品 ID 去重")
+    parser.add_argument("--dry-run", action="store_true", help="只检查输入、磁盘和参数，不下载或转换")
     return parser
 
 
 async def run_cloud(args: argparse.Namespace) -> int:
-    project_root = Path(__file__).resolve().parent
+    project_root = Path(__file__).resolve().parents[1]
     download_dir = _project_path(args.download_dir, project_root / "videos" / args.blogger)
     output_base = project_root / "output" / args.blogger
     out_dir = _project_path(args.out_dir, output_base / date.today().isoformat())
@@ -227,7 +236,7 @@ async def run_cloud(args: argparse.Namespace) -> int:
     )
 
     state_key = hashlib.sha256(args.url.encode("utf-8")).hexdigest()[:20]
-    with CloudState(state_dir / f"{state_key}.sqlite3") as state:
+    with TaskState(state_dir / f"{state_key}.sqlite3") as state:
         was_paused = state.get_meta("paused", "0") == "1"
         if args.refresh:
             state.set_cursor(0)
@@ -347,7 +356,7 @@ async def run_cloud(args: argparse.Namespace) -> int:
                                 continue
                             state.mark_work(aweme_id, "FAILED", error="已完成记录的 Markdown 不存在或校验失败")
 
-                        if status in {"REVIEW_REQUIRED", "SKIPPED"}:
+                        if status == "SKIPPED" or (status == "REVIEW_REQUIRED" and not args.retry_review):
                             processed_this_run += 1
                             batch_progress += 1
                             continue
@@ -549,6 +558,257 @@ async def run_cloud(args: argparse.Namespace) -> int:
             return 1
 
 
+def _state_paths(args: argparse.Namespace, project_root: Path) -> tuple[Path, Path]:
+    state_dir = _project_path(args.state_dir, project_root / "state")
+    export_dir = _project_path(args.export_dir, project_root / "exports")
+    state_dir.mkdir(parents=True, exist_ok=True)
+    export_dir.mkdir(parents=True, exist_ok=True)
+    return state_dir, export_dir
+
+
+def run_video_directory(args: argparse.Namespace) -> int:
+    project_root = Path(__file__).resolve().parents[1]
+    source_dir = args.input_dir.expanduser().resolve()
+    if not source_dir.is_dir():
+        print(f"输入视频目录不存在：{source_dir}")
+        return 2
+
+    label = _safe_name(args.blogger if args.blogger != "未分类" else source_dir.name)
+    output_base = project_root / "output" / label
+    out_dir = _project_path(args.out_dir, output_base / date.today().isoformat())
+    state_dir, export_dir = _state_paths(args, project_root)
+    model_cache = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface"))
+    temp_dir = Path(tempfile.gettempdir())
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    guard = StorageGuard(
+        [project_root, source_dir, out_dir, state_dir, export_dir, temp_dir, model_cache],
+        pause_percent=args.pause_percent,
+        resume_percent=args.resume_percent,
+        min_free_bytes=int(args.min_free_gib * 1024**3),
+        poll_seconds=args.poll_seconds,
+    )
+    state_key = hashlib.sha256(str(source_dir).encode("utf-8")).hexdigest()[:20]
+    videos = find_videos(source_dir)
+    if args.dry_run:
+        print("DRY RUN：不会转录、删除源文件或下载模型。")
+        print(f"发现视频：{len(videos)}")
+        print(StorageGuard.format_snapshot(guard.snapshot()))
+        return 0
+
+    processed = 0
+    quality_records: list[dict] = []
+    with TaskState(state_dir / f"files_{state_key}.sqlite3") as state:
+        was_paused = state.get_meta("paused", "0") == "1"
+        try:
+            guard.assert_can_start(was_paused=was_paused)
+        except StorageLimitExceeded as exc:
+            state.set_meta("paused", "1")
+            print(f"PAUSED_STORAGE: {exc}")
+            return 75
+        state.set_meta("paused", "0")
+
+        for video in videos:
+            if args.max_items and processed >= args.max_items:
+                break
+            content_id = hashlib.sha256(str(video.resolve()).encode("utf-8")).hexdigest()
+            record = state.get_work(content_id, platform="file")
+            status = record.get("status") if record else None
+            saved_md = Path(record["md_path"]) if record and record.get("md_path") else None
+
+            if status == "COMPLETED" and saved_md and is_valid_markdown(saved_md) and not args.force:
+                if not args.keep_source:
+                    video.unlink(missing_ok=True)
+                processed += 1
+                continue
+            if status == "REVIEW_REQUIRED" and not args.retry_review:
+                processed += 1
+                continue
+
+            if not is_valid_video(video):
+                state.mark_work(
+                    content_id, "FAILED", title=title_of(video), video_path=str(video),
+                    error="源视频无效或 ffprobe 无法读取时长", platform="file",
+                )
+                processed += 1
+                continue
+
+            try:
+                guard.assert_can_start(
+                    extra_bytes=estimate_temp_bytes(video, args.ocr, args.frame_interval)
+                )
+            except StorageLimitExceeded as exc:
+                state.mark_work(
+                    content_id, "PENDING", title=title_of(video), video_path=str(video),
+                    error=str(exc), platform="file",
+                )
+                state.set_meta("paused", "1")
+                print(f"PAUSED_STORAGE: {exc}")
+                return 75
+
+            title = title_of(video)
+            md_path = out_dir / f"{title}.md"
+            state.mark_work(
+                content_id, "PROCESSING", title=title, video_path=str(video),
+                md_path=str(md_path), platform="file",
+            )
+            result, quality_record = process_video(
+                video, out_dir, set(), args.model, args.language,
+                delete_video=False, force=True, ocr=args.ocr,
+                frame_interval=args.frame_interval, save_frames=args.save_frames,
+                max_frames=args.max_frames, require_transcript=True,
+            )
+            if result != "ok" or not is_valid_markdown(md_path):
+                state.mark_work(
+                    content_id, "FAILED", title=title, video_path=str(video),
+                    md_path=str(md_path), error="媒体处理失败或 Markdown 校验未通过；源视频已保留",
+                    platform="file",
+                )
+            elif is_low_confidence(quality_record):
+                state.mark_work(
+                    content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
+                    md_path=str(md_path), error="转录质量触发复核阈值；源视频已保留",
+                    platform="file",
+                )
+                if quality_record:
+                    quality_records.append(quality_record)
+            else:
+                state.mark_work(
+                    content_id, "COMPLETED", title=title, video_path=str(video),
+                    md_path=str(md_path), platform="file",
+                )
+                if quality_record:
+                    quality_records.append(quality_record)
+                if not args.keep_source:
+                    video.unlink(missing_ok=True)
+
+            processed += 1
+            if guard.should_pause():
+                state.set_meta("paused", "1")
+                print(f"PAUSED_STORAGE: {guard.pause_reason()}")
+                return 75
+
+        if quality_records:
+            write_quality_report(out_dir, quality_records)
+        try:
+            guard.assert_can_start()
+            checkpoint = export_markdown_checkpoint(output_base, export_dir, label)
+            if checkpoint:
+                print(f"Markdown 检查点：{checkpoint}")
+        except StorageLimitExceeded as exc:
+            print(f"跳过 ZIP 导出：{exc}")
+        state.set_meta("paused", "0")
+        print(f"视频任务处理数：{processed}")
+        print(f"状态统计：{state.status_counts('file')}")
+        print(StorageGuard.format_snapshot(guard.snapshot()))
+    return 0
+
+
+def run_document_directory(args: argparse.Namespace) -> int:
+    project_root = Path(__file__).resolve().parents[1]
+    source_dir = args.document_dir.expanduser().resolve()
+    if not source_dir.is_dir():
+        print(f"输入文档目录不存在：{source_dir}")
+        return 2
+
+    label = _safe_name(args.blogger if args.blogger != "未分类" else source_dir.name)
+    output_base = project_root / "output" / "documents" / label
+    out_dir = _project_path(args.out_dir, output_base / date.today().isoformat())
+    state_dir, export_dir = _state_paths(args, project_root)
+    temp_dir = Path(tempfile.gettempdir())
+    out_dir.mkdir(parents=True, exist_ok=True)
+    guard = StorageGuard(
+        [project_root, source_dir, out_dir, state_dir, export_dir, temp_dir],
+        pause_percent=args.pause_percent,
+        resume_percent=args.resume_percent,
+        min_free_bytes=int(args.min_free_gib * 1024**3),
+        poll_seconds=args.poll_seconds,
+    )
+    state_key = hashlib.sha256(str(source_dir).encode("utf-8")).hexdigest()[:20]
+    documents = find_documents(source_dir)
+    if args.dry_run:
+        print("DRY RUN：不会转换或修改源文档。")
+        print(f"发现文档：{len(documents)}")
+        print(StorageGuard.format_snapshot(guard.snapshot()))
+        return 0
+
+    processed = 0
+    with TaskState(state_dir / f"documents_{state_key}.sqlite3") as state:
+        was_paused = state.get_meta("paused", "0") == "1"
+        try:
+            guard.assert_can_start(was_paused=was_paused)
+        except StorageLimitExceeded as exc:
+            state.set_meta("paused", "1")
+            print(f"PAUSED_STORAGE: {exc}")
+            return 75
+        state.set_meta("paused", "0")
+
+        for source in documents:
+            if args.max_items and processed >= args.max_items:
+                break
+            content_id = hashlib.sha256(str(source.resolve()).encode("utf-8")).hexdigest()
+            relative = source.relative_to(source_dir)
+            destination = out_dir / relative.with_suffix(".md")
+            record = state.get_work(content_id, platform="document")
+            if (
+                record and record.get("status") == "COMPLETED"
+                and destination.is_file() and destination.stat().st_size > 0
+                and not args.force
+            ):
+                processed += 1
+                continue
+
+            try:
+                guard.assert_can_start(extra_bytes=source.stat().st_size * 2)
+            except StorageLimitExceeded as exc:
+                state.mark_work(
+                    content_id, "PENDING", title=source.name, md_path=str(destination),
+                    error=str(exc), platform="document",
+                )
+                state.set_meta("paused", "1")
+                print(f"PAUSED_STORAGE: {exc}")
+                return 75
+
+            state.mark_work(
+                content_id, "PROCESSING", title=source.name, md_path=str(destination),
+                platform="document",
+            )
+            try:
+                success = convert_document(source, destination)
+            except Exception as exc:
+                success = False
+                error = str(exc)
+            else:
+                error = "文档转换失败或输出为空"
+            if success:
+                state.mark_work(
+                    content_id, "COMPLETED", title=source.name,
+                    md_path=str(destination), platform="document",
+                )
+            else:
+                state.mark_work(
+                    content_id, "FAILED", title=source.name, md_path=str(destination),
+                    error=error, platform="document",
+                )
+            processed += 1
+            if guard.should_pause():
+                state.set_meta("paused", "1")
+                print(f"PAUSED_STORAGE: {guard.pause_reason()}")
+                return 75
+
+        try:
+            guard.assert_can_start()
+            checkpoint = export_markdown_checkpoint(output_base, export_dir, label)
+            if checkpoint:
+                print(f"Markdown 检查点：{checkpoint}")
+        except StorageLimitExceeded as exc:
+            print(f"跳过 ZIP 导出：{exc}")
+        state.set_meta("paused", "0")
+        print(f"文档任务处理数：{processed}")
+        print(f"状态统计：{state.status_counts('document')}")
+    return 0
+
+
 def main() -> int:
     parser = _make_parser()
     args = parser.parse_args()
@@ -558,11 +818,13 @@ def main() -> int:
         parser.error("--max-items 不能为负数")
     if args.frame_interval <= 0:
         parser.error("--frame-interval 必须大于 0")
-    try:
+    if args.min_free_gib < 0 or args.poll_seconds <= 0:
+        parser.error("磁盘保护参数无效")
+    if args.url:
         return asyncio.run(run_cloud(args))
-    except KeyboardInterrupt:
-        print("用户中断。")
-        return 130
+    if args.input_dir:
+        return run_video_directory(args)
+    return run_document_directory(args)
 
 
 if __name__ == "__main__":

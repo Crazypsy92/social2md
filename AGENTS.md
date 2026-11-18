@@ -1,82 +1,71 @@
 # AGENTS.md
 
-本仓库项目名为 **Social2MD**，定位为多平台社交视频与图文内容归档工具，目标是把内容、原始描述、媒体和识别文本统一整理为 Markdown。
+## 项目定位
 
-**当前真实实现范围：** 已接入 Douyin 主页作品下载与云端批处理；Bilibili、小红书尚未接入。视频 ASR、视频帧 OCR、文本清洗和 Markdown 输出属于可复用处理能力。不要把当前 Douyin 专用下载代码描述成通用平台支持。
+Social2MD 是统一的社交内容归档流水线。所有来源共用同一套任务状态、逐项处理、磁盘保护、质量校验、失败恢复和 Markdown 导出规则。不要重新拆分“云端版 / 本地版”，也不要创建第二套绕过安全规则的处理入口。
 
-平台接入应遵循：平台适配器负责 URL/账号解析、内容列表分页、元数据和媒体下载；公共处理层负责视频 ASR、视频帧 OCR、图片 OCR、文本规范化和 Markdown 输出；状态记录必须使用 platform + content_id，避免不同平台 ID 冲突。
+当前已接入 Douyin 主页作品采集。Bilibili 和小红书尚未接入。已有视频目录和文档目录可作为统一流水线的输入来源。
 
-## 环境
-
-- Python 3.10+（云端建议 3.11/3.12），Linux
-- 系统依赖：`ffmpeg`、`ffprobe`
-- 安装：
+## 唯一入口
 
 ```bash
-bash scripts/setup.sh
+python social2md.py --help
 ```
 
-只装依赖不跑脚本时：
+来源参数三选一：
+- `-u/--url`：Douyin 主页采集。
+- `--input-dir`：已有视频目录，复用同一媒体处理队列。
+- `--document-dir`：文档目录，使用同一状态与磁盘保护机制；源文档永不删除。
+
+不要恢复旧的 `douyin2txt.py`、`cloud_runner.py`、`video2txt.py`、`doc2md.py` 独立入口。
+
+## 模块职责
+
+| 路径 | 职责 |
+|---|---|
+| `social2md.py` | 唯一 CLI 启动入口 |
+| `social2md_app/cli.py` | 统一调度、Douyin 采集、视频目录与文档目录处理 |
+| `social2md_app/video.py` | 视频校验、ASR、视频帧 OCR、文本规范化、Markdown 写入 |
+| `social2md_app/documents.py` | 可选 MarkItDown 文档转换 |
+| `social2md_app/state.py` | 统一 SQLite 状态库 |
+| `social2md_app/storage.py` | 磁盘与 inode 保护 |
+
+## 统一任务规则
+
+1. 状态唯一键必须为 `platform + content_id`，不能只使用作品 ID。
+2. 媒体逐项处理；Douyin 默认每批获取 30 条元数据，但媒体下载和转录并发保持为 1。
+3. 先校验媒体，再处理；Markdown 必须原子写入并通过有效性检查。
+4. 视频只有在输出有效、转录非空且质量未触发复核时才能自动删除。
+5. 失败、异常、空转录、低置信度任务必须保留源视频。
+6. 文档转换永远不删除源文档。
+7. `REVIEW_REQUIRED` 默认不自动重试；用户显式传入 `--retry-review` 才重新处理。
+8. 磁盘暂停阈值 95%，恢复阈值 90%，最低可用空间 1 GiB。
+9. 断点状态和旧 Douyin 数据库必须保留；升级状态 schema 时实现迁移，不得直接删除用户状态。
+10. 测试与安装阶段禁止真实下载、真实 Cookie 和真实账号访问。
+
+## 兼容性与依赖
+
+- Python 3.10+；云端建议 Python 3.11。
+- 系统依赖：ffmpeg、ffprobe。
+- 核心依赖见 `requirements.txt`。
+- OCR 和 MarkItDown 为可选依赖，见 `requirements-optional.txt`。
+- Cookie 通过 Codex Cloud 安全环境变量 `DOUYIN_COOKIE` 注入，不得打印或提交。
+
+## 验证命令
 
 ```bash
-pip install -r requirements.txt
-# OCR / doc2md 需要时再装：
-pip install -r requirements-optional.txt
-```
-
-## 入口
-
-| 文件 | 用途 |
-|------|------|
-| `douyin2txt.py` | 当前 Douyin 适配器与 CLI：下载抖音主页视频 → 转录/OCR → Markdown |
-| `video2txt.py` | 本地目录视频 → 逐个转 `.txt` |
-| `doc2md.py` | 本地文档 → Markdown（依赖 markitdown） |
-| `cloud_runner.py` | 当前 Douyin 云端运行器：小批量获取作品、逐个下载转录、磁盘保护与断点恢复 |
-| `cloud_state.py` | 云端作品状态和分页游标持久化 |
-| `storage_guard.py` | 多目录文件系统、空间和 inode 保护 |
-
-常用命令：
-
-```bash
-python douyin2txt.py --help
-python video2txt.py --help
-python doc2md.py --help
-python cloud_runner.py --help
+python -m py_compile social2md.py social2md_app/*.py
 python -m unittest discover -s tests -v
-
-# 只处理已下载视频，不联网下载
-python douyin2txt.py -b 测试 --skip-download
-
-# 只修复已有 md 的繁简/标点/分段（幂等）
-python douyin2txt.py -b 博主名 --repair-docs
+python social2md.py --help
+python social2md.py --input-dir /tmp/social2md-empty --dry-run
 ```
 
-## 验证
+不要在自动化测试中调用真实平台下载或转录模型。新平台必须通过独立适配器接入，并提供模拟测试与端到端验收证据。
 
-修改代码后至少执行：
+## 文件与文档规范
 
-```bash
-python -m py_compile douyin2txt.py video2txt.py doc2md.py cloud_runner.py cloud_state.py storage_guard.py
-python -m unittest discover -s tests -v
-python douyin2txt.py --help >/dev/null
-```
-
-自动化测试和环境初始化阶段禁止真实下载。当前 cloud_runner.py 仅支持 Douyin；只有用户明确授权后才可执行真实下载。不得在测试中使用真实 Cookie。新增平台必须先实现独立适配器并完成端到端验收，不得直接复用 Douyin API。
-
-## 目录约定
-
-- `output/<博主名>/<运行日期>/`：Markdown 成品，按博主和批次分目录
-- `videos/<博主名>/`：视频缓存；云端入口仅在转录校验成功且质量合格后删除
-- `state/`：云端作品状态、分页游标和暂停信息
-- `exports/`：只包含 Markdown 的检查点 ZIP
-- `models/sherpa-onnx-punct-ct-transformer-zh-en-vocab272727-2024-04-12/`：可选标点模型，
-  缺失时自动退化为按停顿补句号
-- 以上目录及 `*.db`、`logs/` 均不入库
-
-## 约束
-
-- 不要提交 `douyin_cookie.yaml`、`*.db`、`*.sqlite3*`、`output/`、`videos/`、`models/`、`logs/`、`state/`、`exports/` 等数据或凭证
-- 不要新增重型依赖；OCR/markitdown 保持可选，缺失时应能正常运行核心流程
-- 保持现有 CLI 参数兼容：`-u/-b/-c`、`--skip-download`、`--repair-docs`、`--clean-videos`
-- 转录输出必须保持：繁转简、补中文标点、按停顿分段
-- 代码注释使用中文
+- 目录、文件名、Python 标识符使用英文 snake_case。
+- 文档正文使用中文。
+- 文档统一放在 `docs/`。
+- 测试命名为 `tests/test_<module_or_behavior>.py`。
+- 不提交 Cookie、数据库、媒体、模型、运行日志和输出目录。

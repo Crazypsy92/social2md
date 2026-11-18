@@ -1,322 +1,131 @@
-# Social2MD 使用指南（当前 Douyin 适配器）
+# Social2MD 使用指南
 
-Social2MD 的总体定位是多平台社交视频与图文内容归档工具。**当前版本实际接入的是抖音主页视频采集**，并提供本地视频 ASR、视频帧 OCR 和 Markdown 输出；Bilibili、小红书尚未接入下载流程。
+Social2MD 只有一套处理流水线，不区分云端版和本地版。抖音主页、已有视频目录和文档目录使用同一个命令入口、任务状态库、磁盘保护和恢复机制。
 
-本指南后续命令均针对当前 Douyin 适配器。不要将这些抖音主页链接、Cookie 或 F2 参数直接用于其他平台。
+## 1. 环境准备
 
-包含三个脚本：
-
-| 脚本 | 用途 |
-|------|------|
-| `douyin2txt.py` | 当前 Douyin 适配器：抖音主页 → 下载 → 语音转录/画面识别 → Markdown |
-| `video2txt.py` | 本地某个目录里的视频 → 逐个转 `.txt` |
-| `doc2md.py` | 本地文档（PDF/Word/PPT/Excel 等）→ 批量转 `.md` |
-
----
-
-## 一、环境准备
-
-### 1. 依赖
-
-| 依赖 | 说明 |
-|------|------|
-| Python 3.10+ | 本机为 3.14.4 |
-| ffmpeg | 抽音频、抽帧，必须能在命令行直接调用 |
-| f2 | 抖音下载工具（命令行 `f2`） |
-| faster-whisper | 本地语音转录，无需 GPU、无需联网 |
-| easyocr + opencv-python | OCR 模式（识别画面文字）才需要 |
-| opencc | 繁体转简体（语音转录必装，脚本自动转换） |
-| sherpa-onnx | 中文标点恢复（转录自动补标点、分段） |
-| markitdown | `doc2md.py` 才需要 |
-
-检查 ffmpeg 是否可用：
+建议使用 Codex Cloud 的 Linux Python 环境。执行：
 
 ```bash
-ffmpeg -version
+bash scripts/setup.sh
 ```
 
-安装依赖（本机已全部装好，新机器执行）：
+OCR 和文档转换为可选功能：
 
 ```bash
-pip install f2 faster-whisper opencc-python-reimplemented sherpa-onnx
-# OCR 模式额外安装
-pip install easyocr opencv-python
-# doc2md.py 额外安装
-pip install markitdown
+pip install -r requirements-optional.txt
 ```
 
-> 首次运行会自动下载 whisper 模型（`small` 约 500MB），需要联网；之后转录全程离线。
-> 标点模型放在工程内 `models/sherpa-onnx-punct-ct-transformer-zh-en-vocab272727-2024-04-12/model.onnx`（约 294MB）。文件缺失时会退化为「按停顿补句号」，不影响转录。
+系统需要 ffmpeg / ffprobe。初始化和测试阶段不会下载真实作品。
 
----
-
-## 二、配置抖音 Cookie（首次必做）
-
-f2 下载需要登录状态。首次使用按下面步骤生成 `douyin_cookie.yaml`；换账号或 cookie 过期时重新配置：
-
-1. 复制模板：把 `douyin_cookie.example.yaml` 复制为 `douyin_cookie.yaml`。
-2. 浏览器登录 [douyin.com](https://www.douyin.com)，按 `F12` → **网络(Network)** → 随便点一个请求 → **请求头(Request Headers)** → 复制 `Cookie:` 后面的一整串。
-3. 粘贴到 `douyin_cookie.yaml` 的 `cookie` 字段（保留两侧引号）。
-
-```yaml
-douyin:
-  cookie: "你的完整 cookie 字符串"
-  mode: "post"          # 抓主页作品
-  naming: "{desc}"      # 文件名=视频标题
-  desc: true            # 同时保存原文案
-```
-
-> `douyin_cookie.yaml` 含账号凭证，已被 `.gitignore` 忽略，**不要提交、不要外传**。
-
-**常见配置项**：
-
-- `naming`：默认 `"{desc}"`。如果博主大量视频标题重复，同名 md 会互相覆盖导致漏内容，改成 `"{aweme_id}_{desc}"` 用作品 ID 区分即可拿全。
-- `page_counts`：一次翻页抓取数量，一般不用改。
-
----
-
-## 三、最简用法
-
-一条命令完成「下载 → 转录 → 输出 md → 保留视频待校验」：
+## 2. 唯一命令入口
 
 ```bash
-python douyin2txt.py \
-  -u "https://www.douyin.com/user/MS4wLjABAAAA..." \
-  -b "暴躁桃姐"
+python social2md.py --help
 ```
 
-- `-u`：博主主页完整链接，必须带 `sec_uid`（`MS4wLj...` 那串）。纯抖音号不行；可以用分享短链 `https://v.douyin.com/xxx` 跳转后复制地址栏。
-- `-b`：博主名，用于分文件夹，不填则为 `未分类`。
+三种输入来源互斥，一次运行只选择一种：
 
-默认结果：
+| 参数 | 输入 | 处理方式 |
+|---|---|---|
+| `-u URL` | Douyin 主页 | F2 分页获取作品，逐项下载和转录 |
+| `--input-dir PATH` | 已有视频目录 | 逐项校验、ASR/OCR、Markdown |
+| `--document-dir PATH` | 文档目录 | 逐项转换为 Markdown |
 
-```
-<工程目录>/output/<博主名>/<运行日期>/*.md     ← md 成品，按批次分文件夹
-<工程目录>/output/<博主名>/<运行日期>/images/  ← 关键帧图片（加了 --save-frames 才有）
-<工程目录>/videos/<博主名>/              ← 视频目录，存工程内，转完保留，校验后清理
-```
+## 3. Douyin 主页
 
----
+在 Codex Cloud 安全环境变量中配置 `DOUYIN_COOKIE`。不要把 Cookie 写进命令、任务提示词、日志或仓库。
 
-## 四、参数说明
-
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `-u, --url` | 抖音主页链接 | 使用 `--skip-download` 时可省略 |
-| `-c, --config` | f2 配置文件（含 cookie） | `douyin_cookie.yaml` |
-| `-b, --blogger` | 博主名，用于分目录 | `未分类` |
-| `--download-dir` | 视频下载目录，存工程内，转完默认保留 | `<工程>/videos/<博主名>` |
-| `--out-dir` | md 输出目录 | `<工程>/output/<博主名>/<日期>/` |
-| `--model` | 转录模型：`tiny/base/small/medium/large-v3` | `small` |
-| `--language` | 转录语言 | `zh` |
-| `--ocr` | OCR 模式，识别画面文字（不做语音转录） | 关 |
-| `--frame-interval` | 抽帧间隔秒数（OCR/关键帧） | `3` |
-| `--save-frames` | 转录同时导出关键帧图片 | 关 |
-| `--frames-only` | 不转录，只对已下载视频导出关键帧 | 关 |
-| `--max-frames` | 每个视频最多导出几张 | `12` |
-| `--skip-download` | 跳过下载，只处理已下好的视频 | 关 |
-| `--delete-video` | 转完立即删除视频（默认保留） | 关 |
-| `--clean-videos` | 校验完成后清理缓存视频，不下载/转录 | 关 |
-| `--force` | 覆盖已存在的同名 md | 关 |
-| `--repair-docs` | 只修复已有 md（繁转简、补标点、分段），不下载/转录 | 关 |
-
-模型选择建议：
-
-- `small`：默认，中文口播效果够用，速度适中。
-- `medium` / `large-v3`：普通话不标准、口音重、背景音多时更准，但 CPU 上会慢很多。
-- `tiny` / `base`：只求速度、对准确率要求不高时用。
-
----
-
-## 五、常用场景
-
-### 1. 口播类视频（语音模式，最常用）
+先处理 30 个作品：
 
 ```bash
-python douyin2txt.py -u "<主页链接>" -b "博主名" --model small --language zh
+python social2md.py -u "主页链接" -b "作者名称" --batch-size 30 --max-items 30
 ```
 
-### 2. 文字卡 / 金句 / 图文轮播（OCR 模式）
+确认输出质量后，去掉 `--max-items 30` 继续扫描。默认每批获取最多 30 条作品元数据，但下载和转录始终一次处理一个作品。
 
-画面里全是文字、没什么口播时，用 OCR 识别画面：
+## 4. 已有视频目录
 
 ```bash
-python douyin2txt.py -u "<主页链接>" -b "博主名" --ocr --frame-interval 3
+python social2md.py --input-dir "videos/inbox" -b "视频归档"
 ```
 
-`--frame-interval` 越小识别越全，但速度越慢；文字停留较久可调大到 4~5。
+视频目录走与 Douyin 下载任务相同的处理规则：
 
-### 3. 增量补更（重复运行）
+1. 检查源视频能否被 ffprobe 读取。
+2. 提取音频并进行 ASR，或使用 `--ocr` 做视频帧 OCR。
+3. 繁转简、标点恢复和自然段整理。
+4. Markdown 原子写入并验证内容。
+5. 检查转录质量；低置信度标记为 `REVIEW_REQUIRED`。
+6. 只有全部通过才自动删除源视频。
 
-直接再执行同一条命令即可。脚本会扫描 `output/<博主名>/` 下**所有批次**里已有的 md 标题，已转过的视频自动跳过，只处理新增作品。
+如需保留源视频，添加 `--keep-source`。
 
-> ⚠️ 不要删除 `output/<博主名>/` 目录，否则会丢失去重依据，导致全量重转。
+## 5. 文档目录
 
-### 4. 只想转录已下载好的视频
-
-视频已在下载目录里（比如上次中断），跳过下载：
+先安装可选依赖：
 
 ```bash
-python douyin2txt.py -b "博主名" --skip-download
+pip install -r requirements-optional.txt
 ```
 
-### 5. 指定下载目录和输出目录
-
-不用默认路径时：
+运行：
 
 ```bash
-python douyin2txt.py \
-  -u "<主页链接>" \
-  -b "博主名" \
-  --download-dir "./videos/博主名" \
-  --out-dir "./output/博主名/自定义批次"
+python social2md.py --document-dir "documents/inbox" -b "文档归档"
 ```
 
-> 指定 `--out-dir` 后不再自动创建日期文件夹，且查重范围就是该目录本身。
+文档按文件逐项转换，结果非空后原子写入 Markdown。源文档永远不会被删除。
 
-### 6. 视频保留与清理
+## 6. 常用参数
 
-转录完成后视频默认保留在 `videos/<博主名>/`，方便对照校验。校验完执行：
+| 参数 | 作用 | 默认 |
+|---|---|---|
+| `-b, --blogger` | 作者或任务目录名称 | 未分类 |
+| `--batch-size` | Douyin 每批元数据数 | 30 |
+| `--max-items` | 本次最多处理数量，0 为不限 | 0 |
+| `--model` | Whisper 模型 | small |
+| `--language` | 转录语言 | zh |
+| `--ocr` | 使用视频帧 OCR 替代 ASR | 关闭 |
+| `--frame-interval` | OCR / 抽帧间隔秒数 | 3 |
+| `--save-frames` | 同时导出关键帧 | 关闭 |
+| `--keep-source` | 成功后保留视频源文件 | 关闭 |
+| `--retry-review` | 重新处理低置信度任务 | 关闭 |
+| `--force` | 忽略已完成状态并重做 | 关闭 |
+| `--dry-run` | 仅检查，不下载或转换 | 关闭 |
+| `--pause-percent` | 磁盘暂停阈值 | 95% |
+| `--resume-percent` | 磁盘恢复阈值 | 90% |
+| `--min-free-gib` | 最低剩余空间 | 1 GiB |
 
-```bash
-python douyin2txt.py -b "博主名" --clean-videos
+## 7. 断点恢复和状态
+
+状态库按来源保存，作品记录以 `platform + content_id` 为唯一键。已有旧版 Douyin 数据库会自动迁移，旧作品状态不会被丢弃。
+
+- `COMPLETED`：输出通过校验。
+- `PROCESSING`：上次中断时正在处理；重新运行可继续。
+- `FAILED`：失败，源文件保留；重新运行会再次尝试。
+- `REVIEW_REQUIRED`：低置信度，默认跳过；使用 `--retry-review` 重试。
+- `PENDING`：等待磁盘空间恢复。
+
+## 8. 输出结构
+
+```text
+output/
+├── <author_or_job>/
+│   └── YYYY-MM-DD/
+├── documents/
+│   └── <job>/
+videos/
+state/
+exports/
 ```
 
-想恢复“转完即删”的旧行为，加 `--delete-video`。注意：重复下载、已跳过转录的视频会自动删除，不会堆积。
+导出的 ZIP 只包含 Markdown，不包含视频、Cookie、模型和数据库。云端工作目录可能是临时环境，重要 ZIP 需要在任务结束前导出到持久化位置。
 
-### 7. 导出视频关键帧（地图/战线图/图表）
+## 9. 安全约束
 
-转录的同时顺手导出关键画面：
-
-```bash
-python douyin2txt.py -u "<主页链接>" -b "战争局势" --save-frames --max-frames 12
-```
-
-图片保存在 md 同级的 `images/<视频标题>/001.jpg`。程序每 `--frame-interval` 秒抽一帧，并自动去掉几乎相同的帧，最后均匀保留最多 `--max-frames` 张。
-
-视频已经下载好、只想补图片时（不会重新转录）：
-
-```bash
-python douyin2txt.py -b "战争局势" --frames-only
-```
-
-注意：`--frames-only` 依赖 `videos/<博主名>/` 里的视频，清理视频后就无法再补图。
-
-### 8. 强制重转
-
-加 `--force` 覆盖已有 md（会重新转录叠加模型耗时，谨慎使用）：
-
-```bash
-python douyin2txt.py -u "<主页链接>" -b "博主名" --force
-```
-
----
-
-## 六、输出格式
-
-每个视频对应一个 `.md`，文件名即视频标题：
-
-```markdown
-# 视频标题
-
-## 原文案
-
-（抖音帖子自带的文字描述）
-
-## 口播转录
-
-（简体中文全文，已自动补标点并按语音停顿分段；OCR 模式下这一节变为「## 画面文字」）
-```
-
-识别不到内容时写 `（未识别到内容）`。
-
-### 文本整理（自动）
-
-转录完成后脚本会自动做三件事：
-
-1. **繁体转简体**：用 OpenCC `t2s` 转换，避免 Whisper 输出繁体。
-2. **补标点**：每段转录过 sherpa-onnx 中文标点模型，补逗号、句号、问号。
-3. **分自然段**：段间停顿超过 1 秒或单段超过 110 字就换段。
-
-可用环境变量微调：`DY_PARA_GAP`（换段停顿秒数，默认 1.0）、`DY_PARA_CHARS`（单段字数，默认 110）。
-
-### 低置信度清单（自动）
-
-每批语音转录完成后，会生成本批的 `_低置信度清单.md`，列出 Whisper 自己没把握的视频（`avg_logprob < -0.8` 或 `compression_ratio > 2.4`），并给出分数和最差片段。建议优先校验清单里的视频；阈值可用 `DY_LOW_LOGPROB`、`DY_HIGH_COMPRESSION` 调整。
-
-### 修复已有 md
-
-早期批次没有标点或是繁体，可以就地修复（幂等，可重复执行）：
-
-```bash
-python douyin2txt.py -b "博主名" --repair-docs
-# 或指定目录
-python douyin2txt.py --repair-docs --out-dir "output/博主名"
-```
-
-修复只改「## 口播转录」一节，不动标题和原文案。
-
----
-
-## 七、辅助脚本
-
-### 1. `video2txt.py` — 本地视频转文字
-
-把某个目录（含子目录）下所有视频转成同名 `.txt`，默认转完删除视频：
-
-```bash
-python video2txt.py "/path/to/videos" --model small --language zh
-```
-
-| 参数 | 说明 |
-|------|------|
-| `directory` | 目标目录 |
-| `--model` | 默认 `base`，中文建议 `small` 以上 |
-| `--language` | `zh`/`en`/`ja`/`ko`，不填自动检测 |
-| `--dry-run` | 只预览，不实际处理 |
-| `--force` | 覆盖已存在的 `.txt` |
-
-### 2. `doc2md.py` — 文档批量转 Markdown
-
-支持 PDF/DOCX/PPT/PPTX/XLS/XLSX/HTML/EPUB/CSV/JSON/XML，保留原目录结构输出：
-
-```bash
-python doc2md.py -s "/path/to/教程" -d "./output/docs"
-python doc2md.py -s "目录1" -s "目录2" -d "./output/docs"   # 多个源目录
-python doc2md.py -s "/path/to/教程" -d "./output/docs" --dry-run
-```
-
-| 参数 | 说明 |
-|------|------|
-| `-s, --src` | 源目录，可多次指定 |
-| `-d, --dst` | 输出根目录，源目录名会作为一级子目录 |
-| `--dry-run` | 预览模式 |
-| `--force` | 覆盖已有 `.md` |
-
----
-
-## 八、常见问题
-
-**Q1：下载阶段很久没动静，是卡死了吗？**
-不是。f2 每翻一页会强制等待约 30 秒，作品多的号下载阶段本来就慢，耐心等待即可。运行日志在 `logs/` 下。
-
-**Q2：提示找不到配置文件 / 下载失败？**
-检查 `douyin_cookie.yaml` 是否存在、`cookie` 是否已过期。重新按「二、配置 Cookie」步骤更新。
-
-**Q3：下载成功但 md 很少？**
-大概率是视频标题重复导致同名覆盖。把配置里的 `naming` 改为 `"{aweme_id}_{desc}"` 后加 `--force` 重跑。
-
-**Q4：主页链接怎么拿？**
-必须是 `https://www.douyin.com/user/MS4wLj...` 这种带 `sec_uid` 的链接。在抖音 App 里点「分享 → 复制链接」得到短链，浏览器打开后地址栏里的完整地址即可。
-
-**Q5：转录后视频去哪了？**
-默认保留在 `videos/<博主名>/`，校验完成后执行 `--clean-videos` 清理；加 `--delete-video` 则转完立即删除，**不可恢复**。
-
-**Q6：某个视频失败了怎么办？**
-失败视频会留在 `videos/<博主名>/`，不会生成 md；下次运行会被重新处理。可单独用 `--skip-download` 补转。
-
-**Q7：ffmpeg 报中文路径/emoji 文件名错误？**
-脚本内部已处理（先复制成临时 ASCII 文件名再调用 ffmpeg），一般无需手动改名。若仍报错，确认 `ffmpeg`/`ffprobe` 在 PATH 中。
-
-**Q8：能不能只转某个日期之前的内容？**
-当前版本不支持按时间筛选，靠「已有 md 标题」跨批次去重实现增量。新作品会自动补转，老作品自动跳过。
+- 不把 Cookie 写入 Git、日志或命令参数。
+- 不在测试中访问真实账号。
+- 不删除空转录、失败或低置信度视频。
+- 不删除任何源文档。
+- 不手动清空状态数据库来“重置任务”；确需重跑时使用 `--force` 或 `--refresh`。
