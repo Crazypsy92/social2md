@@ -22,7 +22,8 @@ install_ffmpeg
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 
-python3 -m py_compile douyin2txt.py video2txt.py doc2md.py
+python3 -m py_compile douyin2txt.py video2txt.py doc2md.py cloud_runner.py cloud_state.py storage_guard.py
+python3 -m unittest discover -s tests -v
 python3 douyin2txt.py --help >/dev/null
 python3 video2txt.py --help >/dev/null
 python3 doc2md.py --help >/dev/null

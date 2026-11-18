@@ -47,7 +47,44 @@ pip install -r requirements-optional.txt   # OCR 模式 / doc2md.py 才需要
 
 1. 推送仓库到 GitHub，在 Codex 中连接该仓库；
 2. 环境 setup 命令填 `bash scripts/setup.sh`；
-3. 云端没有抖音登录 Cookie，不要跑真实下载；用 `--skip-download` 验证已有视频，或只做代码修改和 `--help` 自检。
+3. 环境安装和自动化测试阶段不要执行真实下载；原有脚本可用 `--skip-download` 验证本地视频。
+4. 用户明确授权真实下载后，使用新增的 cloud_runner.py，不要把 Cookie 写进代码或任务提示词。
+
+
+## 云端批量处理（逐个转录）
+
+新增的云端入口为 cloud_runner.py，不改变原有 douyin2txt.py 的使用方式。
+
+在 Codex Cloud 的安全环境变量中配置 DOUYIN_COOKIE，勿把 Cookie 写进任务提示词、命令参数、日志或 GitHub。也可以使用被 .gitignore 忽略的 douyin_cookie.yaml，但云端优先推荐 Secret 环境变量。
+
+先执行：
+
+~~~bash
+python cloud_runner.py --help
+python cloud_runner.py -u "主页链接" -b "博主名" --batch-size 5 --max-items 5
+~~~
+
+先用 5 个作品做小规模验证。确认结果正确后，再去掉 --max-items 5 执行完整扫描。
+
+默认策略：
+
+- 每批最多获取 5 个作品。
+- 每个作品单独下载、校验、转录和写入 Markdown。
+- 同一时刻只运行一个视频转录任务。
+- Markdown 内容有效且 Whisper 质量指标未触发复核阈值后，才删除视频。
+- 空转录、异常、损坏视频和低置信度作品保留原视频。
+- 以作品 ID 保存状态和分页游标，异常退出后可恢复。
+- 磁盘使用率达到 95% 暂停，低于 90% 才允许恢复，并至少保留 1 GiB 空间。
+- 扫描完成后如需检查新作品，使用 --refresh；已完成作品仍按作品 ID 去重。
+
+输出目录：
+
+- 视频缓存：videos/
+- Markdown：output/
+- 断点状态：state/
+- Markdown 检查点 ZIP：exports/
+
+ZIP 只包含 Markdown，不包含视频、Cookie、模型和运行数据库。云端工作目录可能是临时环境，重要 ZIP 应在任务结束前导出到用户可持久保存的位置。
 
 ## 配置 cookie
 
