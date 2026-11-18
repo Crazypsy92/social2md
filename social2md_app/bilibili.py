@@ -76,6 +76,14 @@ class BilibiliAdapter:
             **options,
         })
         cookie = os.environ.get("BILIBILI_COOKIE", "").strip()
+        cookie_file = os.environ.get("BILIBILI_COOKIE_FILE", "").strip()
+        if not cookie and cookie_file:
+            try:
+                cookie = Path(cookie_file).read_text(encoding="utf-8").strip()
+            except OSError as exc:
+                raise RuntimeError("无法读取 BILIBILI_COOKIE_FILE 指定的凭证文件") from exc
+            if not cookie:
+                raise RuntimeError("BILIBILI_COOKIE_FILE 指定的凭证文件为空")
         if cookie:
             parsed = SimpleCookie()
             parsed.load(cookie)
@@ -125,6 +133,8 @@ class BilibiliAdapter:
             progress_hooks=[check_space],
             postprocessor_hooks=[lambda _: guard.assert_can_start()],
             continuedl=True,
+            # Bilibili CDN 对整文件请求可能拒绝，使用标准 Range 分块下载。
+            http_chunk_size=10 * 1024**2,
         ) as client:
             client.process_ie_result(dict(info), download=True)
         guard.assert_can_start()

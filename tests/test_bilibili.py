@@ -1,6 +1,9 @@
 import tempfile
 import unittest
+import http.cookiejar
+import os
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from social2md_app.bilibili import BilibiliAdapter, access_error, canonical_url
@@ -12,6 +15,43 @@ from social2md_app.video import process_video
 
 
 class BilibiliTests(unittest.TestCase):
+    def test_cookie_file_and_download_chunks(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            cookie_file = root / 'cookie'
+            cookie_file.write_text('SESSDATA=test_session; bili_jct=test_csrf')
+            client = SimpleNamespace(cookiejar=http.cookiejar.CookieJar())
+            adapter = BilibiliAdapter()
+            with patch.dict(os.environ, {'BILIBILI_COOKIE': '', 'BILIBILI_COOKIE_FILE': str(cookie_file)}), \
+                 patch.object(adapter, 'factory', return_value=client) as factory:
+                self.assertIs(adapter._client(), client)
+                self.assertEqual({c.name for c in client.cookiejar}, {'SESSDATA', 'bili_jct'})
+                self.assertTrue(all(c.domain == '.bilibili.com' and c.secure for c in client.cookiejar))
+                self.assertFalse(factory.call_args.args[0].get('nocheckcertificate', False))
+            target = root / 'video.mkv'
+            target.write_bytes(b'media')
+            from unittest.mock import MagicMock
+            with patch.object(adapter, '_client') as create_client:
+                from social2md_app.storage import StorageGuard
+                guard = MagicMock(spec=StorageGuard)
+                adapter.download({'id': 'test'}, target, guard)
+                self.assertEqual(create_client.call_args.kwargs['http_chunk_size'], 10 * 1024**2)
+
+    def test_installed_audio_decoder_compatibility(self):
+        try:
+            from faster_whisper.audio import decode_audio
+        except ImportError:
+            self.skipTest('核心 ASR 依赖未安装')
+        import wave
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'audio.wav'
+            with wave.open(str(path), 'wb') as audio:
+                audio.setnchannels(1)
+                audio.setsampwidth(2)
+                audio.setframerate(16000)
+                audio.writeframes(b'\0\0' * 16000)
+            self.assertEqual(len(decode_audio(str(path))), 16000)
+
     def test_canonical_space_and_part_urls(self):
         self.assertEqual(canonical_url('https://space.bilibili.com/123?spm_id_from=test'),
                          'https://space.bilibili.com/123/video')
