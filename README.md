@@ -1,8 +1,21 @@
-# douyin2md — 抖音视频批量转文案工具
+# Social2MD — 多平台社交内容归档工具
 
-给一个抖音主页链接，自动把该号**全部作品**下载下来，提取**文案文字**，存成 Markdown。转录完成后视频默认保留在工程内 `videos/`，校验无误后用 `--clean-videos` 清理。
+Social2MD 面向抖音、Bilibili、小红书等社交平台，目标是将视频、图文笔记、原始描述及媒体信息统一整理为 Markdown。
 
-支持两种提取模式：
+**当前实现边界：** 已接入抖音主页作品批量下载、视频 ASR/OCR 与 Markdown 输出；Bilibili 和小红书尚未接入本项目的下载流程。通用的视频转录、视频画面 OCR、Markdown 整理能力可以复用，但各平台仍需独立的内容采集适配器。
+
+## 平台支持现状
+
+| 平台 / 内容 | 当前状态 | 后续接入方式 |
+|---|---|---|
+| 抖音视频 / 主页作品 | **已接入** | 当前使用 F2 的 Douyin 接口 |
+| Bilibili 视频 / UP 主空间 | 尚未集成 | 可评估 yt-dlp 的视频与空间列表提取器，完成登录、分页和下载验收后接入 |
+| 小红书视频笔记 | 尚未集成 | 可评估 yt-dlp 的 XiaoHongShu 提取器，需实际链接验证 |
+| 小红书图文笔记 | 尚未集成 | 需要单独解析笔记正文和图片列表、下载图片，并增加图片 OCR |
+
+注意：上游下载器列出某个平台，不等于本项目已经支持该平台；站点结构、登录态和访问限制可能变化。参见 [yt-dlp 支持站点列表](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)。
+
+当前已接入的抖音视频处理支持两种提取模式：
 
 | 模式 | 适用 | 提取内容 |
 |------|------|----------|
@@ -13,7 +26,7 @@
 
 ## 功能
 
-- 📥 **批量下载**：用 [f2](https://github.com/Johnserf-Seed/f2) 抓取主页全部作品（mp4 + 原文案）
+- 📥 **抖音采集适配器**：用 [f2](https://github.com/Johnserf-Seed/f2) 抓取抖音主页作品（mp4 + 原文案）；其他平台尚未接入
 - 📝 **标题当文件名**：每个视频产出一个同名 `.md`
 - 🎙️ **语音转文字**：faster-whisper 本地 CPU 转录（无需 GPU、无需联网 API）
 - 🖼️ **画面转文字**（OCR 模式）：定时抽帧 → 感知哈希去重 → easyocr 识别
@@ -27,8 +40,8 @@
 ## 安装
 
 ```bash
-git clone <你的仓库地址> douyin2md
-cd douyin2md
+git clone <你的仓库地址> social2md
+cd social2md
 bash scripts/setup.sh
 ```
 
@@ -47,7 +60,44 @@ pip install -r requirements-optional.txt   # OCR 模式 / doc2md.py 才需要
 
 1. 推送仓库到 GitHub，在 Codex 中连接该仓库；
 2. 环境 setup 命令填 `bash scripts/setup.sh`；
-3. 云端没有抖音登录 Cookie，不要跑真实下载；用 `--skip-download` 验证已有视频，或只做代码修改和 `--help` 自检。
+3. 环境安装和自动化测试阶段不要执行真实下载；原有脚本可用 `--skip-download` 验证本地视频。
+4. 用户明确授权真实下载后，使用新增的 cloud_runner.py，不要把 Cookie 写进代码或任务提示词。
+
+
+## 当前抖音云端批量处理（逐个转录）
+
+cloud_runner.py 是当前 Douyin 平台的云端适配入口，不是通用多平台下载器；它与 douyin2txt.py 共用当前抖音处理链。
+
+在 Codex Cloud 的安全环境变量中配置 DOUYIN_COOKIE，勿把 Cookie 写进任务提示词、命令参数、日志或 GitHub。也可以使用被 .gitignore 忽略的 douyin_cookie.yaml，但云端优先推荐 Secret 环境变量。
+
+先执行：
+
+~~~bash
+python cloud_runner.py --help
+python cloud_runner.py -u "主页链接" -b "博主名" --batch-size 30 --max-items 30
+~~~
+
+首次建议先处理 30 个作品验证端到端流程。确认结果正确后，再去掉 --max-items 30 执行完整扫描。
+
+默认策略：
+
+- 每批最多获取 30 个抖音作品元数据，**不是同时缓存 30 个视频**；每次只下载、转录和校验一个视频，成功后删除。
+- 每个作品单独下载、校验、转录和写入 Markdown。
+- 同一时刻只运行一个视频转录任务。
+- Markdown 内容有效且 Whisper 质量指标未触发复核阈值后，才删除视频。
+- 空转录、异常、损坏视频和低置信度作品保留原视频。
+- 以作品 ID 保存状态和分页游标，异常退出后可恢复。
+- 磁盘使用率达到 95% 暂停，低于 90% 才允许恢复，并至少保留 1 GiB 空间。
+- 扫描完成后如需检查新作品，使用 --refresh；已完成作品仍按作品 ID 去重。
+
+输出目录：
+
+- 视频缓存：videos/
+- Markdown：output/
+- 断点状态：state/
+- Markdown 检查点 ZIP：exports/
+
+ZIP 只包含 Markdown，不包含视频、Cookie、模型和运行数据库。云端工作目录可能是临时环境，重要 ZIP 应在任务结束前导出到用户可持久保存的位置。
 
 ## 配置 cookie
 
@@ -58,7 +108,9 @@ f2 下载需要登录 cookie。复制 `douyin_cookie.example.yaml` 为 `douyin_c
 
 ---
 
-## 使用方法
+## 当前抖音适配器使用方法
+
+以下命令均针对当前已接入的抖音适配器，不代表 Bilibili 或小红书已经可以直接使用。
 
 ### 1. 语音模式（口播类视频）
 
@@ -117,7 +169,7 @@ python douyin2txt.py \
 # 视频标题
 
 ## 原文案
-（抖音帖子的文字描述）
+（当前适配器写入的平台原始描述）
 
 ## 口播转录        ← 语音模式
 （语音识别的全文）
@@ -139,7 +191,7 @@ python douyin2txt.py \
 
 ## 依赖
 
-- [f2](https://github.com/Johnserf-Seed/f2) — 抖音下载
+- [f2](https://github.com/Johnserf-Seed/f2) — 当前抖音平台下载适配器
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 本地 ASR
 - [easyocr](https://github.com/JaidedAI/EasyOCR) — 画面文字识别
 - [opencc](https://github.com/yichen0831/opencc-python) — 繁简转换

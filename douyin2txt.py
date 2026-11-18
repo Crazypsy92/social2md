@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-douyin2txt — 抖音主页视频批量转文本工具
+Social2MD / Douyin adapter — 抖音主页视频批量转 Markdown 工具
 
 流程：
   1. f2 下载该主页全部视频（视频标题作文件名）+ 文案
@@ -373,7 +373,8 @@ def cleanup_video(video: Path, title: str) -> None:
 def process_video(video: Path, out_dir: Path, existing: set, model_size: str, language: str,
                   delete_video: bool, force: bool,
                   ocr: bool = False, frame_interval: float = 3.0,
-                  save_frames: bool = False, max_frames: int = 12) -> tuple[str, dict | None]:
+                  save_frames: bool = False, max_frames: int = 12,
+                  require_transcript: bool = False) -> tuple[str, dict | None]:
     """返回 (状态, 质量记录)：状态为 ok / skip / fail；质量记录仅在成功语音转录时存在。"""
     title = title_of(video)
     md_path = out_dir / (title + '.md')
@@ -399,9 +400,31 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
         parts = [f'# {title}\n']
         if desc:
             parts.append('## 原文案\n\n' + desc + '\n')
+        if require_transcript and not text.strip():
+            raise RuntimeError('未识别到有效文字，保留原视频等待复核')
+
         parts.append(section + '\n' + (text if text else '（未识别到内容）') + '\n')
         md_path.parent.mkdir(parents=True, exist_ok=True)
-        md_path.write_text('\n'.join(parts), encoding='utf-8')
+        content = '\n'.join(parts)
+        temp_md = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode='w',
+                encoding='utf-8',
+                dir=md_path.parent,
+                prefix=f'.{md_path.name}.',
+                suffix='.tmp',
+                delete=False,
+            ) as handle:
+                temp_md = Path(handle.name)
+                handle.write(content)
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temp_md, md_path)
+        finally:
+            if temp_md is not None:
+                temp_md.unlink(missing_ok=True)
+
         existing.add(title)
         print(f'✅ {md_path.name}  ({len(text)} 字)')
 
@@ -541,7 +564,7 @@ def clean_downloads(root: Path) -> None:
 # ── main ─────────────────────────────────────────────────
 
 def main():
-    ap = argparse.ArgumentParser(description='抖音主页视频批量转文本（下载→ASR→md，视频默认保留待校验）')
+    ap = argparse.ArgumentParser(description='Social2MD 当前 Douyin 适配器：抖音主页视频下载 → ASR/OCR → Markdown')
     ap.add_argument('-u', '--url', help='抖音主页链接（--skip-download 时可省略）')
     ap.add_argument('-c', '--config', default='douyin_cookie.yaml',
                     help='f2 配置文件（含 cookie），默认 douyin_cookie.yaml')

@@ -18,11 +18,16 @@ output/
 videos/
 models/
 logs/
+state/
+exports/
 transcription_work/
 generated_images/
 test_markitdown/
 *.db
 *.db-journal
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
 *.log
 release/
 D:*/

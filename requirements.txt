@@ -3,3 +3,4 @@ f2>=0.0.1.7
 faster-whisper>=1.2.0
 opencc-python-reimplemented>=0.1.7
 sherpa-onnx>=2.0.0
+PyYAML>=6.0
