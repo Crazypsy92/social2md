@@ -3,10 +3,10 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from douyin2txt import process_video
+from social2md_app.video import process_video
 
 
-class ProcessVideoSafetyTests(unittest.TestCase):
+class VideoSafetyTests(unittest.TestCase):
     def test_empty_transcript_does_not_delete_video(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -17,20 +17,14 @@ class ProcessVideoSafetyTests(unittest.TestCase):
             wav.write_bytes(b"fake-wav")
 
             with (
-                patch("douyin2txt.read_desc", return_value=""),
-                patch("douyin2txt.extract_audio", return_value=wav),
-                patch("douyin2txt.transcribe", return_value=([], {"avg_logprob": 0.0})),
-                patch("douyin2txt.format_transcript", return_value=""),
+                patch("social2md_app.video.read_desc", return_value=""),
+                patch("social2md_app.video.extract_audio", return_value=wav),
+                patch("social2md_app.video.transcribe", return_value=([], {"avg_logprob": 0.0})),
+                patch("social2md_app.video.format_transcript", return_value=""),
             ):
                 status, _ = process_video(
-                    video,
-                    output,
-                    set(),
-                    "small",
-                    "zh",
-                    delete_video=True,
-                    force=False,
-                    require_transcript=True,
+                    video, output, set(), "small", "zh",
+                    delete_video=False, force=True, require_transcript=True,
                 )
 
             self.assertEqual(status, "fail")

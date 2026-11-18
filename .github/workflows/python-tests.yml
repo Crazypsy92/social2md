@@ -15,8 +15,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: Compile Python modules
-        run: python -m py_compile douyin2txt.py video2txt.py doc2md.py cloud_runner.py cloud_state.py storage_guard.py
-      - name: Check cloud CLI help
-        run: python cloud_runner.py --help >/dev/null
+        run: python -m py_compile social2md.py social2md_app/*.py
+      - name: Check unified CLI
+        run: python social2md.py --help
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
