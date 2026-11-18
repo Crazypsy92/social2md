@@ -61,14 +61,14 @@ pip install -r requirements-optional.txt   # OCR 模式 / doc2md.py 才需要
 
 ~~~bash
 python cloud_runner.py --help
-python cloud_runner.py -u "主页链接" -b "博主名" --batch-size 5 --max-items 5
+python cloud_runner.py -u "主页链接" -b "博主名" --batch-size 30 --max-items 30
 ~~~
 
-先用 5 个作品做小规模验证。确认结果正确后，再去掉 --max-items 5 执行完整扫描。
+首次建议先处理 30 个作品验证端到端流程。确认结果正确后，再去掉 --max-items 30 执行完整扫描。
 
 默认策略：
 
-- 每批最多获取 5 个作品。
+- 每批最多获取 30 个作品元数据，**不是同时缓存 30 个视频**；每次只下载、转录和校验一个视频，成功后删除。
 - 每个作品单独下载、校验、转录和写入 Markdown。
 - 同一时刻只运行一个视频转录任务。
 - Markdown 内容有效且 Whisper 质量指标未触发复核阈值后，才删除视频。

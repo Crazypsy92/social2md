@@ -6,11 +6,11 @@
 
 在 Codex Cloud 的安全环境变量中配置 DOUYIN_COOKIE。不要把 Cookie 写进任务提示词、命令参数、日志或 GitHub。也可以使用被 .gitignore 忽略的 douyin_cookie.yaml，但云端优先推荐 Secret 环境变量。
 
-先执行 python cloud_runner.py --help 查看参数。真实下载前，先使用小规模验证，例如设置 --batch-size 5 --max-items 5。主页链接通过 -u 传入，博主目录名通过 -b 传入。
+先执行 python cloud_runner.py --help 查看参数。真实下载前，先使用小规模验证，例如设置 --batch-size 30 --max-items 30。主页链接通过 -u 传入，博主目录名通过 -b 传入。
 
 ## 默认处理策略
 
-- 每批最多获取 5 个作品。
+- 每批最多获取 30 个作品元数据，不会一次下载 30 个视频；逐个下载、转录和校验。
 - 每个作品单独下载、校验、转录和写入 Markdown。
 - 同一时刻只执行一个视频转录任务。
 - 只有 Markdown 通过内容校验且质量指标未触发复核阈值，才删除视频。

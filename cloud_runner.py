@@ -187,7 +187,7 @@ def _make_parser() -> argparse.ArgumentParser:
     parser.add_argument("--out-dir", help="Markdown 输出目录，默认 output/<博主名>/<日期>")
     parser.add_argument("--state-dir", default="state", help="断点状态目录")
     parser.add_argument("--export-dir", default="exports", help="Markdown ZIP 导出目录")
-    parser.add_argument("--batch-size", type=int, default=5, help="每批最多获取的作品数，默认 5")
+    parser.add_argument("--batch-size", type=int, default=30, help="每批最多获取的作品数，默认 30（仍逐个下载并转录）")
     parser.add_argument("--max-items", type=int, default=0, help="本次最多处理作品数；0 表示不限制")
     parser.add_argument("--pause-percent", type=float, default=95.0, help="磁盘暂停阈值")
     parser.add_argument("--resume-percent", type=float, default=90.0, help="暂停后恢复阈值")
