@@ -1,25 +1,6 @@
 #!/usr/bin/env python3
 """
-Social2MD shared video processor — 视频 ASR、OCR 与 Markdown 处理
-
-流程：
-  1. f2 下载该主页全部视频（视频标题作文件名）+ 文案
-  2. 对每个 mp4 做 ASR（faster-whisper，本地 CPU）得到口播转录
-  3. 每个视频输出一个 .md（标题 + 原文案 + 口播转录）到目标目录
-     转录结果自动繁转简、补标点、按停顿分段
-  4. 转录成功后删除该视频（不保留）
-
-用法：
-  python douyin2txt.py -u "<主页链接>" -c douyin_cookie.yaml --blogger 暴躁桃姐
-
-  # 默认路径（均在工程目录内）：
-  #   视频下载目录 <工程>/videos/<博主名>/   （存工程内，转完保留，校验后手动清理）
-  #   md 输出目录      <工程>/output/<博主名>/<运行日期>/   每跑一批一个日期文件夹
-  # 去重：只要在 output/<博主名>/ 下任意批次里存在同名 md 就跳过，不会重复转录。
-  # 也可用 --download-dir / --out-dir 显式覆盖。
-  # 只转录已下好的视频、跳过 f2 下载：加 --skip-download
-  # 校验完清理缓存视频：加 --clean-videos
-  # 转完立即删视频（旧行为）：加 --delete-video
+Social2MD shared video processor — 视频校验、ASR、OCR、文本规范化与 Markdown 写入
 """
 
 import os
@@ -33,9 +14,7 @@ from pathlib import Path
 VIDEO_EXTS = {'.mp4', '.mkv', '.mov', '.webm', '.flv', '.avi', '.m4v', '.ts'}
 
 # 工程根目录（本脚本所在目录），默认输出/临时目录都放这里
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUT_BASE = PROJECT_ROOT / 'output'          # md 成品，按博主分文件夹
-DOWNLOAD_BASE = PROJECT_ROOT / 'videos'             # 视频下载目录，按博主分文件夹（存工程内，不放 /tmp）
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 # ── OCR（抽帧 → 去重 → easyocr）─────────────────────────
 
@@ -359,10 +338,11 @@ def process_video(video: Path, out_dir: Path, existing: set, model_size: str, la
                   delete_video: bool, force: bool,
                   ocr: bool = False, frame_interval: float = 3.0,
                   save_frames: bool = False, max_frames: int = 12,
-                  require_transcript: bool = False) -> tuple[str, dict | None]:
+                  require_transcript: bool = False,
+                  output_path: Path | None = None) -> tuple[str, dict | None]:
     """返回 (状态, 质量记录)：状态为 ok / skip / fail；质量记录仅在成功语音转录时存在。"""
     title = title_of(video)
-    md_path = out_dir / (title + '.md')
+    md_path = output_path or (out_dir / (title + '.md'))
 
     if not force and title in existing:
         print(f'⏭  跳过（已存在）：{title}.md')
@@ -527,22 +507,5 @@ def write_quality_report(out_dir: Path, records: list[dict]) -> None:
     p = out_dir / '_低置信度清单.md'
     p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(f'📋 低置信度清单：{p.name}（{len(suspects)}/{len(records)}）')
-
-
-def clean_downloads(root: Path) -> None:
-    """校验完成后清理临时下载目录里的视频/文案/封面。"""
-    if not root.exists():
-        print(f'📭 下载目录不存在：{root}')
-        return
-    files = [p for p in root.rglob('*') if p.is_file()]
-    size = sum(p.stat().st_size for p in files) / (1024 * 1024)
-    for p in files:
-        p.unlink(missing_ok=True)
-    for d in sorted((p for p in root.rglob('*') if p.is_dir()), reverse=True):
-        try:
-            d.rmdir()
-        except OSError:
-            pass
-    print(f'🧹 已清理 {len(files)} 个缓存文件，释放 {size:.1f} MB（{root}）')
 
 

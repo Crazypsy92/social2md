@@ -22,6 +22,7 @@ from .video import (
     process_video,
     title_of,
     write_quality_report,
+    repair_docs,
 )
 from .documents import convert_document, find_documents
 from .storage import StorageGuard, StorageLimitExceeded
@@ -57,7 +58,7 @@ def load_cookie_and_settings(config_path: Path) -> tuple[str, dict]:
         cookie = str(settings.get("cookie") or "").strip()
     if not cookie or cookie in {"在此粘贴你的cookie", "YOUR_COOKIE_HERE"}:
         raise RuntimeError(
-            "缺少抖音 Cookie。请在云端安全环境变量中配置 DOUYIN_COOKIE，"
+            "缺少抖音 Cookie。请在运行环境的安全变量中配置 DOUYIN_COOKIE，"
             "或提供被 Git 忽略的 douyin_cookie.yaml。"
         )
     return cookie, settings
@@ -345,18 +346,18 @@ async def run_cloud(args: argparse.Namespace) -> int:
                         record = state.get_work(aweme_id)
                         status = record.get("status") if record else None
 
-                        if status == "COMPLETED":
+                        if status == "COMPLETED" and not args.force:
                             saved_md = Path(record["md_path"]) if record.get("md_path") else None
                             saved_video = Path(record["video_path"]) if record.get("video_path") else None
                             if saved_md and is_valid_markdown(saved_md):
-                                if saved_video and saved_video.exists():
+                                if saved_video and saved_video.exists() and not args.keep_source:
                                     cleanup_video(saved_video, title_of(saved_video))
                                 processed_this_run += 1
                                 batch_progress += 1
                                 continue
                             state.mark_work(aweme_id, "FAILED", error="已完成记录的 Markdown 不存在或校验失败")
 
-                        if status == "SKIPPED" or (status == "REVIEW_REQUIRED" and not args.retry_review):
+                        if status == "SKIPPED" or (status == "REVIEW_REQUIRED" and not args.retry_review and not args.force):
                             processed_this_run += 1
                             batch_progress += 1
                             continue
@@ -433,7 +434,7 @@ async def run_cloud(args: argparse.Namespace) -> int:
 
                         title = title_of(video_path)
                         md_path = out_dir / f"{title}.md"
-                        if md_path.exists() and is_valid_markdown(md_path):
+                        if md_path.exists() and is_valid_markdown(md_path) and not args.force and not (status == "REVIEW_REQUIRED" and args.retry_review):
                             state.mark_work(
                                 aweme_id, "REVIEW_REQUIRED", title=title,
                                 video_path=str(video_path), md_path=str(md_path),
@@ -487,7 +488,8 @@ async def run_cloud(args: argparse.Namespace) -> int:
                                 aweme_id, "COMPLETED", title=title,
                                 video_path=str(video_path), md_path=str(md_path)
                             )
-                            cleanup_video(video_path, title)
+                            if not args.keep_source:
+                                cleanup_video(video_path, title)
 
                         processed_this_run += 1
                         batch_progress += 1
@@ -539,7 +541,7 @@ async def run_cloud(args: argparse.Namespace) -> int:
                     raise RuntimeError("本批没有取得可恢复的分页进度，已停止以避免死循环")
 
             state.set_meta("paused", "0")
-            print("云端处理结束。")
+            print("任务处理结束。")
             print(f"本次扫描作品数：{processed_this_run}")
             print(f"状态统计：{state.status_counts()}")
             print(StorageGuard.format_snapshot(guard.snapshot()))
@@ -554,7 +556,7 @@ async def run_cloud(args: argparse.Namespace) -> int:
             print("收到中断信号；分页游标和作品状态已保存。")
             return 130
         except Exception as exc:
-            print(f"云端处理异常：{exc}")
+            print(f"任务处理异常：{exc}")
             return 1
 
 
@@ -647,16 +649,33 @@ def run_video_directory(args: argparse.Namespace) -> int:
                 return 75
 
             title = title_of(video)
-            md_path = out_dir / f"{title}.md"
+            relative_parent = video.relative_to(source_dir).parent
+            item_out_dir = out_dir / relative_parent
+            md_path = item_out_dir / f"{title}_{content_id[:8]}.md"
+            item_out_dir.mkdir(parents=True, exist_ok=True)
+
+            if (
+                md_path.exists() and is_valid_markdown(md_path) and not args.force
+                and not (status == "REVIEW_REQUIRED" and args.retry_review)
+            ):
+                state.mark_work(
+                    content_id, "REVIEW_REQUIRED", title=title, video_path=str(video),
+                    md_path=str(md_path),
+                    error="发现已有有效 Markdown；为避免覆盖或误删源视频，保留源视频供人工核验",
+                    platform="file",
+                )
+                processed += 1
+                continue
             state.mark_work(
                 content_id, "PROCESSING", title=title, video_path=str(video),
                 md_path=str(md_path), platform="file",
             )
             result, quality_record = process_video(
-                video, out_dir, set(), args.model, args.language,
+                video, item_out_dir, set(), args.model, args.language,
                 delete_video=False, force=True, ocr=args.ocr,
                 frame_interval=args.frame_interval, save_frames=args.save_frames,
                 max_frames=args.max_frames, require_transcript=True,
+                output_path=md_path,
             )
             if result != "ok" or not is_valid_markdown(md_path):
                 state.mark_work(
@@ -726,6 +745,11 @@ def run_document_directory(args: argparse.Namespace) -> int:
     )
     state_key = hashlib.sha256(str(source_dir).encode("utf-8")).hexdigest()[:20]
     documents = find_documents(source_dir)
+    try:
+        import markitdown  # noqa: F401
+    except ImportError:
+        print("文档转换需要可选依赖，请先安装 requirements-optional.txt。")
+        return 2
     if args.dry_run:
         print("DRY RUN：不会转换或修改源文档。")
         print(f"发现文档：{len(documents)}")
@@ -820,11 +844,17 @@ def main() -> int:
         parser.error("--frame-interval 必须大于 0")
     if args.min_free_gib < 0 or args.poll_seconds <= 0:
         parser.error("磁盘保护参数无效")
-    if args.url:
-        return asyncio.run(run_cloud(args))
-    if args.input_dir:
-        return run_video_directory(args)
-    return run_document_directory(args)
+    if args.refresh and not args.url:
+        parser.error("--refresh 仅适用于 Douyin 主页采集")
+    try:
+        if args.url:
+            return asyncio.run(run_cloud(args))
+        if args.input_dir:
+            return run_video_directory(args)
+        return run_document_directory(args)
+    except KeyboardInterrupt:
+        print("收到中断信号；任务状态已保存。")
+        return 130
 
 
 if __name__ == "__main__":
