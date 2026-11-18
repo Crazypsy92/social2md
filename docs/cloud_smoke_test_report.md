@@ -27,13 +27,13 @@ FFmpeg 成功生成本地 1 秒、64×64 MPEG-4 测试片段，FFprobe 正确读
 
 安装脚本、Python 编译、统一 CLI 帮助和 19 项 unittest 全部通过。测试输出中的空转录失败提示来自保留源视频的安全测试，测试断言通过。
 
-已执行本地空视频目录 dry-run，带本轮输出与状态目录以及 keep-source 参数，发现视频 0 个，磁盘检查正常。这仅验证本地输入流程，目标主页 dry-run 尚未执行。当前 Douyin dry-run 实现本身不读取 Cookie、不访问平台，因此即使成功也不能证明认证与采集可用。
+已执行本地空视频目录 dry-run，带本轮输出与状态目录以及 keep-source 参数，发现视频 0 个，磁盘检查正常。这仅验证本地输入流程，用户补充目标短链后，已执行目标 URL dry-run，退出码为 0，批大小为 30，磁盘保护参数正常。短链是否实际指向主页尚未联网确认。当前 Douyin dry-run 实现本身不读取 Cookie、不访问平台，因此即使成功也不能证明认证与采集可用。
 
 ## 真实运行配置与阻塞
 
 计划配置为 batch-size=30、max-items=30、keep-source、model=small、language=zh，输出分别位于 videos/cloud_smoke_test、output/cloud_smoke_test、state/cloud_smoke_test 和 exports/cloud_smoke_test。
 
-用户提供的目标主页为占位符，实际主页尚未提供；DOUYIN_COOKIE 未配置。按照执行前约束，真实运行停止在前置条件检查阶段。未使用 refresh、force 或 retry-review，未清空或重置状态。
+用户已补充目标短链，公开报告省略链接。运行环境的 DOUYIN_COOKIE 仍未配置，本地 Cookie 文件不存在，环境配置也没有声明凭证绑定。按照执行前约束，真实运行停止在前置条件检查阶段。未使用 refresh、force 或 retry-review，未清空或重置状态。
 
 ## 作品处理统计
 
@@ -74,4 +74,4 @@ SQLite 状态持久化、平台键隔离及旧数据库迁移相关单元测试�
 | 源视频保护 | PASS，仅限本轮未执行删除；真实保留验收待执行 |
 | ZIP 导出 | FAIL，本轮尚无可验收的 ZIP 产物 |
 
-下一步由用户提供实际主页，并在环境设置中安全配置 Cookie。之后先检查目标主页与运行环境，执行目标主页 dry-run，再按最多 30 条、逐项下载转录、保留全部源视频的配置运行。完成质量统计、输出抽查及 ZIP 完整性检查后更新本报告。当前不建议扩大采集范围。
+下一步由用户在环境设置中安全配置 DOUYIN_COOKIE。之后先检查目标主页与运行环境，执行目标主页 dry-run，再按最多 30 条、逐项下载转录、保留全部源视频的配置运行。完成质量统计、输出抽查及 ZIP 完整性检查后更新本报告。当前不建议扩大采集范围。
