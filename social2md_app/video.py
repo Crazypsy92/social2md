@@ -271,14 +271,14 @@ def format_transcript(segments: list[tuple[float, float, str]]) -> str:
     return '\n\n'.join(paras)
 
 
-def transcribe(wav: Path, model_size: str, language: str) -> tuple[list[tuple[float, float, str]], dict]:
+def transcribe(wav: Path, model_size: str, language: str, initial_prompt: str | None = None, segment_details: list | None = None) -> tuple[list[tuple[float, float, str]], dict]:
     """返回 ([(start, end, text), ...], 质量指标)。时间戳用于判断停顿，指标用于筛可疑转录。"""
     model = get_model(model_size)
     segs, _ = model.transcribe(
         str(wav), language=language,
         beam_size=int(os.environ.get('DY_BEAM', '5')),
         vad_filter=True,
-        initial_prompt='以下是普通话口播，请输出简体中文，并带上逗号、句号等标点符号。',
+        initial_prompt=initial_prompt or '以下是普通话口播，请输出简体中文，并带上逗号、句号等标点符号。',
     )
 
     segments = []
@@ -286,6 +286,11 @@ def transcribe(wav: Path, model_size: str, language: str) -> tuple[list[tuple[fl
     quality = {'avg_logprob': 0.0, 'min_logprob': 0.0,
                'max_compression': 0.0, 'max_no_speech': 0.0, 'worst': None}
     for s in segs:
+        if segment_details is not None:
+            segment_details.append({'start': s.start, 'end': s.end, 'text': s.text,
+                                    'avg_logprob': s.avg_logprob,
+                                    'compression_ratio': s.compression_ratio,
+                                    'no_speech_prob': s.no_speech_prob})
         if not s.text.strip():
             continue
         segments.append((s.start, s.end, s.text))

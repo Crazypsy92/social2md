@@ -144,3 +144,7 @@ python social2md.py --help
 ## 版权说明
 
 本项目的历史实现基于开源项目 [hi5jeff/douyinzhengliu](https://github.com/hi5jeff/douyinzhengliu) 修改。原项目未附带许可证；使用和再分发前请自行核实原作者的授权与相关平台规则。
+
+## 中文 ASR 对照实验
+
+ASR-01 提供可选的 Whisper、Paraformer、Qwen 及 pycorrector 对照，保留原文并将差异标为待复核。默认处理入口继续使用现有 Whisper。独立环境与使用步骤见 [实验说明](docs/asr01_usage.md)，已执行的真实数据范围、资源测量和限制见 [模型对照报告](docs/asr01_model_comparison.md)。

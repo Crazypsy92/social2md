@@ -1,0 +1,7 @@
+[
+  {"term":"硬件何工","aliases":[]},
+  {"term":"Buck","aliases":["Bug"]},
+  {"term":"Boost","aliases":[]},
+  {"term":"LDO","aliases":[]},
+  {"term":"DC-DC","aliases":["DCDC"]}
+]

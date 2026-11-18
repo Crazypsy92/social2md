@@ -211,6 +211,15 @@ def _make_parser() -> argparse.ArgumentParser:
     parser.add_argument("--force", action="store_true", help="忽略已完成状态并重新生成 Markdown")
     parser.add_argument("--refresh", action="store_true", help="Douyin 从最新作品重新扫描，已完成作品仍按平台和作品 ID 去重")
     parser.add_argument("--dry-run", action="store_true", help="只检查输入、磁盘和参数，不下载或转换")
+    parser.add_argument("--asr-audit", action="store_true", help="对 input-dir 执行独立 ASR 对照实验")
+    parser.add_argument("--audit-output", default="output/asr01_experiment")
+    parser.add_argument("--audit-python", default="/workspace/.venvs/asr01/bin/python")
+    parser.add_argument("--audit-cache", default="/workspace/.cache/asr01")
+    parser.add_argument("--audit-terms", help="JSON 专业词典路径")
+    parser.add_argument("--audit-limit", type=int, default=4)
+    parser.add_argument("--audit-seconds", type=float, default=30)
+    parser.add_argument("--audit-full", action="store_true", help="覆盖所选视频全长，以 audit-seconds 分块")
+    parser.add_argument("--audit-timeout", type=int, default=1800)
     return parser
 
 
@@ -856,6 +865,11 @@ def main() -> int:
         parser.error("磁盘保护参数无效")
     if args.refresh and not args.url:
         parser.error("--refresh 仅适用于 Douyin 主页采集")
+    if args.asr_audit:
+        if not args.input_dir or args.audit_limit < 1 or args.audit_seconds <= 0:
+            parser.error("ASR 实验需要 input-dir 和正数采样参数")
+        from .asr_audit import run_audit
+        return run_audit(args)
     try:
         if args.url:
             from urllib.parse import urlparse

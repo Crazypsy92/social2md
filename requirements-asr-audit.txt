@@ -1,0 +1,4 @@
+# 独立虚拟环境使用，先从 PyTorch 官方 CPU 源安装 torch 与 torchaudio。
+funasr==1.4.27
+pycorrector==1.1.4
+qwen-asr==0.0.6
