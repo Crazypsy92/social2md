@@ -745,16 +745,16 @@ def run_document_directory(args: argparse.Namespace) -> int:
     )
     state_key = hashlib.sha256(str(source_dir).encode("utf-8")).hexdigest()[:20]
     documents = find_documents(source_dir)
-    try:
-        import markitdown  # noqa: F401
-    except ImportError:
-        print("文档转换需要可选依赖，请先安装 requirements-optional.txt。")
-        return 2
     if args.dry_run:
         print("DRY RUN：不会转换或修改源文档。")
         print(f"发现文档：{len(documents)}")
         print(StorageGuard.format_snapshot(guard.snapshot()))
         return 0
+    try:
+        import markitdown  # noqa: F401
+    except ImportError:
+        print("文档转换需要可选依赖，请先安装 requirements-optional.txt。")
+        return 2
 
     processed = 0
     with TaskState(state_dir / f"documents_{state_key}.sqlite3") as state:
