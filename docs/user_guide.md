@@ -110,6 +110,8 @@ python social2md.py --document-dir "documents/inbox" -b "文档归档"
 
 状态库按来源保存，作品记录以 `platform + content_id` 为唯一键。已有旧版 Douyin 数据库会自动迁移，旧作品状态不会被丢弃。
 
+Python 自带 `sqlite3`，读取状态库不需要额外安装数据库服务。其他程序若需复用去重规则，应只读 `works` 表并按组合键查询；状态 schema、SQLite 驱动和云端备份说明见[状态库集成说明](state_db_integration.md)。GitHub 仓库不包含被 `.gitignore` 排除的 SQLite 状态文件。
+
 - `COMPLETED`：输出通过校验。
 - `PROCESSING`：上次中断时正在处理；重新运行可继续。
 - `FAILED`：失败，源文件保留；重新运行会再次尝试。
