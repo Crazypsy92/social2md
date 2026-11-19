@@ -84,7 +84,7 @@ def run_bilibili(args) -> int:
 
 
 def _run_items(args, state, guard, download_dir, out_dir, export_dir, label, source_url):
-    from .cli import export_markdown_checkpoint, is_valid_markdown, process_media_task
+    from .cli import _safe_name, export_markdown_checkpoint, is_valid_markdown, process_media_task
 
     adapter = BilibiliAdapter()
     processed = 0
