@@ -1,20 +1,24 @@
-# Bilibili 转录文档交付说明
+# Bilibili 转录文档归档说明
 
-本次交付仅包含可阅读的 Markdown 转录文档、只含 Markdown 的检查点 ZIP，以及本说明。源视频、SQLite 状态数据库和运行缓存不包含在交付中。
+本次整理后的交付只保留 large-v3 版和第二个 UP 主当前已有的 Markdown 文档与检查点 ZIP。small 版已从仓库和本地文档输出中删除。源视频、SQLite 状态数据库及运行缓存没有提交。
 
-## 文档清单
+## 归档内容
 
-| UP 主空间 | Markdown 文件 | 检查点 ZIP |
-|---|---:|---|
-| `3707065532942758` | Whisper small 版 10 篇；large-v3 版 10 篇及 1 份低置信度清单 | 两个 ZIP，分别含 10 和 11 个 Markdown 文件 |
-| `1696279173` | 72 篇 | 1 个 ZIP，含 72 个 Markdown 文件 |
+归档快照统一放在 [`docs/archives/bilibili/`](archives/README.md)：
 
-检查点 ZIP 已通过完整性检查，内容均为 Markdown。第二个空间的本地任务状态快照为 71 条 `COMPLETED`、1 条 `FAILED`、2 条 `REVIEW_REQUIRED`；扫描游标位于列表第 60 条，`scan_complete=0`。所以这些文件代表当前已处理结果，不表示该空间已采集完成。
+| UP 主空间 | 内容 | 位置 |
+|---|---|---|
+| `3707065532942758` | large-v3 转录 10 篇、低置信度清单 1 篇、仅含上述 Markdown 的 ZIP | [`large-v3/`](archives/bilibili/3707065532942758/large-v3/) |
+| `1696279173` | 当前 72 篇 Markdown、仅含 Markdown 的 ZIP | [`1696279173/`](archives/bilibili/1696279173/) |
 
-## 云端如何判断作品是否处理过
+第二个空间的任务状态快照为 71 条 `COMPLETED`、1 条 `FAILED`、2 条 `REVIEW_REQUIRED`；扫描游标位于列表第 60 条，`scan_complete=0`。归档只代表当前已生成的文档，不表示空间采集完成。
 
-Bilibili 主页任务以 `platform + content_id` 作为 SQLite 状态库中的唯一键，`content_id` 是 BV 号，分 P 会各自记录。云端恢复同一个主页任务时，状态为 `COMPLETED` 的条目只有在对应 Markdown 有效、且配置了保留源视频时视频仍存在，才会跳过；`FAILED` 条目若源视频仍在会复用视频重试；`REVIEW_REQUIRED` 默认跳过，显式使用 `--retry-review` 才重试。
+## 运行结果与云端去重
 
-因此，仅把 Markdown 和 ZIP 放进 GitHub，**不足以**让新的云端环境可靠判断已处理条目。要跨环境续跑，需要另外安全保留并恢复同一任务的 SQLite 状态库，以及它引用的 Markdown 和源视频；各路径也要能在新环境正确对应。当前这次文档交付没有同步状态库和源视频，所以它适合查看和下载结果，不能单独用于云端断点续跑。新云端处理完成后，需将更新后的状态库持久保存，后续运行才能读取最新进度。
+程序运行结果写入由 `--out-dir`、`--export-dir` 指定的目录；这些目录属于运行数据，不应与人工归档样例混放。仓库内精选归档放在 `docs/archives/`，并附有清单说明其来源和范围。
 
-若使用 `--input-dir` 处理本地视频，状态 ID 根据视频绝对路径的 SHA-256 生成；迁移后路径变化会产生不同 ID。Bilibili 主页模式使用 BV 号作为作品 ID，更适合跨环境续跑。多个环境不要同时写入同一个 SQLite 状态库。
+Bilibili 主页任务以 SQLite 状态库中的 `platform + content_id` 作为唯一键，`content_id` 是 BV 号，分 P 会各自记录。云端恢复同一主页任务时，`COMPLETED` 条目会检查 Markdown 有效性；启用 `--keep-source` 时也要求对应源视频仍存在。`FAILED` 条目若源视频仍在会复用视频重试；`REVIEW_REQUIRED` 默认跳过，显式使用 `--retry-review` 才重试。
+
+因此，GitHub 上的 Markdown 和 ZIP **不能单独让新的云端环境判断任务是否处理过**。跨环境断点续跑还需要保存并恢复任务 SQLite 状态库，以及该状态引用的源视频和输出文件；恢复时需确保配置路径可用。当前归档没有状态库和源视频，只供查看或下载。云端每次处理完成后，应把更新的 SQLite 状态库保存到持久存储，供后续任务读取。
+
+使用 `--input-dir` 时，状态 ID 根据源视频绝对路径的 SHA-256 生成；迁移后路径变化会产生不同 ID。Bilibili 主页模式使用 BV 号，更适合跨路径识别。多个软件/任务请使用独立的输出和状态目录，不要同时写同一个 SQLite 数据库。

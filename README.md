@@ -113,7 +113,17 @@ python social2md.py --input-dir "videos/inbox" --force
 | `exports/` | 只包含 Markdown 的检查点 ZIP |
 | `models/` | 可选的标点恢复模型缓存 |
 
-云端工作目录可能是临时环境。重要 ZIP 应在任务结束前导出到可持久保存的位置。
+以上都是运行时数据目录，默认由 `.gitignore` 排除，不代表项目代码或固定样例。多个软件或任务共用同一工作区时，请为每个任务显式指定独立的下载、输出、状态和导出目录；状态库不要共用或并发写入。例如：
+
+```bash
+python social2md.py -u "主页链接" -b "任务名称" \
+  --download-dir /workspace/data/task-a/videos \\
+  --out-dir /workspace/data/task-a/output \\
+  --state-dir /workspace/data/task-a/state \\
+  --export-dir /workspace/data/task-a/exports
+```
+
+云端工作目录可能是临时环境，需把需要保留的输出和状态库保存到持久存储。仓库中的人工整理归档样例统一放在 [`docs/archives/`](docs/archives/README.md)，不会作为运行时输入，也不会与 `output/` 混放。
 
 ## 项目结构
 
