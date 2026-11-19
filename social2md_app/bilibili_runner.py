@@ -117,7 +117,13 @@ def _run_items(args, state, guard, download_dir, out_dir, export_dir, label, sou
                         continue
 
                 target = download_dir / f"{content_id}_video.mkv"
-                md_path = Path(record["md_path"]) if record and record.get("md_path") else out_dir / f"{content_id}.md"
+                recorded_md_path = Path(record["md_path"]) if record and record.get("md_path") else None
+                if recorded_md_path and recorded_md_path.is_file():
+                    md_path = recorded_md_path
+                else:
+                    title_stem = _safe_name(metadata["title"]).encode("utf-8")[:180]
+                    title_stem = title_stem.decode("utf-8", errors="ignore").rstrip("._-") or content_id
+                    md_path = out_dir / f"{title_stem}_{content_id}.md"
                 saved_video = Path(record["video_path"]) if record and record.get("video_path") else None
                 if saved_video is None or not saved_video.is_file():
                     state.mark_work(content_id, "PENDING_DOWNLOAD", title=metadata["title"], video_path=str(target), platform="bilibili")

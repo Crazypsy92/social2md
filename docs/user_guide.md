@@ -44,7 +44,16 @@ python social2md.py -u "主页链接" -b "作者名称" --batch-size 30 --max-it
 
 确认输出质量后，去掉 `--max-items 30` 继续扫描。默认每批获取最多 30 条作品元数据，但下载和转录始终一次处理一个作品。
 
-## 4. 已有视频目录
+## 4. Bilibili UP 主空间
+
+用 `-b` 指定 UP 主名称，默认 Markdown 路径为 `output/<UP主名称>/<作品标题>_<BV号>.md`。文件名保留标题便于查找，并用 BV 号保证唯一。已有状态记录指向的 Markdown 若仍存在则沿用原路径，缺失时新输出使用标题格式。恢复任务时继续使用相同主页链接和状态目录；SQLite 去重键仍为平台和 BV 号。
+
+```bash
+python social2md.py -u "https://space.bilibili.com/用户ID/video" \
+  -b "UP主名称" --keep-source
+```
+
+## 5. 已有视频目录
 
 ```bash
 python social2md.py --input-dir "videos/inbox" -b "视频归档"
@@ -61,7 +70,7 @@ python social2md.py --input-dir "videos/inbox" -b "视频归档"
 
 如需保留源视频，添加 `--keep-source`。
 
-## 5. 文档目录
+## 6. 文档目录
 
 先安装可选依赖：
 
@@ -77,7 +86,7 @@ python social2md.py --document-dir "documents/inbox" -b "文档归档"
 
 文档按文件逐项转换，结果非空后原子写入 Markdown。源文档永远不会被删除。
 
-## 6. 常用参数
+## 7. 常用参数
 
 | 参数 | 作用 | 默认 |
 |---|---|---|
@@ -97,7 +106,7 @@ python social2md.py --document-dir "documents/inbox" -b "文档归档"
 | `--resume-percent` | 磁盘恢复阈值 | 90% |
 | `--min-free-gib` | 最低剩余空间 | 1 GiB |
 
-## 7. 断点恢复和状态
+## 8. 断点恢复和状态
 
 状态库按来源保存，作品记录以 `platform + content_id` 为唯一键。已有旧版 Douyin 数据库会自动迁移，旧作品状态不会被丢弃。
 
