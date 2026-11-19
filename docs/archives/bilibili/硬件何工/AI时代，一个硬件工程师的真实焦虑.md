@@ -1,4 +1,10 @@
-# BV1hxsE6vEMa
+# AI时代，一个硬件工程师的真实焦虑
+
+## 来源
+
+https://www.bilibili.com/video/BV1hxsE6vEMa
+
+作者：硬件何工
 
 ## 口播转录
 

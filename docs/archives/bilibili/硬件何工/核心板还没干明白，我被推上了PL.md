@@ -1,4 +1,10 @@
-# BV1euWb6AEqy
+# 核心板还没干明白，我被推上了PL
+
+## 来源
+
+https://www.bilibili.com/video/BV1euWb6AEqy
+
+作者：硬件何工
 
 ## 口播转录
 

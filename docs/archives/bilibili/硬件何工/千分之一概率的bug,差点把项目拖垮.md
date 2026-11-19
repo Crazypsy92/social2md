@@ -1,4 +1,10 @@
-# BV19XWM6GEZs
+# 千分之一概率的bug,差点把项目拖垮
+
+## 来源
+
+https://www.bilibili.com/video/BV19XWM6GEZs
+
+作者：硬件何工
 
 ## 口播转录
 
