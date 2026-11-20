@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-20T05:13:58+00:00",
+  "creator": {
+    "name": "幻灵Kuri",
+    "platform": "bilibili",
+    "creator_id": "1632300806",
+    "profile_url": "https://space.bilibili.com/1632300806/video"
+  },
+  "selection_scope": "Cyberpunk 2077 game: 4 ultimate-analysis videos + 5 worldbuilding videos",
+  "deduplication_key": [
+    "platform",
+    "content_id"
+  ],
+  "status_semantics": {
+    "COMPLETED": "Markdown transcript is archived and this item can be skipped by future processing",
+    "PROCESSING": "Selected and currently in progress; not complete",
+    "PENDING": "Selected but not yet processed"
+  },
+  "items": [
+    {
+      "platform": "bilibili",
+      "content_id": "BV1w6D7B2EGU",
+      "title": "赛博朋克 2077【终极解读】04 | 一小时沉浸式重温《往日之影》三大结局 它为何 “救活” 了赛博朋克这个 IP",
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1w6D7B2EGU",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/赛博朋克 2077【终极解读】04 | 一小时沉浸式重温《往日之影》三大结局 它为何 “救活” 了赛博朋克这个 IP.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "87cdbe823e78bc29f9ec17b6186eac9c519dfa6f67b4ca10bdefdbc16a5b841e"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1ybXNBpEPT",
+      "title": "赛博朋克 2077【终极解读】 03 | 从万人唾弃到封神！CDPR的“赎罪”之路！四万字全网独家全结局解读",
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1ybXNBpEPT",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/赛博朋克 2077【终极解读】 03 | 从万人唾弃到封神！CDPR的“赎罪”之路！四万字全网独家全结局解读.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "153c20bc19fbdd1616a39c6de98b16d3f50a623c0cd54468861fbc73ff3aa973"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1XNwmzGELY",
+      "title": "赛博朋克 2077【终极解读】 02 | 4 万字深挖立项始末与主线剧情全貌",
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1XNwmzGELY",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/赛博朋克 2077【终极解读】 02 | 4 万字深挖立项始末与主线剧情全貌.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "1736aa56b81300f4f500804bc94e3d5b04f39c47ad856a57cb9e538968a139bc"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1nQNczNEgV",
+      "title": "赛博朋克 2077【终极解读】01 | 六万五千字深挖游戏世界观 在资本主义下的2077年还会有斩杀线吗？",
+      "status": "PROCESSING",
+      "source_url": "https://www.bilibili.com/video/BV1nQNczNEgV"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1rcPszYEfv",
+      "title": "普通人在夜之城如果活下去 赛博朋克2077世界观解读⑤【终极解读赛博朋克2077 第零期】",
+      "status": "PENDING",
+      "source_url": "https://www.bilibili.com/video/BV1rcPszYEfv"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1bpPFzGEzv",
+      "title": "未来世界的战争到底是由政府还是公司发起的？赛博朋克2077世界观解读④【终极解读赛博朋克2077 第零期】",
+      "status": "PENDING",
+      "source_url": "https://www.bilibili.com/video/BV1bpPFzGEzv"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1hgZ1BxE76",
+      "title": "理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】",
+      "status": "PENDING",
+      "source_url": "https://www.bilibili.com/video/BV1hgZ1BxE76"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1tuZuBnE1D",
+      "title": "美国是怎么分裂的？赛博朋克2077世界观解读②【终极解读赛博朋克2077 第零期】",
+      "status": "PENDING",
+      "source_url": "https://www.bilibili.com/video/BV1tuZuBnE1D"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1nBZLBREcR",
+      "title": "荒坂帝国的崛起 赛博朋克2077世界观解读①【终极解读赛博朋克2077 第零期】",
+      "status": "PENDING",
+      "source_url": "https://www.bilibili.com/video/BV1nBZLBREcR"
+    }
+  ]
+}

@@ -12,3 +12,6 @@
 Markdown 文件名使用作品标题；作品 BV 号保留在文档来源链接中。标题在各自归档中唯一，所以文件名不附加难辨认的 ID 或哈希。ZIP 只含 Markdown。
 
 源视频、SQLite 状态库、模型和运行缓存均不在归档中。云端断点恢复需要单独持久化状态库及其引用的源视频和输出；跨软件读取方式见[状态库集成说明](../state_db_integration.md)。
+
+
+`幻灵Kuri/processed_items.json` 使用 `(platform, content_id)` 去重；其他软件应只把 `COMPLETED` 视为已处理，`PROCESSING` 和 `PENDING` 不算完成。清单中的 `transcript_path` 指向标题命名的 Markdown。
