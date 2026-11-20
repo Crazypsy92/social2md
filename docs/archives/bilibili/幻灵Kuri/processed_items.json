@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T05:13:58+00:00",
+  "updated_at": "2026-11-20T13:53:13+00:00",
   "creator": {
     "name": "幻灵Kuri",
     "platform": "bilibili",
@@ -55,28 +55,40 @@
       "platform": "bilibili",
       "content_id": "BV1nQNczNEgV",
       "title": "赛博朋克 2077【终极解读】01 | 六万五千字深挖游戏世界观 在资本主义下的2077年还会有斩杀线吗？",
-      "status": "PROCESSING",
-      "source_url": "https://www.bilibili.com/video/BV1nQNczNEgV"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1nQNczNEgV",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/赛博朋克 2077【终极解读】01 | 六万五千字深挖游戏世界观 在资本主义下的2077年还会有斩杀线吗？.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "26469ff40817372000497a1be14309a77dcfb52a4b37cc73550f49f265934c84"
     },
     {
       "platform": "bilibili",
       "content_id": "BV1rcPszYEfv",
       "title": "普通人在夜之城如果活下去 赛博朋克2077世界观解读⑤【终极解读赛博朋克2077 第零期】",
-      "status": "PENDING",
-      "source_url": "https://www.bilibili.com/video/BV1rcPszYEfv"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1rcPszYEfv",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/普通人在夜之城如果活下去 赛博朋克2077世界观解读⑤【终极解读赛博朋克2077 第零期】.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "440d8670f7a555f3688f4bb0ad7315ca13579ba66c9f7defb72f40c35339d643"
     },
     {
       "platform": "bilibili",
       "content_id": "BV1bpPFzGEzv",
       "title": "未来世界的战争到底是由政府还是公司发起的？赛博朋克2077世界观解读④【终极解读赛博朋克2077 第零期】",
-      "status": "PENDING",
-      "source_url": "https://www.bilibili.com/video/BV1bpPFzGEzv"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1bpPFzGEzv",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/未来世界的战争到底是由政府还是公司发起的？赛博朋克2077世界观解读④【终极解读赛博朋克2077 第零期】.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "598a5cf67526bae4cb6414428571307de9a12cf5ec8d70bc3756533d2fe9cd00"
     },
     {
       "platform": "bilibili",
       "content_id": "BV1hgZ1BxE76",
       "title": "理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】",
-      "status": "PENDING",
+      "status": "PROCESSING",
       "source_url": "https://www.bilibili.com/video/BV1hgZ1BxE76"
     },
     {

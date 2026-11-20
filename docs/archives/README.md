@@ -8,6 +8,7 @@
 |---|---|---|
 | [硬件何工](bilibili/硬件何工/) | 10 篇 large-v3 转录、1 篇低置信度清单、转录 ZIP | small 版按用户要求移除 |
 | [饶厂长讲传统工科求职](bilibili/饶厂长讲传统工科求职/) | 当前已有的 72 篇 Markdown 和转录 ZIP | 归档时状态为 71 完成、1 失败、2 待复核；扫描尚未结束 |
+| [幻灵Kuri](bilibili/幻灵Kuri/) | 6 篇 large-v3 Markdown、Markdown ZIP、机器可读处理清单 | 9 条已筛选；6 完成、1 处理中、2 待处理 |
 
 Markdown 文件名使用作品标题；作品 BV 号保留在文档来源链接中。标题在各自归档中唯一，所以文件名不附加难辨认的 ID 或哈希。ZIP 只含 Markdown。
 
