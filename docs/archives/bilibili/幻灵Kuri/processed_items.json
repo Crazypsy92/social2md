@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T13:53:13+00:00",
+  "updated_at": "2026-11-22T12:58:50+00:00",
   "creator": {
     "name": "幻灵Kuri",
     "platform": "bilibili",
@@ -88,22 +88,34 @@
       "platform": "bilibili",
       "content_id": "BV1hgZ1BxE76",
       "title": "理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】",
-      "status": "PROCESSING",
-      "source_url": "https://www.bilibili.com/video/BV1hgZ1BxE76"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1hgZ1BxE76",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "f99bac72a4d6b689e6702372580405581a2d6773cecb77418458ae18a7933ee8"
     },
     {
       "platform": "bilibili",
       "content_id": "BV1tuZuBnE1D",
       "title": "美国是怎么分裂的？赛博朋克2077世界观解读②【终极解读赛博朋克2077 第零期】",
-      "status": "PENDING",
-      "source_url": "https://www.bilibili.com/video/BV1tuZuBnE1D"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1tuZuBnE1D",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/美国是怎么分裂的？赛博朋克2077世界观解读②【终极解读赛博朋克2077 第零期】.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "e7b2c1cec34dc2ef3351722e9b2f6b31abbe71821599a7a3db4508548d7b65d5"
     },
     {
       "platform": "bilibili",
       "content_id": "BV1nBZLBREcR",
       "title": "荒坂帝国的崛起 赛博朋克2077世界观解读①【终极解读赛博朋克2077 第零期】",
-      "status": "PENDING",
-      "source_url": "https://www.bilibili.com/video/BV1nBZLBREcR"
+      "status": "COMPLETED",
+      "source_url": "https://www.bilibili.com/video/BV1nBZLBREcR",
+      "transcript_path": "docs/archives/bilibili/幻灵Kuri/荒坂帝国的崛起 赛博朋克2077世界观解读①【终极解读赛博朋克2077 第零期】.md",
+      "model": "faster-whisper large-v3",
+      "language": "zh",
+      "sha256": "7372bf7f2925ab05da4fdafefaad79fec31fc433b578cc8a8854dd4d9424f7e9"
     }
   ]
 }
