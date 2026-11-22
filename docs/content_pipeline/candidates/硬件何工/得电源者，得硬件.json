@@ -1,0 +1,97 @@
+{
+  "source_sha256": "9e9ffd5ec22603d2ed3baadc3eba07c4651b5fdabc165f548587dac59b609df8",
+  "audio_verified": false,
+  "candidates": [
+    {
+      "candidate_id": "manual_review:21:bcd3471e31",
+      "rule": "manual_review",
+      "start": 21,
+      "end": 27,
+      "original": "扫走一年网络",
+      "suggestions": [
+        "少走一年弯路"
+      ],
+      "reason": "FunASR 与 Qwen3-ASR 输出“少走一年弯路”，faster-whisper 输出“稍有一年网络”；存在模型冲突，未核听音频，保留原词并标记待核。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "glossary_alias:92:953151fca6",
+      "rule": "glossary_alias",
+      "start": 92,
+      "end": 96,
+      "original": "DCDC",
+      "suggestions": [
+        "DC-DC"
+      ],
+      "reason": "用户术语词典提供候选；未核听音频，不自动替换。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "manual_review:393:c7e1e502f3",
+      "rule": "manual_review",
+      "start": 393,
+      "end": 395,
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "reason": "电源语境中可能指纹波，但不同识别输出未达成充分一致；这是术语候选，不作为音频校验或已确认纠错。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "manual_review:637:c7e1e502f3",
+      "rule": "manual_review",
+      "start": 637,
+      "end": 639,
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "reason": "电源语境中可能指纹波，但不同识别输出未达成充分一致；这是术语候选，不作为音频校验或已确认纠错。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "manual_review:1051:c7e1e502f3",
+      "rule": "manual_review",
+      "start": 1051,
+      "end": 1053,
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "reason": "电源语境中可能指纹波，但不同识别输出未达成充分一致；这是术语候选，不作为音频校验或已确认纠错。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "manual_review:1075:c7e1e502f3",
+      "rule": "manual_review",
+      "start": 1075,
+      "end": 1077,
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "reason": "电源语境中可能指纹波，但不同识别输出未达成充分一致；这是术语候选，不作为音频校验或已确认纠错。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "glossary_alias:1577:953151fca6",
+      "rule": "glossary_alias",
+      "start": 1577,
+      "end": 1581,
+      "original": "DCDC",
+      "suggestions": [
+        "DC-DC"
+      ],
+      "reason": "用户术语词典提供候选；未核听音频，不自动替换。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    }
+  ]
+}

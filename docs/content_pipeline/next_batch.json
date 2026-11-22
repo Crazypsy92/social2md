@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "pipeline_version": "0.1.1",
+  "updated_at": "2026-11-22T13:38:48+00:00",
+  "ordinary_limit": 3,
+  "ordinary_batch": [
+    {
+      "platform": "bilibili",
+      "content_id": "BV1hgZ1BxE76",
+      "creator": "幻灵Kuri",
+      "title": "理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】",
+      "archive_path": "幻灵Kuri/理想主义者的悲歌 赛博朋克2077世界观解读③【终极解读赛博朋克2077 第零期】.md",
+      "source_sha256": "f99bac72a4d6b689e6702372580405581a2d6773cecb77418458ae18a7933ee8",
+      "character_count": 8339,
+      "candidate_count": 0,
+      "status": "QUEUED"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1nBZLBREcR",
+      "creator": "幻灵Kuri",
+      "title": "荒坂帝国的崛起 赛博朋克2077世界观解读①【终极解读赛博朋克2077 第零期】",
+      "archive_path": "幻灵Kuri/荒坂帝国的崛起 赛博朋克2077世界观解读①【终极解读赛博朋克2077 第零期】.md",
+      "source_sha256": "7372bf7f2925ab05da4fdafefaad79fec31fc433b578cc8a8854dd4d9424f7e9",
+      "character_count": 7226,
+      "candidate_count": 0,
+      "status": "QUEUED"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1hxsE6vEMa",
+      "creator": "硬件何工",
+      "title": "AI时代，一个硬件工程师的真实焦虑",
+      "archive_path": "硬件何工/AI时代，一个硬件工程师的真实焦虑.md",
+      "source_sha256": "05a098f7cb4a31ad916c9e0156a64a595e5a31d22db582470df3f2e12e3d831e",
+      "character_count": 2324,
+      "candidate_count": 0,
+      "status": "QUEUED"
+    }
+  ],
+  "long_documents_separate": [
+    {
+      "platform": "bilibili",
+      "content_id": "BV1rcPszYEfv",
+      "creator": "幻灵Kuri",
+      "title": "普通人在夜之城如果活下去 赛博朋克2077世界观解读⑤【终极解读赛博朋克2077 第零期】",
+      "archive_path": "幻灵Kuri/普通人在夜之城如果活下去 赛博朋克2077世界观解读⑤【终极解读赛博朋克2077 第零期】.md",
+      "source_sha256": "440d8670f7a555f3688f4bb0ad7315ca13579ba66c9f7defb72f40c35339d643",
+      "character_count": 11232,
+      "candidate_count": 0,
+      "status": "LONG_PENDING"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1bpPFzGEzv",
+      "creator": "幻灵Kuri",
+      "title": "未来世界的战争到底是由政府还是公司发起的？赛博朋克2077世界观解读④【终极解读赛博朋克2077 第零期】",
+      "archive_path": "幻灵Kuri/未来世界的战争到底是由政府还是公司发起的？赛博朋克2077世界观解读④【终极解读赛博朋克2077 第零期】.md",
+      "source_sha256": "598a5cf67526bae4cb6414428571307de9a12cf5ec8d70bc3756533d2fe9cd00",
+      "character_count": 12270,
+      "candidate_count": 2,
+      "status": "LONG_PENDING"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1tuZuBnE1D",
+      "creator": "幻灵Kuri",
+      "title": "美国是怎么分裂的？赛博朋克2077世界观解读②【终极解读赛博朋克2077 第零期】",
+      "archive_path": "幻灵Kuri/美国是怎么分裂的？赛博朋克2077世界观解读②【终极解读赛博朋克2077 第零期】.md",
+      "source_sha256": "e7b2c1cec34dc2ef3351722e9b2f6b31abbe71821599a7a3db4508548d7b65d5",
+      "character_count": 11450,
+      "candidate_count": 1,
+      "status": "LONG_PENDING"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1XNwmzGELY",
+      "creator": "幻灵Kuri",
+      "title": "赛博朋克 2077【终极解读】 02 | 4 万字深挖立项始末与主线剧情全貌",
+      "archive_path": "幻灵Kuri/赛博朋克 2077【终极解读】 02 | 4 万字深挖立项始末与主线剧情全貌.md",
+      "source_sha256": "1736aa56b81300f4f500804bc94e3d5b04f39c47ad856a57cb9e538968a139bc",
+      "character_count": 41469,
+      "candidate_count": 0,
+      "status": "LONG_PENDING"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1nQNczNEgV",
+      "creator": "幻灵Kuri",
+      "title": "赛博朋克 2077【终极解读】01 | 六万五千字深挖游戏世界观 在资本主义下的2077年还会有斩杀线吗？",
+      "archive_path": "幻灵Kuri/赛博朋克 2077【终极解读】01 | 六万五千字深挖游戏世界观 在资本主义下的2077年还会有斩杀线吗？.md",
+      "source_sha256": "26469ff40817372000497a1be14309a77dcfb52a4b37cc73550f49f265934c84",
+      "character_count": 50257,
+      "candidate_count": 1,
+      "status": "LONG_PENDING"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1w6D7B2EGU",
+      "creator": "幻灵Kuri",
+      "title": "赛博朋克 2077【终极解读】04 | 一小时沉浸式重温《往日之影》三大结局 它为何 “救活” 了赛博朋克这个 IP",
+      "archive_path": "幻灵Kuri/赛博朋克 2077【终极解读】04 | 一小时沉浸式重温《往日之影》三大结局 它为何 “救活” 了赛博朋克这个 IP.md",
+      "source_sha256": "87cdbe823e78bc29f9ec17b6186eac9c519dfa6f67b4ca10bdefdbc16a5b841e",
+      "character_count": 21002,
+      "candidate_count": 0,
+      "status": "LONG_PENDING"
+    }
+  ],
+  "skipped": [
+    {
+      "content_id": "BV1ybXNBpEPT",
+      "status": "REVIEW_REQUIRED",
+      "reason": "已存在当前源哈希对应的加工结果"
+    },
+    {
+      "content_id": "BV1tqsF65Eks",
+      "status": "REVIEW_REQUIRED",
+      "reason": "已存在当前源哈希对应的加工结果"
+    },
+    {
+      "content_id": "BV1gR7k6EEGq",
+      "status": "REVIEW_REQUIRED",
+      "reason": "已存在当前源哈希对应的加工结果"
+    }
+  ]
+}

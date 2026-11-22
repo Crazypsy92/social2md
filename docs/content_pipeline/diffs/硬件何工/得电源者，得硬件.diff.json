@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "source_sha256": "9e9ffd5ec22603d2ed3baadc3eba07c4651b5fdabc165f548587dac59b609df8",
+  "corrected_sha256": "7245a1b05da8b388ae882c3b61217c8ccad650c3903e30d495df03867a58e2d1",
+  "audio_verified": false,
+  "applied_text_replacements": [
+    {
+      "original": "BUG",
+      "target": "Buck",
+      "start": 97,
+      "end": 100,
+      "evidence_type": "independent_asr_consensus_plus_user_glossary",
+      "independent_asr": [
+        {
+          "model": "faster-whisper 1.2.1",
+          "clip": 1,
+          "range_seconds": [
+            0.0,
+            30.0
+          ],
+          "text": "我说的是 DC-DC、Buck、Boost、LDO 这些"
+        },
+        {
+          "model": "FunASR SeACo Paraformer 1.4.27",
+          "clip": 1,
+          "range_seconds": [
+            0.0,
+            30.0
+          ],
+          "text": "我说的是 DCDC buck boost LDO 这些"
+        },
+        {
+          "model": "Qwen3-ASR-0.6B 0.0.6",
+          "clip": 1,
+          "range_seconds": [
+            0.0,
+            30.0
+          ],
+          "text": "我说的是 DCDC、buck boost、LDO 这些"
+        }
+      ],
+      "audio_verified": false,
+      "reason": "原转录与术语词典别名冲突；faster-whisper、FunASR SeACo、Qwen3-ASR 三种独立输出均识别为 Buck/buck，符合两种以上独立 ASR 一致且词典有明确术语的条件。未人工核听，因此只称文本证据支持，不称音频已验证。"
+    }
+  ],
+  "applied_text_deletions": [],
+  "inserted_review_markers": [
+    {
+      "candidate_id": "manual_review:21:bcd3471e31",
+      "original": "扫走一年网络",
+      "suggestions": [
+        "少走一年弯路"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "glossary_alias:92:953151fca6",
+      "original": "DCDC",
+      "suggestions": [
+        "DC-DC"
+      ],
+      "rule": "glossary_alias",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "manual_review:393:c7e1e502f3",
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "manual_review:637:c7e1e502f3",
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "manual_review:1051:c7e1e502f3",
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "manual_review:1075:c7e1e502f3",
+      "original": "文博",
+      "suggestions": [
+        "纹波"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "candidate_id": "glossary_alias:1577:953151fca6",
+      "original": "DCDC",
+      "suggestions": [
+        "DC-DC"
+      ],
+      "rule": "glossary_alias",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "original_character_count": 2390,
+  "review_character_count": 2602
+}

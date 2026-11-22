@@ -1,0 +1,149 @@
+{
+  "source_sha256": "153c20bc19fbdd1616a39c6de98b16d3f50a623c0cd54468861fbc73ff3aa973",
+  "audio_verified": false,
+  "candidates": [
+    {
+      "candidate_id": "repeated_phrase:27741:ec08083107",
+      "rule": "repeated_phrase",
+      "start": 27741,
+      "end": 27768,
+      "original": "V自然是无法接受这个结果。\n\nV自然是无法接受这个结果",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“V自然是无法接受这个结果”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:27872:912e68ae6a",
+      "rule": "repeated_phrase",
+      "start": 27872,
+      "end": 27889,
+      "original": "你应该来与我一起。你应该来与我一起",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“你应该来与我一起”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31634:677bdcf8b9",
+      "rule": "repeated_phrase",
+      "start": 31634,
+      "end": 31663,
+      "original": "才获得了半个世纪的安宁和权势。才获得了半个世纪的安宁和权势",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“才获得了半个世纪的安宁和权势”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31744:20a0091c4f",
+      "rule": "repeated_phrase",
+      "start": 31744,
+      "end": 31769,
+      "original": "让他不可能拒绝强尼的请求。让他不可能拒绝强尼的请求",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“让他不可能拒绝强尼的请求”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31818:b6f1b8c63d",
+      "rule": "repeated_phrase",
+      "start": 31818,
+      "end": 31843,
+      "original": "合作的原因和心境完全不同。合作的原因和心境完全不同",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“合作的原因和心境完全不同”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31852:201eecefd2",
+      "rule": "repeated_phrase",
+      "start": 31852,
+      "end": 31871,
+      "original": "那就是再干荒版一票。那就是再干荒版一票",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“那就是再干荒版一票”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31903:ef1d6f2259",
+      "rule": "repeated_phrase",
+      "start": 31903,
+      "end": 31926,
+      "original": "想从正面打进去是别想了。想从正面打进去是别想了",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“想从正面打进去是别想了”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31930:5492470545",
+      "rule": "repeated_phrase",
+      "start": 31930,
+      "end": 31951,
+      "original": "他打算开著军用科技的。他打算开著军用科技的",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“他打算开著军用科技的”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31952:cc5a08759e",
+      "rule": "repeated_phrase",
+      "start": 31952,
+      "end": 31971,
+      "original": "专属轰炸机飞闯进去。专属轰炸机飞闯进去",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“专属轰炸机飞闯进去”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:31972:acf3600292",
+      "rule": "repeated_phrase",
+      "start": 31972,
+      "end": 31997,
+      "original": "不过跟50年前的炸荒版塔。不过跟50年前的炸荒版塔",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“不过跟50年前的炸荒版塔”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:32032:ad4771134c",
+      "rule": "repeated_phrase",
+      "start": 32032,
+      "end": 32053,
+      "original": "然后从电梯井一路向下。然后从电梯井一路向下",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“然后从电梯井一路向下”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:32054:1e47add152",
+      "rule": "repeated_phrase",
+      "start": 32054,
+      "end": 32081,
+      "original": "再借助反重力推进器降落底部。再借助反重力推进器降落底部",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“再借助反重力推进器降落底部”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    },
+    {
+      "candidate_id": "repeated_phrase:32082:55a751fc60",
+      "rule": "repeated_phrase",
+      "start": 32082,
+      "end": 32099,
+      "original": "只要靠著出其不意。只要靠著出其不意",
+      "suggestions": [],
+      "reason": "发现相邻重复片段“只要靠著出其不意”；可能是强调或识别重复，不能自动删除。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    }
+  ]
+}

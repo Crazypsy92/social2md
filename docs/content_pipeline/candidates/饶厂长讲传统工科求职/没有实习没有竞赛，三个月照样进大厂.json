@@ -1,0 +1,19 @@
+{
+  "source_sha256": "3f85e0953dc9b2fd4d4910e50f642f28327bf183d2a51a0bf4bee1c168efb22d",
+  "audio_verified": false,
+  "candidates": [
+    {
+      "candidate_id": "manual_review:934:494ab26541",
+      "rule": "manual_review",
+      "start": 934,
+      "end": 941,
+      "original": "电极控制工程师",
+      "suggestions": [
+        "电机控制工程师"
+      ],
+      "reason": "“电机控制工程师”与上下文项目例子相符，是普通话近音误识别候选；该作品没有可用的独立 ASR 对照，本轮未核听音频，不替换原文。",
+      "status": "REVIEW_REQUIRED",
+      "audio_verified": false
+    }
+  ]
+}

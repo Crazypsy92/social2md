@@ -130,7 +130,10 @@ class BilibiliTests(unittest.TestCase):
             import zipfile
             with zipfile.ZipFile(next((root / 'exports').glob('*.zip'))) as archive:
                 self.assertIsNone(archive.testzip())
-                self.assertEqual(sorted(archive.namelist()), ['BV123_p1.md', 'BV123_p2.md'])
+                self.assertEqual(
+                    sorted(archive.namelist()),
+                    ['分_P_1_BV123_p1.md', '分_P_2_BV123_p2.md'],
+                )
 
     def test_listing_failure_is_not_marked_complete(self):
         with tempfile.TemporaryDirectory() as directory:

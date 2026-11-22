@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_sha256": "3f85e0953dc9b2fd4d4910e50f642f28327bf183d2a51a0bf4bee1c168efb22d",
+  "corrected_sha256": "19aed50f7a1c630e8ee893e3abf306506fde99395f9dde185bd823a004d2c8f9",
+  "audio_verified": false,
+  "applied_text_replacements": [],
+  "applied_text_deletions": [],
+  "inserted_review_markers": [
+    {
+      "candidate_id": "manual_review:934:494ab26541",
+      "original": "电极控制工程师",
+      "suggestions": [
+        "电机控制工程师"
+      ],
+      "rule": "manual_review",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "original_character_count": 3655,
+  "review_character_count": 3747
+}
