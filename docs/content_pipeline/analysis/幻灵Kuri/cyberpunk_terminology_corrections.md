@@ -176,7 +176,7 @@
 8. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG 与荒坂、军用科技的关系。
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
 10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
-10. [美国联邦储备委员会 2025 年调查附录（2026 年发布）](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
+11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 
 ## 十、后续维护规则
 
