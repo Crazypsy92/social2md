@@ -78,7 +78,7 @@ EBM 希望收购 TWA，以获得其航空运输和商业设施；轨道航空也
 
 罗斯坦基金为了证明自身并未参与欺诈，向检察机关提交资料，同时雇佣网络黑客调查 MA&F 的数据系统，希望找到相关证据。MA&F 将这一行为视为网络攻击，开始加强网络防护，并组织自己的网络人员反击。
 
-双方的目标逐渐从调查和防御转向破坏对方的金融系统与数据要塞。网络空间中的数据堡垒成为战场，金融数据、账户和企业信息成为攻击对象。网络监察（NetWatch）开始限制网络访问，并打击相关网络犯罪，期间有大量网络人员被捕。
+双方的目标逐渐从调查和防御转向破坏对方的金融系统与数据要塞。网络空间中的数据堡垒成为战场，金融数据、账户和企业信息成为攻击对象。设定资料还把拉撒路集团（Lazarus Group）列为第三次公司战争的参与方；它是一家私人军事承包企业。原始转录没有清楚说明它在冲突中的具体合同关系，因此不应擅自写成它策划了金融诈骗，或把它与 MA&F 合并为同一家公司。网络监察（NetWatch）开始限制网络访问，并打击相关网络犯罪，期间有大量网络人员被捕。
 
 当网络战受到限制后，双方又把冲突扩展到现实世界，雇佣武装人员攻击对方的网络通信设施。原始资料强调，实际发生的短时间实体冲突造成的人员伤亡和财产损失，甚至超过了后续数月网络攻击的总和。
 
@@ -114,7 +114,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 
 这场灾难与传奇黑客瑞奇·巴特莫斯（Rache Bartmoss）有关。巴特莫斯长期反对巨型企业对网络和信息的控制，并在自己的程序中留下了 R.A.B.I.D.S. 病毒。2022 年，企业袭击导致巴特莫斯死亡，他留下的触发机制随后释放病毒，最终造成旧网（Old NET）大规模崩溃。
 
-原始转录将病毒听成了“Rabbit”或“Rapids”，这是明显的 ASR 错误。正确名称是 R.A.B.I.D.S.，其英文展开为 Roving Autonomous Bartmoss Interface Drones。它与数据崩溃事件有关，但两者不是同一个名词：R.A.B.I.D.S. 是病毒，DataKrash 是由其引发的网络灾难。
+原始转录将 R.A.B.I.D.S. 听成了“Rabbit”或“Rapids”，这是明显的 ASR 错误。R.A.B.I.D.S. 的英文展开为 Roving Autonomous Bartmoss Interface Drones，指瑞奇·巴特莫斯留下的自我复制、具有攻击性的 AI 程序群。DataKrash 则涉及巴特莫斯植入旧网的 DataKrash 代码/协议，以及 2022 年由此引发的网络崩溃事件。不同资料有时会把 DataKrash 简称为病毒，也有资料把 R.A.B.I.D.S. 单独称为病毒；为避免把两者混为一谈，本稿将 R.A.B.I.D.S. 视为程序群，将 DataKrash 视为代码/协议及其引发的灾难。
 
 数据崩溃破坏了旧网的大量区域，企业数据库、金融系统和通信网络受到严重影响。此后，网络监察（NetWatch）逐步建立黑墙（Blackwall），将危险的旧网络空间与人类继续使用的网络隔离开来。
 
@@ -122,7 +122,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 
 #### 7. 2023 年荒坂塔核爆：战争的代价由整座城市承担
 
-2023 年 8 月 20 日，夜之城荒坂塔遭到袭击，一枚战术核装置被引爆，造成大规模人员伤亡，市中心形成长期无法正常使用的热区。
+2023 年 8 月 20 日，夜之城荒坂塔遭到袭击，一枚战术核装置被引爆，造成大规模人员伤亡，市中心形成长期无法正常使用的热区。以 Cyberpunk RED 时间线为基础的资料记载，爆炸当场约有 50 万人死亡，随后还有约 25 万人死于余波；不同资料对统计口径的表述略有差异，本文将其作为设定时间线中的估算数字，而非精确人口统计。
 
 这一事件成为第四次公司战争最具标志性的节点。荒坂塔不仅是企业总部，也是夜之城权力结构的重要象征。核爆摧毁了企业设施，也摧毁了大量平民生活空间。战争中的企业目标和普通居民的生存环境在这里发生了直接碰撞。
 
@@ -194,8 +194,8 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 | CINO | 国际海事与海洋公司（CINO） | 第四次公司战争最初参与方 |
 | OTEC | 海洋科技与能源公司（OTEC） | 第四次公司战争最初参与方 |
 | IHAG | 国际商船公司（IHAG） | 破产后引发 CINO 与 OTEC 争夺 |
-| Rabbit / Rapids | R.A.B.I.D.S. | 巴特莫斯留下的病毒名称 |
-| 出网陨落 | 数据崩溃（DataKrash） | 2022 年网络灾难 |
+| Rabbit / Rapids | R.A.B.I.D.S.（Roving Autonomous Bartmoss Interface Drones） | 巴特莫斯留下的自我复制 AI 攻击程序群；不要把其名称误听成 Rabbit 或 Rapids |
+| 出网陨落 | 数据崩溃（DataKrash） | 与巴特莫斯植入的 DataKrash 代码/协议及 R.A.B.I.D.S. 程序群释放有关的 2022 年网络灾难 |
 | 瑞奇·巴特莫斯 | 瑞奇·巴特莫斯（Rache Bartmoss） | 传奇黑客 |
 | 网间 | 网络监察（NetWatch） | 网络监管机构 |
 | 初网 | 旧网（Old NET） | 数据崩溃前的全球网络 |
@@ -224,7 +224,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 - 第三次公司战争的 MA&F 中文译名存在不同写法，本稿保留英文全称和缩写。
 - 第四次公司战争的“影子战争”“热战”等阶段划分，需注意不同版本设定资料的年份口径。
 - 2023 年荒坂塔核爆的行动队构成、核装置安放者和强尼的具体死亡过程存在版本差异；强尼在游戏中的记忆不应直接当作全知视角的历史记录。
-- 原始转录把 R.A.B.I.D.S.、DataKrash、旧网和黑墙混为一谈，本稿已区分病毒、事件、旧网络和隔离屏障。
+- 原始转录把 R.A.B.I.D.S.、DataKrash、旧网和黑墙混为一谈；本稿区分 DataKrash 代码/协议与灾难事件、R.A.B.I.D.S. 程序群、旧网络和隔离屏障。不同设定资料对“DataKrash 病毒”的简称用法不完全一致。
 - 原始视频中的部分战争伤亡、企业损失和设施数量未逐条核实，不作为本稿的独立统计结论。
 
 ### 八、资料校核入口
@@ -233,8 +233,10 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 2. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG、荒坂与军用科技的冲突过程。
 3. [Major events in the Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED 时间线为基础的事件节点。
 4. [Johnny Silverhand｜CD PROJEKT RED 官方中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——强尼·银手、武侍、亚当·重锤等官方中文名称。
-5. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平与数据崩溃相关设定。
-6. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——病毒名称及其与旧网崩溃的关系。
+5. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
+6. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——R.A.B.I.D.S. 程序群与旧网崩溃的关系。
+7. [DataKrash｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/DataKrash)——DataKrash 代码/协议与 2022 年数据崩溃事件。
+8. [Cyberpunk RED Core Rulebook（术语与时间线）](https://foundrydndplaza.sfo2.digitaloceanspaces.com/Cyberpunk_RED/CPR%20-%20Corebook%20-%20Cyberpunk%20Red%20v122.pdf)——R.A.B.I.D.S.、DataKrash 和旧网相关术语。
 7. [Cyberpunk 2077 Ultimate Edition Game Booklet｜CD PROJEKT RED](https://cdn-s-cyberpunk.cdprojektred.com/CP2077-UE-Booklet-EN-1.pdf)——强尼·银手与 2023 年荒坂塔事件的官方游戏手册表述。
 
 **资料使用说明：** 本稿以原始转录的叙述结构为基础，并利用设定资料修正专名和时间线。对于版本之间存在分歧的事件，保留差异说明，不把某一版本的叙事强行写成唯一事实。
