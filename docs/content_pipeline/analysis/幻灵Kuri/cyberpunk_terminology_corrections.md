@@ -35,6 +35,16 @@
 
 | 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
 |---|---|---|
+| Sasai Arasaka | 荒坂三斋 | 荒坂公司的创始人、荒坂三郎之父 |
+| Saburo Arasaka | 荒坂三郎 | 不写成荒坂三郎以外的近音字 |
+| Kei Arasaka | 荒坂敬 | 不写成荒坂靖、荒坂静 |
+| Yorinobu Arasaka | 荒坂赖宣 | 不写成荒坂赖轩 |
+| Hanako Arasaka | 荒坂华子 | 部分资料写作“花子”，本项目统一“华子” |
+| Michiko Arasaka (Saburo's wife) | 三郎第三任妻子 Michiko Arasaka | 与 Kei 的女儿 Michiko Sanderson 不是同一个人 |
+| Michiko Sanderson (née Arasaka) | 荒坂美智子（Michiko Sanderson） | Kei 的女儿、Saburo 的孙女；不要与三郎第三任妻子混淆 |
+
+| 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
+|---|---|---|
 | Johnny Silverhand | 强尼·银手 | 强尼赢手、强引手、强尼英手 |
 | Robert John Linder | 罗伯特·约翰·林德 | 罗伯特约翰林德 |
 | Alt Cunningham | 奥特·坎宁安 | 奥特凯尼安、奥特·凯宁安 |
@@ -146,6 +156,15 @@
 | 37% 与“完全付不起 400 美元” | 37% 来自 2024 年调查，指不能完全用现金或等价方式支付；2025 年调查中 12% 表示目前无法支付 |
 
 ## 九、外部资料与术语依据
+
+
+- [荒坂公司｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂公司)——荒坂集团及其人物关系。
+- [荒坂敬｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_敬)——Kei 的中文名称与家族关系。
+- [荒坂赖宣｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_赖宣)——Yorinobu 的中文名称与家族关系。
+- [荒坂华子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_华子)——Hanako 的中文名称与家族关系。
+- [荒坂美智子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_美智子)——Kei 的女儿 Michiko。
+- [Michiko Arasaka（Saburo's wife）｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Arasaka_%28Saburo%27s_wife%29)——Saburo 的第三任妻子，与孙女 Michiko Sanderson 区分。
+- [Michiko Sanderson｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Sanderson)——Kei 的女儿、Saburo 的孙女。
 
 1. [CD PROJEKT RED 官方简体中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——角色名称、阿德卡多、莫克斯帮、武侍、强尼·银手等。
 2. [CD PROJEKT RED：创伤小组官方介绍](https://www.cyberpunk.net/zh-cn/news/22154/sai-bo-peng-ke-2077-e3-2018yu-gao-pian-zhu-zheng-jie-du-di-shi-er-ji-ep12-chuang-shang-xiao-zu)——Trauma Team 的中文名称和会员制服务说明。
