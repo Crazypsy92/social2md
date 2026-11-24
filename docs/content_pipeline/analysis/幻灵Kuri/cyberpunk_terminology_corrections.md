@@ -1,0 +1,166 @@
+# Cyberpunk 2077 专名与转录校正规范
+
+> 适用范围：social2md 中幻灵Kuri发布的《赛博朋克 2077》系列内容。  
+> 用途：统一 ASR 错字、人物音译、企业译名、帮派名称和世界观术语，供后续分析稿复用。  
+> 原则：优先采用游戏内简体中文、CD PROJEKT RED 中文资料和中文设定资料库的常见名称；没有稳定中文译名时保留英文原名，不自行创造看似准确的音译。
+
+## 一、基础校正规则
+
+1. 先识别英文专名，再确定中文译名，不根据 ASR 近音汉字直接判断人物或组织。
+2. 中文译名与英文原名首次并列，后文统一使用中文简称。
+3. 不同组织不能为了叙事方便合并分类：流浪者家族、街头帮派、私人军事公司、执法机构和商业企业必须分开。
+4. 病毒、事件、网络和组织必须分开。例如 R.A.B.I.D.S. 是病毒，DataKrash 是数据崩溃事件，Old NET 是旧网，Blackwall 是黑墙。
+5. 版本存在分歧时保留英文名并注明口径，不把某个粉丝译名写成官方唯一译名。
+6. 原始转录不覆盖修改。校正只进入 analysis 新稿和本术语表。
+
+## 二、城市、人物与城市建设
+
+| 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
+|---|---|---|
+| Night City | 夜之城 | 夜市城、叶之城、叶志城 |
+| Richard Night | 理查德·奈特 | 理查德耐特、奈德 |
+| Miriam Night | 米莉亚姆·奈特 | 米利安·耐特、米利安 |
+| Halsey, Ferris and Night (HFN) | Halsey、Ferris 与 Night 建筑公司（HFN） | Healthy Ferris & Knight；不要省略 Night |
+| Night International | 奈特国际 | 夜市国际、夜之城国际 |
+| Night Foundation | 奈特基金会 | 夜市基金会 |
+| Night Corp / Night Corporation | 夜氏集团（Night Corp） | 夜市公司、夜之城公司；部分资料也译作“奈特集团”，本项目优先采用中文 WIKI 的“夜氏集团” |
+| Coronado City | 科罗纳多市 | 科罗纳多城 |
+| Del Coronado Bay | 德尔科罗纳多湾 | 德尔科罗纳多海湾 |
+| Morro Bay | 莫罗湾 | 墨龙湾、莫洛湾 |
+| Morro Bay Massacre | 莫罗湾大屠杀 | 莫罗湾屠杀 |
+| Parkview Tower | Parkview Tower（公园景观塔） | 建议保留英文，避免地点误认 |
+| Avian Extermination Act | 鸟类灭绝法案 | 不能扩大为“所有动物灭绝” |
+
+## 三、人物与核心技术
+
+| 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
+|---|---|---|
+| Johnny Silverhand | 强尼·银手 | 强尼赢手、强引手、强尼英手 |
+| Robert John Linder | 罗伯特·约翰·林德 | 罗伯特约翰林德 |
+| Alt Cunningham | 奥特·坎宁安 | 奥特凯尼安、奥特·凯宁安 |
+| Rache Bartmoss | 瑞奇·巴特莫斯 | 拉奇·巴特莫斯；首次出现并列英文 |
+| Morgan Blackhand | 摩根·黑手 | 摩根黑手 |
+| Spider Murphy | 蜘蛛·墨菲 | 蜘蛛莫菲 |
+| Rogue Amendiares | 罗格（Rogue Amendiares） | 首次出现保留英文 |
+| Adam Smasher | 亚当·重锤 | 亚当众锤、亚当重锤 |
+| Ulf Grunwalder | 乌尔夫·格伦瓦尔德 | 沃尔夫格伦瓦尔德 |
+| Soulkiller | 灵魂杀手 | 灵魂杀者 |
+| Mikoshi | 神舆 | 神鱼 |
+| Relic | Relic 芯片（分离芯片） | 一季、Relic 生物芯片；不要误写成普通存储卡 |
+| R.A.B.I.D.S. | R.A.B.I.D.S. 病毒 | Rabbit、Rapids、Rabbids；没有稳定官方中文名时保留英文缩写 |
+| DataKrash | 数据崩溃（DataKrash） | 出网陨落；它是事件名，不是病毒名 |
+| Old NET | 旧网（Old NET） | 初网；应与 2077 年市民网络区分 |
+| Blackwall | 黑墙 | 它是隔离屏障 |
+| NetWatch | 网络监察（NetWatch） | 网间、网监 |
+| Ihara-Grubb Transformation Algorithms | Ihara-Grubb Transformation Algorithms（IGTA） | IG 算法；没有稳定官方中文译名时不强行音译 |
+| Cyberware | 义体 | 一体、议题、异体 |
+| Ripperdoc | 义体医生 | 义体医生/义体医生诊所按句意选择 |
+| Braindance | 超梦 | 脑舞 |
+| Rockerboy | 摇滚小子 | 摇滚男孩 |
+| Samurai | 武侍 | 武士乐队；官方中文页面采用“武侍” |
+
+## 四、企业、机构与国家
+
+| 英文原名 | 统一中文写法 | 注意事项 |
+|---|---|---|
+| Arasaka | 荒坂（荒坂公司） | 不写成荒板 |
+| Militech | 军用科技（军用科技公司） | 不写成居用科技 |
+| Biotechnica | 生物科技（Biotechnica） | 与普通“生物技术”描述区分 |
+| Kang Tao | 康陶 | 不写成康陶科技，除非具体来源如此命名 |
+| Petrochem | 沛卓石化 | 不写成佩卓、佩特罗 |
+| SovOil | 苏石油（SovOil） | 部分旧资料译作苏石化或苏维埃石油，本项目统一用“苏石油” |
+| Kiroshi / Kiroshi Optics | 歧路司（Kiroshi）／歧路司光学 | 奇洛希、奇路斯、基罗希 |
+| Euro Business Machines (EBM) | 欧洲商业机器公司（EBM） | 欧洲商业机械公司可理解，本项目统一“机器” |
+| Orbital Air | 轨道航空 | 不要与欧洲航天局混淆 |
+| Zetatech | 泽塔科技 | 不写成泽塔技术 |
+| Trauma Team | 创伤小组（Trauma Team） | “创伤小队”也是常见资料译法；本项目采用 CD PROJEKT RED 官方中文网站用语“创伤小组” |
+| NCPD | 夜之城警察局（NCPD） | 不与 MaxTac 混为一谈 |
+| MaxTac | 暴恐机动队（MaxTac） | 不写成爆孔机动队；是高危赛博精神病事件的专业战术力量 |
+| NUSA | 新美国（NUSA） | 正式全称语境可写“新美利坚合众国” |
+| Free States | 自由州 | 不等于一个统一国家 |
+| Unification War | 统一战争 | 新美国与自由州之间的国家统一冲突，不属于四次公司战争 |
+| European Economic Community (EEC) | 欧洲经济共同体（EEC） | 不要与欧盟直接等同 |
+
+## 五、公司战争与组织专名
+
+| 英文原名 | 统一中文写法 | 说明 |
+|---|---|---|
+| First Corporate War | 第一次公司战争 | 部分资料译作第一次企业战争 |
+| Second Corporate War | 第二次公司战争 | 部分资料译作第二次企业战争；起始年份在资料版本中有 2007/2008 口径差异 |
+| Third Corporate War | 第三次公司战争 | 主要在网络空间进行 |
+| Fourth Corporate War | 第四次公司战争 | 也称第四次企业战争；本项目统一用“公司战争” |
+| TransWorld Airlines (TWA) | 环球航空（TWA） | 第一次公司战争收购争端中的目标企业 |
+| Merrill, Asukaga & Finch (MA&F) | Merrill, Asukaga & Finch（MA&F） | 中文译名不统一，正文保留英文全称和缩写 |
+| Rothstein Fund | 罗斯坦基金 | 第三次公司战争相关金融机构 |
+| Lazarus Group | 拉撒路集团 | 私人军事承包企业 |
+| CINO | 国际海事与海洋公司（CINO） | 第四次公司战争初期参与方 |
+| OTEC | 海洋科技与能源公司（OTEC） | 第四次公司战争初期参与方 |
+| IHAG | 国际商船公司（IHAG） | CINO 与 OTEC 争夺其破产后的剩余资产 |
+| Eurobank | 欧洲银行 | 参与第四次公司战争前期的金融博弈 |
+
+## 六、夜之城主要帮派与流浪者
+
+| 英文原名 | 统一中文写法 | 组织分类与注意事项 |
+|---|---|---|
+| Aldecaldos | 阿德卡多 | 流浪者家族／游牧民氏族，不是普通街头帮派 |
+| Wraiths | 夜游鬼 | 流浪者氏族，与阿德卡多敌对 |
+| Valentinos | 瓦伦蒂诺帮 | 社区根基鲜明的街头帮派 |
+| Maelstrom | 漩涡帮 | 以极端义体改造和暴力文化著称 |
+| 6th Street | 六街帮 | 有第四次公司战争退伍军人背景 |
+| The Mox | 莫克斯帮 | 由性工作者、朋克和边缘群体组成的自我保护型帮派 |
+| Tyger Claws | 虎爪帮 | 不写成胡爪帮、五爪帮 |
+| Animals | 动物帮 | 重视身体力量、强化药物和格斗 |
+| Voodoo Boys | 巫毒帮 | 具有海地社群背景，名称带有外部命名色彩 |
+| Scavengers | 清道夫 | 多个独立犯罪团伙，不是一个统一帮派 |
+
+## 七、地区、服务与物品
+
+| 英文原名 | 统一中文写法 |
+|---|---|
+| Watson | 沃森区 |
+| Westbrook | 威斯特布鲁克 |
+| Heywood | 海伍德 |
+| Santo Domingo | 圣多明戈 |
+| Pacifica | 太平洲 |
+| Badlands | 恶土 |
+| Japantown | 日本街 |
+| Kabuki | 歌舞伎区 |
+| Little China | 小唐人街 |
+| Dogtown | 狗镇 |
+| Lizzie's Bar | 丽姿酒吧 |
+| Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
+
+## 八、容易混淆的设定关系
+
+| 不应混为一谈的术语 | 正确关系 |
+|---|---|
+| R.A.B.I.D.S. 与 DataKrash | R.A.B.I.D.S. 是病毒；DataKrash 是其引发的数据崩溃事件 |
+| Old NET 与 Blackwall | Old NET 是数据崩溃前的全球网络；Blackwall 是后来用于隔离危险旧网络区域的屏障 |
+| Soulkiller 与 Relic | Soulkiller 是意识数字化/复制相关技术；Relic 是承载人格印记的芯片技术产品 |
+| Night International、Night Foundation、Night Corp | 奈特国际是理查德·奈特的开发公司；奈特基金会由米莉亚姆·奈特建立；后续组织重组为夜氏集团 |
+| Aldecaldos 与街头帮派 | 阿德卡多是流浪者家族，不能直接归类为夜之城街头帮派 |
+| Scavengers 与单一帮派 | 清道夫是多个独立团伙的统称，不是统一组织 |
+| NCPD 与 MaxTac | NCPD 是夜之城警察局；MaxTac 是专业战术单位 |
+| Trauma Team 与公共医疗 | 创伤小组是会员/合同制的专业救援服务，不等于普遍公共医疗 |
+| Unification War 与 Corporate Wars | 统一战争是新美国试图整合自由州的国家战争，不是第五次公司战争 |
+| 37% 与“完全付不起 400 美元” | 37% 指不能完全用现金或等价方式支付；2025 年调查中 12% 才表示无法以任何方式支付 |
+
+## 九、外部资料与术语依据
+
+1. [CD PROJEKT RED 官方简体中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——角色名称、阿德卡多、莫克斯帮、武侍、强尼·银手等。
+2. [CD PROJEKT RED：创伤小组官方介绍](https://www.cyberpunk.net/zh-cn/news/22154/sai-bo-peng-ke-2077-e3-2018yu-gao-pian-zhu-zheng-jie-du-di-shi-er-ji-ep12-chuang-shang-xiao-zu)——Trauma Team 的中文名称和会员制服务说明。
+3. [赛博朋克 2077 WIKI：组织分类](https://wiki.biligame.com/cyberpunk2077/分类:组织)——主要帮派、流浪者、企业和执法力量的中文分类。
+4. [歧路司｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/歧路司)——Kiroshi 的中文名称和企业业务。
+5. [夜氏集团｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/夜氏集团)——Night Corp 的中文名称和沿革。
+6. [Night City Gangs｜Low Life Lore](https://lowlifelore.com/night-city-gangs)——2026-11-01 更新的帮派/流浪者分类和组织特征；该站为非官方资料，作为交叉核对来源。
+7. [赛博朋克世界历史时间线｜机核 GCORES](https://www.gcores.com/articles/185013)——公司战争、数据崩溃、黑墙和统一战争时间线。
+8. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG 与荒坂、军用科技的关系。
+9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
+10. [美国联邦储备委员会 2025 年家庭经济状况报告](https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-savings-investments.htm)——400 美元意外支出的统计口径。
+
+## 十、后续维护规则
+
+- 新发现的错误写法先加入本表，再统一更新受影响的分析稿。
+- 只改分析稿和术语表，不覆盖原始转录。
+- 发现不同来源译名冲突时，记录来源、版本和采用理由。
+- 不能确认的专名保留英文，不为追求“全中文”而臆造译名。
