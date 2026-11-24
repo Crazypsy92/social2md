@@ -134,9 +134,27 @@ original_preserved: true
 夜之城的霓虹越明亮，越需要追问：是谁在决定城市如何运转，谁能获得安全和医疗，谁又只能承担企业竞争与战争的代价？
 
 
+### 六、术语与人物关系校正
+
+| 原转录或容易混淆的写法 | 本稿统一写法 | 校正说明 |
+|---|---|---|
+| 荒坂三斋 | 荒坂三斋（Sasai Arasaka） | 荒坂公司的创始人、荒坂三郎之父 |
+| 荒坂三郎 | 荒坂三郎（Saburo Arasaka） | 荒坂集团的核心掌权者 |
+| 荒坂敬、荒坂靖、荒坂静 | 荒坂敬（Kei Arasaka） | 三郎长子，曾任荒坂公司 CEO；转录中的“靖”“静”属于同音识别错误 |
+| 荒坂赖宣 | 荒坂赖宣（Yorinobu Arasaka） | 三郎次子，敬的弟弟 |
+| 荒坂华子、荒坂花子 | 荒坂华子（Hanako Arasaka） | 三郎女儿，赖宣的妹妹；中文资料有“花子/华子”写法，本项目统一“华子” |
+| 荒坂美智子（妻子） | 三郎第三任妻子（Michiko Arasaka） | 1954 年出生，1999 年去世，是赖宣和华子的母亲 |
+| 荒坂美智子（敬的女儿） | 荒坂美智子（Michiko Sanderson，née Arasaka） | Kei 的女儿、Saburo 的孙女，参与 2045 年荒坂派系斗争；与三郎第三任妻子不是同一个人 |
+| 神鱼 | 神舆（Mikoshi） | 荒坂用于储存数字人格的设施/项目名称 |
+| 灵魂杀者 | 灵魂杀手（Soulkiller） | 与意识数字化、人格复制相关的技术 |
+| 奥特凯宁安 | 奥特·坎宁安（Alt Cunningham） | 灵魂杀手技术的开发者 |
+| 一季 | Relic 芯片（Relic） | 不是“一季”；2077 主线中也称“分离芯片” |
+
+**人物关系特别说明：** 原始视频同时提到 Saburo 的第三任妻子 Michiko Arasaka，以及 Kei 的女儿 Michiko Sanderson。两人都可能被中文转录成“荒坂美智子”，但她们是不同人物。前者是 Yorinobu 与 Hanako 的母亲；后者是 Kei 的女儿、Saburo 的孙女，也是 2045 年荒坂“鸠”派系的核心人物。后续正文必须保留英文名以免混淆。
+
 ### 七、原始材料列出的参考链接
 
-以下链接来自原始转录。本批次没有逐条打开核验，因此只保留为后续查证入口：
+以下链接来自原始转录或本轮补充校核，作为后续查证入口：
 
 - [Saburo Arasaka](https://cyberpunk.fandom.com/wiki/Saburo_Arasaka)
 - [Arasaka](https://cyberpunk.fandom.com/wiki/Arasaka)
@@ -144,6 +162,14 @@ original_preserved: true
 - [Michiko Sanderson](https://cyberpunk.fandom.com/wiki/Michiko_Sanderson)
 - [Kei Arasaka](https://cyberpunk.fandom.com/wiki/Kei_Arasaka)
 - [Sasai Arasaka](https://cyberpunk.fandom.com/wiki/Sasai_Arasaka)
+- [荒坂公司｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂公司)
+- [荒坂敬｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_敬)
+- [荒坂赖宣｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_赖宣)
+- [荒坂华子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_华子)
+- [荒坂美智子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_美智子)
+- [Michiko Arasaka（Saburo's wife）｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Arasaka_%28Saburo%27s_wife%29)
+- [Michiko Sanderson｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Sanderson)
+
 
 ### 八、转录待核验与材料边界
 
