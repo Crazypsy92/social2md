@@ -116,7 +116,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 
 原始转录将 R.A.B.I.D.S. 听成了“Rabbit”或“Rapids”，这是明显的 ASR 错误。R.A.B.I.D.S. 的英文展开为 Roving Autonomous Bartmoss Interface Drones，指瑞奇·巴特莫斯留下的自我复制、具有攻击性的 AI 程序群。DataKrash 则涉及巴特莫斯植入旧网的 DataKrash 代码/协议，以及 2022 年由此引发的网络崩溃事件。不同资料有时会把 DataKrash 简称为病毒，也有资料把 R.A.B.I.D.S. 单独称为病毒；为避免把两者混为一谈，本稿将 R.A.B.I.D.S. 视为程序群，将 DataKrash 视为代码/协议及其引发的灾难。
 
-数据崩溃破坏了旧网的大量区域，企业数据库、金融系统和通信网络受到严重影响。此后，网络监察（NetWatch）逐步建立黑墙（Blackwall），将危险的旧网络空间与人类继续使用的网络隔离开来。
+2014 年，旧网采用 Ihara-Grubb Transformation Algorithms（IGTA）进行重构，巴特莫斯把 DataKrash 代码植入新的网络架构。2022 年触发后，数据崩溃破坏了旧网的大量区域，企业数据库、金融系统和通信网络受到严重影响。此后，网络监察（NetWatch）逐步建立黑墙（Blackwall）；设定时间线通常将黑墙的建成节点放在 2044 年前后，用于把危险的旧网络区域与人类继续使用的网络隔离开来。
 
 这场灾难也揭示了反抗行为的复杂性。巴特莫斯希望摧毁企业利用网络控制社会的能力，但他释放的病毒并没有只针对企业。网络基础设施、公共信息和普通用户同样受到波及。一个人可以出于反抗压迫的动机采取行动，却未必能够控制行动造成的全部后果。
 
@@ -236,7 +236,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 5. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
 6. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——R.A.B.I.D.S. 程序群与旧网崩溃的关系。
 7. [DataKrash｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/DataKrash)——DataKrash 代码/协议与 2022 年数据崩溃事件。
-8. [Cyberpunk RED Core Rulebook（术语与时间线）](https://foundrydndplaza.sfo2.digitaloceanspaces.com/Cyberpunk_RED/CPR%20-%20Corebook%20-%20Cyberpunk%20Red%20v122.pdf)——R.A.B.I.D.S.、DataKrash 和旧网相关术语。
+
 7. [Cyberpunk 2077 Ultimate Edition Game Booklet｜CD PROJEKT RED](https://cdn-s-cyberpunk.cdprojektred.com/CP2077-UE-Booklet-EN-1.pdf)——强尼·银手与 2023 年荒坂塔事件的官方游戏手册表述。
 
 **资料使用说明：** 本稿以原始转录的叙述结构为基础，并利用设定资料修正专名和时间线。对于版本之间存在分歧的事件，保留差异说明，不把某一版本的叙事强行写成唯一事实。
