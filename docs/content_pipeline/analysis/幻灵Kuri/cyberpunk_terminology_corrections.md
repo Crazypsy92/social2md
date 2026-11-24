@@ -47,8 +47,8 @@
 | Soulkiller | 灵魂杀手 | 灵魂杀者 |
 | Mikoshi | 神舆 | 神鱼 |
 | Relic | Relic 芯片（分离芯片） | 一季、Relic 生物芯片；不要误写成普通存储卡 |
-| R.A.B.I.D.S. | R.A.B.I.D.S. 病毒 | Rabbit、Rapids、Rabbids；没有稳定官方中文名时保留英文缩写 |
-| DataKrash | 数据崩溃（DataKrash） | 出网陨落；它是事件名，不是病毒名 |
+| R.A.B.I.D.S. | R.A.B.I.D.S. 程序群（Roving Autonomous Bartmoss Interface Drones） | Rabbit、Rapids、Rabbids；指自我复制、具有攻击性的 AI 程序群，不宜简单等同于 DataKrash |
+| DataKrash | 数据崩溃（DataKrash） | 出网陨落；涉及巴特莫斯植入的代码/协议及其引发的网络灾难。部分时间线资料简称为 DataKrash virus，正文应避免与 R.A.B.I.D.S. 程序群混为一谈 |
 | Old NET | 旧网（Old NET） | 初网；应与 2077 年市民网络区分 |
 | Blackwall | 黑墙 | 它是隔离屏障 |
 | NetWatch | 网络监察（NetWatch） | 网间、网监 |
@@ -134,7 +134,7 @@
 
 | 不应混为一谈的术语 | 正确关系 |
 |---|---|
-| R.A.B.I.D.S. 与 DataKrash | R.A.B.I.D.S. 是病毒；DataKrash 是其引发的数据崩溃事件 |
+| R.A.B.I.D.S. 与 DataKrash | R.A.B.I.D.S. 是自我复制的 AI 攻击程序群；DataKrash 是植入旧网的代码/协议及其引发的网络崩溃事件。不同设定资料有时会把 DataKrash 简称为病毒 |
 | Old NET 与 Blackwall | Old NET 是数据崩溃前的全球网络；Blackwall 是后来用于隔离危险旧网络区域的屏障 |
 | Soulkiller 与 Relic | Soulkiller 是意识数字化/复制相关技术；Relic 是承载人格印记的芯片技术产品 |
 | Night International、Night Foundation、Night Corp | 奈特国际是理查德·奈特的开发公司；奈特基金会由米莉亚姆·奈特建立；后续组织重组为夜氏集团 |
@@ -143,7 +143,7 @@
 | NCPD 与 MaxTac | NCPD 是夜之城警察局；MaxTac 是专业战术单位 |
 | Trauma Team 与公共医疗 | 创伤小组是会员/合同制的专业救援服务，不等于普遍公共医疗 |
 | Unification War 与 Corporate Wars | 统一战争是新美国试图整合自由州的国家战争，不是第五次公司战争 |
-| 37% 与“完全付不起 400 美元” | 37% 指不能完全用现金或等价方式支付；2025 年调查中 12% 才表示无法以任何方式支付 |
+| 37% 与“完全付不起 400 美元” | 37% 来自 2024 年调查，指不能完全用现金或等价方式支付；2025 年调查中 12% 表示目前无法支付 |
 
 ## 九、外部资料与术语依据
 
@@ -156,7 +156,8 @@
 7. [赛博朋克世界历史时间线｜机核 GCORES](https://www.gcores.com/articles/185013)——公司战争、数据崩溃、黑墙和统一战争时间线。
 8. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG 与荒坂、军用科技的关系。
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
-10. [美国联邦储备委员会 2025 年家庭经济状况报告](https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-savings-investments.htm)——400 美元意外支出的统计口径。
+10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
+11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 
 ## 十、后续维护规则
 
