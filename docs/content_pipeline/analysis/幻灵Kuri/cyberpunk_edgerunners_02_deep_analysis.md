@@ -86,6 +86,32 @@ updated: 2026-11-25
 
 **分析：** 第一季以大卫死亡、露西抵达月球为结束；第二季让多位角色存活，却没有恢复他们以前的生活。塔莉亚与微克都需要面对失去义体后如何重建自身价值。D 的最后一跃则保持歧义，不能直接写成“死了”“去了月球”或“胜利归来”。编剧 2026 年 10 月的剧透访谈称第二季结局比第一季更加开放，拒绝把它确定成简单的美好结局。[主创访谈](https://comicbook.com/anime/feature/cyberpunk-edgerunners-showrunner-talks-season-2-ending-future-plans-more/)
 
+## 制作访谈补充：第二季如何有意避开第一季的复制
+
+第二季不是简单换一批角色、沿用第一季的表达模板。CDPR 编剧兼 showrunner Bartosz Sztybor 在 2026 年 10 月的文章中，把两季概括为一组镜像：第一季是年轻人从零走向传奇，第二季则让曾经成名的边缘行者从高处跌落；第一季从孩子的视角观察母亲如何影响选择，第二季则把父母一代的处境和代际差异放到台前。两季共享“选择、牺牲、关系与系统”的问题，但不要求给出相同答案。[CDPR：One City, Many Stories](https://www.cdprojektred.com/en/blog/199/one-city-many-stories-building-cyberpunk-edgerunners-2-and-update-2-5)
+
+导演 Kai Ikarashi 在 2026 年 10 月接受 Game*Spark 采访时，解释了自己对第一季结局的反思：大卫的结局虽然悲惨，但强烈的视觉与音乐可能让死亡显得被浪漫化；第二季的视觉方向因此希望反过来质疑这种“把牺牲拍成传奇”的机制。这个观点是导演对自己创作动机的说明，不意味着第一季创作团队原本就想歌颂死亡，也不能据此把第二季所有镜头都解释成对第一季的批判。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
+### 视觉语言：镜框、光线与摄影者的主观性
+
+Ikarashi 透露，制作团队把画面中嵌套画框的构图称为 **“Romance Frame”**，名称来自 Roman 拍摄的画面。但导演特别说明，这种构图并不总是 Roman 的主观视角；它有时更接近一种俯瞰式视角，作用是突然改变场景的情绪和节奏。由此，摄影机不只是剧情道具，也成为作品控制观众观看距离的形式工具。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
+光线是第二季另一条重要视觉线索。导演表示，他有意把光当作一种力量、意志或影响人物的存在；人物可能奔向光，也可能被光压倒。Capri 被设计为“effect entity”，因此导演希望她不仅像一个固定人格，也能呈现为光和力量本身。访谈还提到，第三集 Capri 的视觉设计从更抽象、规则更少的概念出发，经过角色设计师 Kanno 与设计团队的协作，才转化为动画能够稳定表现的形态。不能把这些制作表述直接当成世界观中某种“光能实体”的技术定义；它首先是导演描述的视觉设计意图。
+
+### 设定边界：Capri 的早期构想不等于最终设定
+
+Ikarashi 还透露，Capri 的早期构想曾是一个肉身女性死亡后转为数字意识的角色；但他当时对《赛博朋克 2077》的技术设定掌握不足，CDPR 指出该方案不符合游戏世界现有技术边界。随后双方围绕黑墙等设定反复讨论，才逐步调整出最终版本。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
+因此，不能把早期“肉身死亡—意识数字化”的提案直接写成正片事实，也不能未经证据就把 Capri 等同于 Soulkiller、Relic 或某种已确认的数字人格备份。分析时应区分：**导演最初提案、CDPR 对设定的约束、最终动画呈现**，三者不是同一个层次。
+
+### 叙事节奏：十集被当作一部连续长片来写
+
+TRIGGER 编剧大冢雅彦在访谈中表示，第二季从一开始就确定一次性上线，因此他写剧本时更接近把它当作一部较长的电影，而不是每集都必须独立完成一个标准电视单元。导演也指出，第四、六、七集更偏向人物氛围和节奏沉淀，第八集是重大事件集中爆发的集数，第九集则承担主要事件前的铺垫。这个制作说明有助于理解为何部分集数看似“剧情推进较少”，但它本身仍不能替代对正片场景的逐段分析。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
+### 音乐方向：从 Franz Ferdinand 转向 The Cure
+
+第二季的片头使用 The Cure 的《10:15 Saturday Night》，与第一季 Franz Ferdinand 的《This Fffire》形成明显差异。Ikarashi 解释，他希望音乐表达一种“对抗不可避免之事”的态度，并参考 post-punk、1980—1990 年代日本摇滚和 2000 年代初美国 hardcore；他选择今堀恒雄参与配乐，也希望音乐既理解旧时代，又能连接当下。第一季与第二季的音乐差异不是简单的“新歌替换旧歌”，而是两季创作方向变化的一部分。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
 ## 人物、技术与设定校正
 
 | 名称 | 官方简体中文与身份 | 需要区分的内容 |
@@ -153,6 +179,6 @@ mindmap
 - **官方一手信息：** [CDPR 中文人物档案](https://www.cyberpunk.net/zh-cn/edgerunners2)、[CDPR 2026-10-20 上线公告](https://www.cdprojekt.com/en/media/news/cyberpunk-edgerunners-2-premieres-on-netflix-new-update-announced-for-cyberpunk-2077/)、[2026-11-05 AnsweRED 主创完整访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)。
 - **分集文字：** [TVmaze](https://www.tvmaze.com/shows/48945/cyberpunk-edgerunners/episodeguide)、[Rotten Tomatoes](https://www.rottentomatoes.com/tv/cyberpunk_edgerunners/s02)。用于核对十集标题与节点，不代表已取得正片完整字幕。
 - **结局复盘：** [GamesRadar](https://www.gamesradar.com/entertainment/anime-shows/cyberpunk-edgerunners-season-2-ending-explained-who-dies/)；结局中有关 D 生死的评论属于媒体解释，不等于制作方明确揭示。
-- **创作者观点：** [ComicBook 2026-10-28 专访](https://comicbook.com/anime/feature/cyberpunk-edgerunners-showrunner-talks-season-2-ending-future-plans-more/)、[Anime Corner 2026-11-12 圆桌](https://animecorner.me/roundtable-bartosz-sztybor-on-potential-edgerunners-season-3-retelling-david-and-lucys-relationship-and-romans-personal-inspirations/)。
+- **创作者观点：** [CDPR：One City, Many Stories（2026-10-21）](https://www.cdprojektred.com/en/blog/199/one-city-many-stories-building-cyberpunk-edgerunners-2-and-update-2-5)、[CDPR：Back to Night City 完整访谈（2026-11-05）](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)、[Game*Spark 对 Kai Ikarashi 与 Masahiko Otsuka 的制作访谈（2026-10-27）](https://en.gamespark.jp/article/2026/10/27/1670.html)、[ComicBook 2026-10-28 专访](https://comicbook.com/anime/feature/cyberpunk-edgerunners-showrunner-talks-season-2-ending-future-plans-more/)、[Anime Corner 2026-11-12 圆桌](https://animecorner.me/roundtable-bartosz-sztybor-on-potential-edgerunners-season-3-retelling-david-and-lucys-relationship-and-romans-personal-inspirations/)。
 
 **未完成项：** 逐镜头视听分析、全部台词精校、与游戏每一条隐藏线索的场景级比对。因此本稿属于有来源的**分集及主题深度整理**，不是看完十集原片后的逐帧考据。
