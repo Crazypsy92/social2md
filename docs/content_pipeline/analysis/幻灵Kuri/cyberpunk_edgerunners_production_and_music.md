@@ -15,6 +15,16 @@ source_basis: production interviews, official credits, soundtrack release
 
 这也解释了为什么作品既有 TRIGGER 标志性的夸张动作和高饱和画面，又能把大量时间留给人物关系、日常交流和情感变化。它不是单纯依靠动作场面推动剧情，也不是把游戏任务按顺序剪成动画。
 
+## 剧本与分镜的协作：故事并非一次写定
+
+第一季的剧本不是由一位编剧写完后交给动画团队照本执行。编剧巴托什·什蒂博尔在 2026 年回顾制作时说明：项目在疫情期间推进，他先提交故事线和初稿，再由宇佐义大与大冢雅彦改写，随后三方持续讨论改动的理由。由于跨国团队只能通过翻译进行长时间沟通，同一场戏在不同文化语境中可能产生相反的情绪理解；团队需要重新调整表达，让观众能够读出角色当时真正承受的情绪。[2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)
+
+一个具体例子是大卫与露西的关系。什蒂博尔发现，原有剧本没有足够明确地呈现两人“开始相爱”的瞬间，于是向今石洋之提出补充，随后在第二集进入制作前加入救护车相关场景。这个细节说明，两人的关系不是只靠后续对白或月球愿望建立；创作团队主动补上了一个可被观众感知的情感转折点。[2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)
+
+第六集《Girl on Fire》则体现了分镜导演对叙事结构的再创作。CDPR 在 2026 年 11 月的主创访谈中确认，Kai Ikarashi 负责该集时，曼因的背景故事并未完整写在剧本里；Ikarashi 通过分镜补出开头与结尾的框架，让这一集形成有起点和收束的独立短篇。制作方也称它是从剧本到分镜改动较多的一集。[CDPR 主创访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)；[Game*Spark 对 Ikarashi 的访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
+
+这两处补写的作用不同：第二集补的是人物关系中缺失的情感节点；第六集补的是人物前史和单集结构。它们共同说明，动画叙事的最终形态来自剧本、分镜、演出与作画之间的协作，而不是把文字脚本逐条转成画面。
+
 ## 大卫的动作设计：速度感不只是画得快
 
 斯安威斯坦是大卫最有辨识度的能力。动画没有只用模糊背景和快速剪辑表现速度，而是通过残影、色彩分层、逐帧动作和节奏变化，把大卫的主观感知变成可见的画面。
@@ -78,6 +88,8 @@ TRIGGER 创意总监若林广海在访谈中表示，他从项目早期就希望
 - [Animation World Network：A Vibrant Ode to Retro Anime](https://www.awn.com/animationworld/cyberpunk-edgerunners-vibrant-ode-retro-anime)
 - [Bartosz Sztybor 2023 年访谈](https://animecorner.me/interview-exploring-the-world-of-cyberpunk-edgerunners-with-bartosz-sztybor/)
 - [Bartosz Sztybor 2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)
+- [CDPR：Back to Night City – Cyberpunk: Edgerunners 2（2026-11-05 完整访谈文字稿）](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)
+- [Game*Spark：Kai Ikarashi、Masahiko Otsuka 制作访谈（2026-10-27）](https://en.gamespark.jp/article/2026/10/27/1670.html)
 - [Studio TRIGGER 访谈](https://otakublend.com/exclusive-studio-trigger-interview/)
 - [CDPR 官方原声专辑介绍](https://cdprojektredgear.com/products/cyberpunk-edgerunners-original-series-soundtrack)
 
