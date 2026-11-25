@@ -135,7 +135,6 @@
 | Federal Intelligence Agency (FIA) | 联情局（FIA） | 《往日之影》中的新美国情报机构；不要与现实国家机构混淆 |
 | Project Cynosure | 小北斗计划（Project Cynosure） | 军用科技相关研究项目；“小北斗计划”为中文设定资料常用译法，首次并列英文 |
 | Neural Matrix | 神经矩阵（Neural Matrix） | 《往日之影》中的治疗装置；剧情明确其只能使用一次 |
-| Black Sapphire | Black Sapphire（黑曜石） | 狗镇的重要场所；中文译名不统一时保留英文 |
 | Barghest | 幽冥犬（Barghest） | 汉森控制狗镇的民兵组织，不是夜之城普通街头帮派 |
 | Blackwall AI | 黑墙之外的 AI | 黑墙是隔离屏障，AI 是屏障之外的数字实体，二者不能混为一谈 |
 | NCPD | 夜之城警察局（NCPD） | 不与 MaxTac 混为一谈 |
@@ -175,6 +174,20 @@
 | Sabina Bravo | Sabina Bravo 海上平台 | 第二次公司战争中平台爆炸被设定资料记载为事故；苏石油并非责任方，不要写成苏格兰石化公司策划 |
 | Seven Hour War | 七小时战争 | 2022 年 9 月 29 日，高轨居民从 O'Neill Two 发动起义，摆脱欧洲航天局控制 |
 | Night City Holocaust | 夜之城大屠杀 | 2023 年 8 月 20 日荒坂塔核爆及其后果 |
+| King of Wands | 权杖国王 | 《往日之影》四种主要人物结局之一 |
+| King of Swords | 宝剑国王 | 百灵鸟被交给李德和新美国；可解锁高塔结局 |
+| King of Cups | 圣杯国王 | V 在小北斗设施中满足百灵鸟的死亡请求 |
+| King of Pentacles | 钱币国王 | V 不杀百灵鸟并将她交给新美国；可解锁高塔结局 |
+| The Tower (Ending) | 高塔结局 | 《往日之影》解锁的本体新结局，不属于四种 King 结局 |
+| The Devil | 恶魔结局 | 荒坂路线；后续还有签署意识存档协议或返回地球的选择 |
+| The Star | 星星结局 | 阿德卡多路线，V 离开夜之城 |
+| The Sun | 太阳结局 | 罗格路线，V 成为来生传奇 |
+| Temperance | 节制结局 | 强尼获得身体，V 的数字人格进入网络空间 |
+| Don't Fear the Reaper | 不要害怕死神 | 本体隐藏单人突袭路线，不是独立的常规结局 |
+| Update 2.0 | Update 2.0 | 2023 年 9 月本体核心玩法系统重构 |
+| Edgerunners Update 1.6 | Edgerunners Update 1.6 | 2022 年 9 月动画联动更新 |
+| Edgerunners 2 Update 2.5 | 《边缘行者 2》更新（2.5） | 2026 年 10 月发布的免费更新 |
+| Project Orion | Project Orion（赛博朋克续作项目） | CDPR 公布的《赛博朋克 2077》后续作品代号 |
 | Cyberpunk 2013 | Cyberpunk 2013 | 1988 年出版的桌面角色扮演游戏第一版 |
 | Cyberpunk 2020 | Cyberpunk 2020 | 1990 年出版的桌面角色扮演游戏第二版 |
 | Cyberpunk RED | Cyberpunk RED | 2020 年出版，主要世界观时间为 2045 年 |
@@ -221,6 +234,7 @@
 | El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
 | Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
 | O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
+| Black Sapphire | Black Sapphire（黑曜石） | 狗镇的重要场所；中文译名不统一时保留英文 |
 | Cynosure | Cynosure（小北斗设施） | 《往日之影》中相关地下设施；不要与黑墙本身或某个 AI 名称混为一谈 |
 | Black Sapphire | Black Sapphire（黑曜石） | 狗镇内的高端场所；保留英文便于与游戏文本对应 |
 
