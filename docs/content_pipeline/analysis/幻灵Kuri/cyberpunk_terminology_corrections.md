@@ -47,6 +47,25 @@
 | Harold Harrison Hunt | 哈罗德·哈里森·亨特 | 四人帮领导者，Allen 遇刺后成为代理总统 |
 | Tesla Johanneson | 特斯拉·约翰内森 | 2003 年公开 NSA 秘密记录的记者 |
 | Antonio Luccessi | 安东尼奥·卢切西 | Armatech-Luccessi International 创始人，意大利武器设计师 |
+| Mike Pondsmith | 迈克·庞德史密斯 | 桌面角色扮演游戏 Cyberpunk 的创作者 |
+| Arthur Jenkins | 阿瑟·詹金斯 | 公司员工出身线中 V 在荒坂的直接上司 |
+| Susan Abernathy | 苏珊·阿伯纳西 | 荒坂特别行动部门负责人，Jenkins 的上级 |
+| Jackie Welles | 杰克·威尔斯 | V 的搭档 |
+| Dexter DeShawn | 德克斯特·德肖恩 | 夜之城中间人，Relic 盗窃行动组织者 |
+| Evelyn Parker | 艾芙琳·帕克 | Doll，Relic 盗窃计划相关人物 |
+| Judy Álvarez | 朱迪·阿尔瓦雷兹 | 超梦技术人员，Evelyn 的朋友 |
+| Goro Takemura | 竹村五郎 | 荒坂三郎的前护卫 |
+| Sandayu Oda | 小田三代（Sandayu Oda） | 荒坂华子的护卫；中文译名不稳定时保留英文 |
+| Anders Hellman | 安德斯·赫尔曼 | 荒坂 Relic 项目负责人 |
+| Panam Palmer | 帕南·帕尔默 | 阿德卡多家族成员 |
+| Saul Bright | 索尔·布莱特 | 阿德卡多家族领导者 |
+| Brigitte | 布里吉特 | 巫毒帮首领 |
+| Placide | 普拉西德 | 巫毒帮成员 |
+| Bryce Mosley | 布莱斯·莫斯利 | 网络监察特工，出现在大帝国商场任务 |
+| Meredith Stout | 梅瑞狄斯·斯托特 | 军用科技特工 |
+| Anthony Gilchrist | 安东尼·吉尔克里斯特 | 军用科技人员 |
+| Henry Stints | 亨利·斯廷茨 | NCPD 警探，街头小子出身线相关人物 |
+| Kaoru Fujioka | 藤冈薰 | 街头小子出身线中的荒坂企业人员/车辆所有者 |
 
 | 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
 |---|---|---|
@@ -87,8 +106,11 @@
 | SovOil | 苏石油（SovOil） | 部分旧资料译作苏石化或苏维埃石油，本项目统一用“苏石油” |
 | Kiroshi / Kiroshi Optics | 歧路司（Kiroshi）／歧路司光学 | 奇洛希、奇路斯、基罗希 |
 | Euro Business Machines (EBM) | 欧洲商业机器公司（EBM） | 欧洲商业机械公司可理解，本项目统一“机器” |
-| Orbital Air | 轨道航空 | 不要与欧洲航天局混淆 |
+| Orbital Air | 轨道航空 | 不要与欧洲航天局混淆；缩写为 OA，不是 OAE |
 | Zetatech | 泽塔科技 | 不写成泽塔技术 |
+| European Space Council (ESC) | 欧洲空间委员会（ESC） | 公司员工出身线涉及月球许可投票的机构；不要直接写成 European Space Agency（ESA） |
+| European Space Agency (ESA) | 欧洲航天局（ESA） | 与 European Space Council（ESC）不是同一个机构 |
+| REDengine 4 | REDengine 4 | CDPR 自研引擎第四代；不是 RAID Engine，也不是从零独立开发的新引擎 |
 | Trauma Team | 创伤小组（Trauma Team） | “创伤小队”也是常见资料译法；本项目采用 CD PROJEKT RED 官方中文网站用语“创伤小组” |
 | NCPD | 夜之城警察局（NCPD） | 不与 MaxTac 混为一谈 |
 | MaxTac | 暴恐机动队（MaxTac） | 不写成爆孔机动队；是高危赛博精神病事件的专业战术力量 |
@@ -124,6 +146,12 @@
 | Wasting Plague | 消瘦瘟疫 | 1999—2000 年席卷欧美的瘟疫，设定资料估计疫苗开发前约 1,400 万人死亡 |
 | Food Crash | 食品崩溃（Food Crash） | 2002 年多个国家农作物受植物病毒感染，美国农业企业作物因抑制剂保护而幸免 |
 | Houston Incident | 休斯顿事件（休斯顿惨案） | 戒严期间军方炮击造成 2,000 多人死亡 |
+| Sabina Bravo | Sabina Bravo 海上平台 | 第二次公司战争中平台爆炸被设定资料记载为事故；苏石油并非责任方，不要写成苏格兰石化公司策划 |
+| Seven Hour War | 七小时战争 | 2022 年 9 月 29 日，高轨居民从 O'Neill Two 发动起义，摆脱欧洲航天局控制 |
+| Night City Holocaust | 夜之城大屠杀 | 2023 年 8 月 20 日荒坂塔核爆及其后果 |
+| Cyberpunk 2013 | Cyberpunk 2013 | 1988 年出版的桌面角色扮演游戏第一版 |
+| Cyberpunk 2020 | Cyberpunk 2020 | 1990 年出版的桌面角色扮演游戏第二版 |
+| Cyberpunk RED | Cyberpunk RED | 2020 年出版，主要世界观时间为 2045 年 |
 
 ## 六、夜之城主要帮派与流浪者
 
@@ -155,6 +183,12 @@
 | Little China | 小唐人街 |
 | Dogtown | 狗镇 |
 | Lizzie's Bar | 丽姿酒吧 |
+| Konpeki Plaza | 绀碧大厦 | Relic 盗窃任务的主要地点 |
+| Clouds | 云顶 | Doll 服务场所，Evelyn Parker 在此工作 |
+| Afterlife | 来生 | 夜之城佣兵酒吧 |
+| Grand Imperial Mall | 大帝国商场 | 巫毒帮、动物帮和网络监察任务地点 |
+| Sunset Motel | 落日旅店 | V 与 Anders Hellman 相关任务地点 |
+| El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
 | Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
 
 ## 八、容易混淆的设定关系
@@ -166,6 +200,11 @@
 | 1996 Armatech-Luccessi 与 Militech | Armatech-Luccessi 是公司前身，Militech 是其后续名称；创始人是意大利人，但公司在美国新罕布什尔州创立 |
 | 1992 EEC 与 Eurodollar | EEC 在 1992 年成立；Eurodollar 是虚构世界货币，不应直接写成现实欧元 |
 | Soulkiller 2013 与 Arasaka Tower 2023 | 2013 年是 Johnny 营救 Alt；2023 年是 Militech 支持的多小队数据库突袭和核爆，不是同一行动 |
+| European Space Council (ESC) 与 European Space Agency (ESA) | ESC 是公司员工出身线中投票月球许可的委员会；ESA 是欧洲航天局，不应混为一谈 |
+| Bakkers 与 Aldecaldos | Bakkers 是 Nomad V 的原生家族；Aldecaldos 是 Panam 所属的另一个流浪者家族 |
+| Nomad Riots 与 Nomad March | 1996 年游牧民骚乱与 2010—2011 年游牧民长征是不同事件 |
+| Sabina Bravo 与 Scottish Petroleum | Sabina Bravo 平台爆炸在设定资料中被认定为事故，苏石油不是责任方，没有可靠依据支持“苏格兰石化公司策划” |
+| REDengine 4 与 RAID Engine | 正确名称是 REDengine 4，是 CDPR 自研引擎第四代，不是 RAID Engine |
 | Old NET 与 Blackwall | Old NET 是数据崩溃前的全球网络；Blackwall 是后来用于隔离危险旧网络区域的屏障 |
 | Soulkiller 与 Relic | Soulkiller 是意识数字化/复制相关技术；Relic 是承载人格印记的芯片技术产品 |
 | Night International、Night Foundation、Night Corp | 奈特国际是理查德·奈特的开发公司；奈特基金会由米莉亚姆·奈特建立；后续组织重组为夜氏集团 |
@@ -198,6 +237,16 @@
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
 10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
 11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）]
+22. [R. Talsorian Games：Cyberpunk RED 官方介绍](https://rtalsoriangames.com/cyberpunk/)——桌游系列与 2045 年背景。
+23. [R. Talsorian Games：Cyberpunk RED FAQ](https://rtalsoriangames.com/2019/05/30/the-cyberpunk-red-faq/)——Cyberpunk 2013、2020、RED 和 2077 的共同时间线。
+24. [CD PROJEKT RED：公司历史](https://www.cdprojekt.com/en/capital-group/history/)——2012 年宣布开发 Cyberpunk 2077。
+25. [CD PROJEKT RED：2018 游戏演示公开](https://www.cdprojekt.com/en/media/news/cyberpunk-2077-gameplay-reveal-and-message-from-game-director/)——48 分钟演示和开发阶段说明。
+26. [CD PROJEKT RED：2020 年预算与项目规模资料](https://www.cdprojekt.com/en/wp-content/uploads-en/2021/04/management-board-report-on-the-activities-of-the-cd-projekt-group-and-cdc-projekt-sa-in-2020.pdf)——REDengine 第四代、项目预算与团队规模。
+27. [GDC：Building Night City — The Technology of Cyberpunk 2077](https://www.gdcvault.com/play/1028734/Building-Night-City-The-Technology)——REDengine 4 的城市构建、流送、内存和 CPU 性能挑战。
+28. [Evelyn Parker｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Evelyn_Parker)——艾芙琳、Relic 盗窃计划和网络监察交易。
+29. [Bakkers｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Bakkers)——巴克尔家族衰落及与蛇族合并。
+30. [The Corpo-Rat｜GamesAtlas](https://www.gamesatlas.com/cyberpunk-2077/main-quests-jobs-mission-walkthrough/the-corpo-rat)——公司员工序章任务和人物关系。
+
 12. [Cyberpunk RPG｜Roll20 Free Basic Rules：Welcome to the Dark Future](https://app.roll20.net/compendium/cpunk/Rules%3AWelcome%20to%20the%20Dark%20Future)——《Cyberpunk RED》免费规则中的美国崩溃、四人帮、Nomad Riots、两次中美洲战争、公司战争和核爆时间线。
 13. [Major events in the Cyberpunk RPG timeline｜PC Gamer](https://www.pcgamer.com/major-events-in-the-cyberpunk-rpg-timeline/)——以 Cyberpunk RED Jumpstart Kit 为主的时间线整理。
 14. [Militech｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Militech)——Armatech-Luccessi International 的成立和军用科技沿革。
