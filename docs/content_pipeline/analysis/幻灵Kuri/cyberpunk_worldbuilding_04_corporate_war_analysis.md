@@ -232,7 +232,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 1. [赛博朋克世界历史时间线｜机核 GCORES](https://www.gcores.com/articles/185013)——四次公司战争、数据崩溃、黑墙和统一战争的时间线。
 2. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG、荒坂与军用科技的冲突过程。
 3. [第二次公司战争｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Second_Corporate_War)——Sabina Bravo 平台爆炸被认定为事故、苏石油并非责任方。
-3. [Major events in the Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED 时间线为基础的事件节点。
+4. [Major events in the Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED 时间线为基础的事件节点。
 5. [Johnny Silverhand｜CD PROJEKT RED 官方中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——强尼·银手、武侍、亚当·重锤等官方中文名称。
 6. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
 7. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——R.A.B.I.D.S. 程序群与旧网崩溃的关系。
