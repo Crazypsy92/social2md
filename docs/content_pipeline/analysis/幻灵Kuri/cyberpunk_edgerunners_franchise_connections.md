@@ -29,7 +29,7 @@ updated: 2026-11-25
 
 ## 《Cyberpunk: Edgerunners MADNESS》：丽贝卡和皮拉的前传
 
-《Cyberpunk: Edgerunners MADNESS》是官方公布的漫画前传，聚焦丽贝卡和她的哥哥皮拉。故事发生在两人加入大卫团队之前，围绕他们追随父亲影子、想成为传奇边缘行者的成长经历展开。神秘人物 Safran 的出现改变了兄妹二人的日常，也推动他们走向后来的佣兵生活。
+《Cyberpunk: Edgerunners MADNESS》是官方公布的漫画前传，聚焦丽贝卡（官方不同中文页面也有“瑞贝卡”译法）和她的哥哥皮拉。故事发生在两人加入大卫团队之前，围绕他们追随父亲影子、想成为传奇边缘行者的成长经历展开。神秘人物 Safran 的出现改变了兄妹二人的日常，也推动他们走向后来的佣兵生活。
 
 这部漫画由第一季编剧 Bartosz Sztybor 创作，Asano 绘制。它不是粉丝同人，也不是对动画剧情的简单复述，而是官方授权的前传故事。[CDPR 官方公告](https://press.cdprojektred.com/en/news/1717/cyberpunk-edgerunners-receives-a-manga-prequel-and-blu-ray-edition)；[KADOKAWA 官方介绍](https://group.kadokawa.co.jp/information/promotional_topics/2024121301_en.html)
 
