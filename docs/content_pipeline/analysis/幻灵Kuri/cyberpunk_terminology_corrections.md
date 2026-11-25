@@ -51,6 +51,16 @@
 | Arthur Jenkins | 阿瑟·詹金斯 | 公司员工出身线中 V 在荒坂的直接上司 |
 | Susan Abernathy | 苏珊·阿伯纳西 | 荒坂特别行动部门负责人，Jenkins 的上级 |
 | Jackie Welles | 杰克·威尔斯 | V 的搭档 |
+| T-Bug | T-Bug | 与 V、Jackie 合作的网络黑客 |
+| Viktor Vektor | 维克多·维克托 | 夜之城义体医生 |
+| Misty Olszewski | 米斯蒂·奥尔谢夫斯基 | Jackie 的伴侣 |
+| Wakako Okada | 和歌子·冈田 | 夜之城中间人 |
+| Padre / Sebastian Ibarra | 神父（Padre）／塞巴斯蒂安·伊巴拉 | 海伍德地区中间人；中文资料可并列英文名 |
+| Kirk Sawyer | 柯克·索耶 | 街头小子出身线中的中间人 |
+| Pepe Najarro | 佩佩·纳哈罗 | El Coyote Cojo 酒吧相关人物 |
+| Sasquatch | 野人王（Sasquatch） | 动物帮重要成员 |
+| Woodman | 伍德曼（Woodman） | 云顶相关人物 |
+| Fingers | 指头哥（Fingers） | 夜之城义体医生的绰号 |
 | Dexter DeShawn | 德克斯特·德肖恩 | 夜之城中间人，Relic 盗窃行动组织者 |
 | Evelyn Parker | 艾芙琳·帕克 | Doll，Relic 盗窃计划相关人物 |
 | Judy Álvarez | 朱迪·阿尔瓦雷兹 | 超梦技术人员，Evelyn 的朋友 |
@@ -158,6 +168,10 @@
 | 英文原名 | 统一中文写法 | 组织分类与注意事项 |
 |---|---|---|
 | Aldecaldos | 阿德卡多 | 流浪者家族／游牧民氏族，不是普通街头帮派 |
+| Bakkers | 巴克尔家族（Bakkers） | Nomad V 的原生家族，后来与蛇族合并 |
+| Snake Nation | 蛇族（Snake Nation） | Bakkers 后来并入的流浪者组织 |
+| Raffen Shiv | 掠夺者（Raffen Shiv） | 恶土中的流浪者犯罪团伙，不等同于 Wraiths |
+| Highriders | 高轨居民（Highriders） | 居住于轨道空间站的群体 |
 | Wraiths | 夜游鬼 | 流浪者氏族，与阿德卡多敌对 |
 | Valentinos | 瓦伦蒂诺帮 | 社区根基鲜明的街头帮派 |
 | Maelstrom | 漩涡帮 | 以极端义体改造和暴力文化著称 |
@@ -190,6 +204,7 @@
 | Sunset Motel | 落日旅店 | V 与 Anders Hellman 相关任务地点 |
 | El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
 | Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
+| O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
 
 ## 八、容易混淆的设定关系
 
@@ -237,15 +252,6 @@
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
 10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
 11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）]
-22. [R. Talsorian Games：Cyberpunk RED 官方介绍](https://rtalsoriangames.com/cyberpunk/)——桌游系列与 2045 年背景。
-23. [R. Talsorian Games：Cyberpunk RED FAQ](https://rtalsoriangames.com/2019/05/30/the-cyberpunk-red-faq/)——Cyberpunk 2013、2020、RED 和 2077 的共同时间线。
-24. [CD PROJEKT RED：公司历史](https://www.cdprojekt.com/en/capital-group/history/)——2012 年宣布开发 Cyberpunk 2077。
-25. [CD PROJEKT RED：2018 游戏演示公开](https://www.cdprojekt.com/en/media/news/cyberpunk-2077-gameplay-reveal-and-message-from-game-director/)——48 分钟演示和开发阶段说明。
-26. [CD PROJEKT RED：2020 年预算与项目规模资料](https://www.cdprojekt.com/en/wp-content/uploads-en/2021/04/management-board-report-on-the-activities-of-the-cd-projekt-group-and-cdc-projekt-sa-in-2020.pdf)——REDengine 第四代、项目预算与团队规模。
-27. [GDC：Building Night City — The Technology of Cyberpunk 2077](https://www.gdcvault.com/play/1028734/Building-Night-City-The-Technology)——REDengine 4 的城市构建、流送、内存和 CPU 性能挑战。
-28. [Evelyn Parker｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Evelyn_Parker)——艾芙琳、Relic 盗窃计划和网络监察交易。
-29. [Bakkers｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Bakkers)——巴克尔家族衰落及与蛇族合并。
-30. [The Corpo-Rat｜GamesAtlas](https://www.gamesatlas.com/cyberpunk-2077/main-quests-jobs-mission-walkthrough/the-corpo-rat)——公司员工序章任务和人物关系。
 
 12. [Cyberpunk RPG｜Roll20 Free Basic Rules：Welcome to the Dark Future](https://app.roll20.net/compendium/cpunk/Rules%3AWelcome%20to%20the%20Dark%20Future)——《Cyberpunk RED》免费规则中的美国崩溃、四人帮、Nomad Riots、两次中美洲战争、公司战争和核爆时间线。
 13. [Major events in the Cyberpunk RPG timeline｜PC Gamer](https://www.pcgamer.com/major-events-in-the-cyberpunk-rpg-timeline/)——以 Cyberpunk RED Jumpstart Kit 为主的时间线整理。
@@ -257,6 +263,16 @@
 19. [Wasting Plague｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Wasting_Plague)——1999—2000 年消瘦瘟疫与约 1,400 万死亡估算。
 20. [First Orbital War｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/First_Orbital_War)——2008 年第一次轨道战争。
 21. [New United States｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/New_United_States)——美国崩溃、自由州和 NUSA 沿革。
+22. [R. Talsorian Games：Cyberpunk RED 官方介绍](https://rtalsoriangames.com/cyberpunk/)——桌游系列与 2045 年背景。
+23. [R. Talsorian Games：Cyberpunk RED FAQ](https://rtalsoriangames.com/2019/05/30/the-cyberpunk-red-faq/)——Cyberpunk 2013、2020、RED 和 2077 的共同时间线。
+24. [CD PROJEKT RED：公司历史](https://www.cdprojekt.com/en/capital-group/history/)——2012 年宣布开发 Cyberpunk 2077。
+25. [CD PROJEKT RED：2018 游戏演示公开](https://www.cdprojekt.com/en/media/news/cyberpunk-2077-gameplay-reveal-and-message-from-game-director/)——48 分钟演示和开发阶段说明。
+26. [CD PROJEKT RED：2020 年预算与项目规模资料](https://www.cdprojekt.com/en/wp-content/uploads-en/2021/04/management-board-report-on-the-activities-of-the-cd-projekt-group-and-cdc-projekt-sa-in-2020.pdf)——REDengine 第四代、项目预算与团队规模。
+27. [GDC：Building Night City — The Technology of Cyberpunk 2077](https://www.gdcvault.com/play/1028734/Building-Night-City-The-Technology)——REDengine 4 的城市构建、流送、内存和 CPU 性能挑战。
+28. [Evelyn Parker｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Evelyn_Parker)——艾芙琳、Relic 盗窃计划和网络监察交易。
+29. [Bakkers｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Bakkers)——巴克尔家族衰落及与蛇族合并。
+30. [The Corpo-Rat｜GamesAtlas](https://www.gamesatlas.com/cyberpunk-2077/main-quests-jobs-mission-walkthrough/the-corpo-rat)——公司员工序章任务和人物关系。
+
 (https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 
 ## 十、后续维护规则
