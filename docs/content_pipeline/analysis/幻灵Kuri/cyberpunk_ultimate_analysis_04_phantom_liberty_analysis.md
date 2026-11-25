@@ -17,7 +17,7 @@ original_preserved: true
 
 《往日之影》（Phantom Liberty）把《赛博朋克 2077》的主线从“V 如何解决 Relic 带来的死亡倒计时”，扩展成一场围绕国家权力、情报机构、企业技术和个人生存展开的谍战故事。
 
-V 得到百灵鸟（Songbird，真名宋昭美 So Mi）的求助后，被卷入新美国总统迈尔斯（Rosalind Myers）在狗镇（Dogtown）的坠机事件。随后，V 与所罗门·李德（Solomon Reed）、亚历克斯（Alex）和百灵鸟展开合作。表面上，所有人都在争取生存；实际上，他们对“活下去”的理解并不相同：
+V 得到百灵鸟（Songbird，真名宋昭美 So Mi）的求助后，被卷入新美利坚合众国（NUSA，文中简称新美国）总统迈尔斯（Rosalind Myers）在狗镇（Dogtown）的坠机事件。随后，V 与所罗门·李德（Solomon Reed）、亚历克斯（Alex）和百灵鸟展开合作。表面上，所有人都在争取生存；实际上，他们对“活下去”的理解并不相同：
 
 - 迈尔斯希望维护新美国的权力和战略利益。
 - 李德把联情局（FIA）和国家任务看得高于个人选择。
@@ -305,5 +305,6 @@ V 得到了身体和生命，却失去了过去生活中的许多东西。
 12. [CD PROJEKT RED：2026 年上半年业务总结](https://www.cdprojekt.com/en/media/news/cd-projekt-red-wraps-up-the-first-half-of-2026/)——截至 2026 年 9 月公布的本体与资料片销量。
 13. [《往日之影》摄影游记——勇闯宝石青｜机核 GCORES](https://www.gcores.com/articles/172434)——游戏中文地点“宝石青”、人物“汉兹先生”和“滑条”的译名交叉核对。
 14. [《赛博朋克 2077：往日之影》图文攻略｜3DM](https://www.3dmgame.com/gl/3821803_589.html)——宝石青、汉兹先生及相关主线任务流程。
+15. [《赛博朋克 2077：往日之影》将带领玩家完成危险的任务，解锁一座新城市与专属结局｜Epic 游戏商城](https://store.epicgames.com/news/cyberpunk-2077-phantom-liberty-takes-players-through-treacherous-quests-to-unlock-a-new-city-and-ending?lang=zh-CN)——将 Song So Mi 的中文姓名写作“宋昭美”，并使用“百灵鸟”作为代号。
 
 **资料使用说明：** 本稿以原始转录的剧情顺序为基础，修正人物、组织、任务和技术名称；对四种 King 结局与高塔本体结局重新划分；对神经矩阵、黑墙、小北斗计划和人物动机作了区分。开发规模和销量优先采用 CDPR 官方资料或可追溯访谈。原始转录未被覆盖。
