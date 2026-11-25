@@ -23,7 +23,7 @@
 | Halsey, Ferris and Night (HFN) | Halsey、Ferris 与 Night 建筑公司（HFN） | Healthy Ferris & Knight；不要省略 Night |
 | Night International | 奈特国际 | 夜市国际、夜之城国际 |
 | Night Foundation | 奈特基金会 | 夜市基金会 |
-| Night Corp / Night Corporation | 夜氏集团（Night Corp） | 夜市公司、夜之城公司；部分资料也译作“奈特集团”，本项目优先采用中文 WIKI 的“夜氏集团” |
+| Night Corp / Night Corporation | 夜氏集团（Night Corp） | 部分资料也译作“夜氏公司”；本项目统一“夜氏集团”。“夜市公司”是 ASR 错字，“夜之城公司”容易与城市本身混淆 |
 | Coronado City | 科罗纳多市 | 科罗纳多城 |
 | Del Coronado Bay | 德尔科罗纳多湾 | 德尔科罗纳多海湾 |
 | Morro Bay | 莫罗湾 | 墨龙湾、莫洛湾 |
@@ -139,11 +139,11 @@
 | Blackwall AI | 黑墙之外的 AI | 黑墙是隔离屏障，AI 是屏障之外的数字实体，二者不能混为一谈 |
 | NCPD | 夜之城警察局（NCPD） | 不与 MaxTac 混为一谈 |
 | MaxTac | 暴恐机动队（MaxTac） | 不写成爆孔机动队；是高危赛博精神病事件的专业战术力量 |
-| NUSA | 新美国（NUSA） | 正式全称语境可写“新美利坚合众国” |
+| NUSA | 新美利坚合众国（NUSA；正文可简称“新美国”） | CD PROJEKT RED 官方简体中文资料采用“新美利坚合众国” |
 | Free States | 自由州 | 不等于一个统一国家 |
 | Unification War | 统一战争 | 新美国与自由州之间的国家统一冲突，不属于四次公司战争 |
 | European Economic Community (EEC) | 欧洲经济共同体（EEC） | 不要与欧盟直接等同 |
-| New United States of America (NUSA) | 新美国（NUSA） | 2053 年新宪法生效后使用的国名 |
+| New United States of America (NUSA) | 新美利坚合众国（NUSA；正文可简称“新美国”） | 2053 年新宪法生效后使用的国名 |
 | Eurodollar | 欧元币 | 赛博朋克世界观中的货币名称，不是现实欧元 |
 
 ## 五、重大冲突与组织专名
@@ -314,6 +314,8 @@
 40. [《往日之影》摄影游记——勇闯宝石青｜机核 GCORES](https://www.gcores.com/articles/172434)——游戏中文地点“宝石青”和“汉兹先生”译名。
 41. [《赛博朋克 2077：往日之影》图文攻略｜3DM](https://www.3dmgame.com/gl/3821803_589.html)——宝石青、汉兹先生及相关主线任务流程。
 42. [《赛博朋克 2077：往日之影》图文攻略｜游民星空](https://www.gamersky.com/handbook/202308/1640118_17.shtml)——“滑条”、宝石青和“汉兹先生”的游戏中文用语。
+43. [《赛博朋克 2077：往日之影》中文官方页面](https://www.cyberpunk.net/us/zh-cn/phantom-liberty)——“新美利坚合众国”、迈尔斯、百灵鸟、李德、亚历克斯、汉森和幽冥犬等官方简体中文用语。
+44. [《赛博朋克 2077：往日之影》将带领玩家完成危险的任务，解锁一座新城市与专属结局｜Epic 游戏商城](https://store.epicgames.com/news/cyberpunk-2077-phantom-liberty-takes-players-through-treacherous-quests-to-unlock-a-new-city-and-ending?lang=zh-CN)——“百灵鸟”宋昭美的中文姓名核对。
 
 ## 十、后续维护规则
 
