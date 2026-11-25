@@ -155,6 +155,18 @@ TRIGGER 的视觉风格不是简单地把夜之城画得更炫。编剧什蒂博
 
 **资料边界：** 本文没有用户提供的动画 ASR 转录，也没有逐集视频文件，因此不是逐镜头、逐台词的字幕校订稿。剧情梳理依据作品公开剧情、官方简介和创作者访谈；时间线以游戏内信息及官方桌游资料交叉参考。关于人物心理、爱情关系和社会结构的内容属于基于剧情的分析，不应冒充制作方唯一解释。赛博精神病部分以桌游规则框架辅助解释，不将虚构设定当成现实医学诊断。
 
+## 九、专题分篇导航
+
+本篇只作为总览入口。深入内容分为五份独立专题，避免将逐集剧情、人物关系、技术设定和制作研究压缩在同一篇里：
+
+- [第一季逐集分析](cyberpunk_edgerunners_episode_analysis.md)
+- [人物与关系深读](cyberpunk_edgerunners_character_analysis.md)
+- [世界观与技术机制](cyberpunk_edgerunners_lore_and_society.md)
+- [动画制作与音乐研究](cyberpunk_edgerunners_production_and_music.md)
+- [MADNESS、游戏联动、桌游与第二季](cyberpunk_edgerunners_franchise_connections.md)
+
+**研究状态：** 第一季总览和上述五个专题已建立；第二季已上线，但当前只完成官方信息盘点，尚未完成逐集正片分析。不要把第一季专题完成误记为整个动画系列全部完工。
+
 ## 十、与现有《赛博朋克 2077》分析稿的关联
 
 - [赛博朋克 2077 世界观综合分析](cyberpunk_ultimate_analysis_01_worldbuilding_analysis.md)——夜之城的资本、企业权力与普通人生存结构。
