@@ -9,7 +9,7 @@ source_basis: Netflix official episode synopses, creator interviews, official fr
 
 # 赛博浪客第一季逐集分析：十集如何把一个少年推向夜之城的终点
 
-> 范围说明：本篇分析 2022 年第一季十集，含完整剧透。剧情节点依据 Netflix 官方分集简介与正片叙事；人物动机和主题判断属于分析，不冒充制作方唯一解释。官方分集简介可参见 [Netflix 第一季页面](https://www.netflix.com/title/81054853)。
+> 范围说明：本篇分析 2022 年第一季十集，含完整剧透。剧情节点依据 Netflix 官方分集简介、可访问的公开剧情资料与创作者访谈；本轮未重新逐集播放正片或核对完整字幕，因此不声称完成逐镜头复核。人物动机和主题判断属于分析，不冒充制作方唯一解释。官方分集简介可参见 [Netflix 第一季页面](https://www.netflix.com/title/81054853)。
 
 ## 第一集：Let You Down——先让观众看到大卫失去什么
 
@@ -147,4 +147,4 @@ source_basis: Netflix official episode synopses, creator interviews, official fr
 - [Bartosz Sztybor 2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)——编剧对第一季人物和制作的回顾。
 - [Animation World Network：制作与视觉风格访谈](https://www.awn.com/animationworld/cyberpunk-edgerunners-vibrant-ode-retro-anime)——大卫设计、动作表现和复古动画参考。
 
-**边界：** Netflix 分集简介只是每集官方短梗概，不能代替逐镜头复盘。本篇围绕正片主要事件进行剧情结构分析，不补写不存在的台词和场景，也不将角色动机解释成唯一答案。
+**边界：** Netflix 分集简介只是每集官方短梗概，不能代替逐镜头复盘。本篇围绕可核实的主要剧情节点进行结构分析，不补写不存在的台词和场景，也不将角色动机解释成唯一答案。
