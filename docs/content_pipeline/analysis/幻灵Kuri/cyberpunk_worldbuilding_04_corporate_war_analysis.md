@@ -233,11 +233,11 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 2. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG、荒坂与军用科技的冲突过程。
 3. [第二次公司战争｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Second_Corporate_War)——Sabina Bravo 平台爆炸被认定为事故、苏石油并非责任方。
 3. [Major events in the Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED 时间线为基础的事件节点。
-4. [Johnny Silverhand｜CD PROJEKT RED 官方中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——强尼·银手、武侍、亚当·重锤等官方中文名称。
-5. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
-6. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——R.A.B.I.D.S. 程序群与旧网崩溃的关系。
-7. [DataKrash｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/DataKrash)——DataKrash 代码/协议与 2022 年数据崩溃事件。
+5. [Johnny Silverhand｜CD PROJEKT RED 官方中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——强尼·银手、武侍、亚当·重锤等官方中文名称。
+6. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
+7. [R.A.B.I.D.S.｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/R.A.B.I.D.S.)——R.A.B.I.D.S. 程序群与旧网崩溃的关系。
+8. [DataKrash｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/DataKrash)——DataKrash 代码/协议与 2022 年数据崩溃事件。
 
-7. [Cyberpunk 2077 Ultimate Edition Game Booklet｜CD PROJEKT RED](https://cdn-s-cyberpunk.cdprojektred.com/CP2077-UE-Booklet-EN-1.pdf)——强尼·银手与 2023 年荒坂塔事件的官方游戏手册表述。
+9. [Cyberpunk 2077 Ultimate Edition Game Booklet｜CD PROJEKT RED](https://cdn-s-cyberpunk.cdprojektred.com/CP2077-UE-Booklet-EN-1.pdf)——强尼·银手与 2023 年荒坂塔事件的官方游戏手册表述。
 
 **资料使用说明：** 本稿以原始转录的叙述结构为基础，并利用设定资料修正专名和时间线。对于版本之间存在分歧的事件，保留差异说明，不把某一版本的叙事强行写成唯一事实。
