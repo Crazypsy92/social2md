@@ -236,7 +236,6 @@
 | O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
 | Black Sapphire | Black Sapphire（黑曜石） | 狗镇的重要场所；中文译名不统一时保留英文 |
 | Cynosure | Cynosure（小北斗设施） | 《往日之影》中相关地下设施；不要与黑墙本身或某个 AI 名称混为一谈 |
-| Black Sapphire | Black Sapphire（黑曜石） | 狗镇内的高端场所；保留英文便于与游戏文本对应 |
 
 ## 八、容易混淆的设定关系
 
