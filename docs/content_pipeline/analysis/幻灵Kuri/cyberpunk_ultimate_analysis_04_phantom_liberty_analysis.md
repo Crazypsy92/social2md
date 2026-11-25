@@ -303,5 +303,7 @@ V 得到了身体和生命，却失去了过去生活中的许多东西。
 10. [Cyberpunk 2077 Ultimate Edition Game Booklet｜CD PROJEKT RED](https://cdn-s-cyberpunk.cdprojektred.com/CP2077-UE-Booklet-EN-1.pdf)——官方游戏手册中 Aurore 与 Aymeric Cassel 的人物介绍。
 11. [Cynosure 项目（小北斗计划）｜夜之城档案库](https://wiki.mgxnet.com/05_%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6/%E5%B0%8F%E5%8C%97%E6%96%97%E8%AE%A1%E5%88%92)——小北斗计划的背景、军用科技研究目标和设施信息；属于非官方整理资料。
 12. [CD PROJEKT RED：2026 年上半年业务总结](https://www.cdprojekt.com/en/media/news/cd-projekt-red-wraps-up-the-first-half-of-2026/)——截至 2026 年 9 月公布的本体与资料片销量。
+13. [《往日之影》摄影游记——勇闯宝石青｜机核 GCORES](https://www.gcores.com/articles/172434)——游戏中文地点“宝石青”、人物“汉兹先生”和“滑条”的译名交叉核对。
+14. [《赛博朋克 2077：往日之影》图文攻略｜3DM](https://www.3dmgame.com/gl/3821803_589.html)——宝石青、汉兹先生及相关主线任务流程。
 
 **资料使用说明：** 本稿以原始转录的剧情顺序为基础，修正人物、组织、任务和技术名称；对四种 King 结局与高塔本体结局重新划分；对神经矩阵、黑墙、小北斗计划和人物动机作了区分。开发规模和销量优先采用 CDPR 官方资料或可追溯访谈。原始转录未被覆盖。
