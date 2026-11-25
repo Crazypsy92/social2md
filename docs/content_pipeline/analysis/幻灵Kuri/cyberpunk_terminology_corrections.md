@@ -42,6 +42,11 @@
 | Hanako Arasaka | 荒坂华子 | 部分资料写作“花子”，本项目统一“华子” |
 | Michiko Arasaka (Saburo's wife) | 三郎第三任妻子 Michiko Arasaka | 与 Kei 的女儿 Michiko Sanderson 不是同一个人 |
 | Michiko Sanderson (née Arasaka) | 荒坂美智子（Michiko Sanderson） | Kei 的女儿、Saburo 的孙女；不要与三郎第三任妻子混淆 |
+| Toshiro Harada | 原田敏郎（Toshiro Harada） | 2013 年夜之城荒坂北美分部负责人，安排绑架 Alt Cunningham |
+| James Richard Allen | 詹姆斯·理查德·艾伦 | 1996 年遇刺的美国总统 |
+| Harold Harrison Hunt | 哈罗德·哈里森·亨特 | 四人帮领导者，Allen 遇刺后成为代理总统 |
+| Tesla Johanneson | 特斯拉·约翰内森 | 2003 年公开 NSA 秘密记录的记者 |
+| Antonio Luccessi | 安东尼奥·卢切西 | Armatech-Luccessi International 创始人，意大利武器设计师 |
 
 | 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
 |---|---|---|
@@ -74,7 +79,8 @@
 | 英文原名 | 统一中文写法 | 注意事项 |
 |---|---|---|
 | Arasaka | 荒坂（荒坂公司） | 不写成荒板 |
-| Militech | 军用科技（军用科技公司） | 不写成居用科技 |
+| Militech | 军用科技（军用科技公司） | 不写成居用科技；前身为 Armatech-Luccessi International |
+| Armatech-Luccessi International | Armatech-Luccessi International | 1996 年由 Antonio Luccessi 在美国新罕布什尔州创立，后发展为 Militech |
 | Biotechnica | 生物科技（Biotechnica） | 与普通“生物技术”描述区分 |
 | Kang Tao | 康陶 | 不写成康陶科技，除非具体来源如此命名 |
 | Petrochem | 沛卓石化 | 不写成佩卓、佩特罗 |
@@ -90,6 +96,8 @@
 | Free States | 自由州 | 不等于一个统一国家 |
 | Unification War | 统一战争 | 新美国与自由州之间的国家统一冲突，不属于四次公司战争 |
 | European Economic Community (EEC) | 欧洲经济共同体（EEC） | 不要与欧盟直接等同 |
+| New United States of America (NUSA) | 新美国（NUSA） | 2053 年新宪法生效后使用的国名 |
+| Eurodollar | 欧元币 | 赛博朋克世界观中的货币名称，不是现实欧元 |
 
 ## 五、公司战争与组织专名
 
@@ -107,6 +115,15 @@
 | OTEC | 海洋科技与能源公司（OTEC） | 第四次公司战争初期参与方 |
 | IHAG | 国际商船公司（IHAG） | CINO 与 OTEC 争夺其破产后的剩余资产 |
 | Eurobank | 欧洲银行 | 参与第四次公司战争前期的金融博弈 |
+| First Central American Conflict | 第一次中美洲冲突 | 1990 年前后开始，不要与第二次中美洲战争混为一谈 |
+| Second Central American War | 第二次中美洲战争 | 2003 年美国入侵哥伦比亚、厄瓜多尔、秘鲁和委内瑞拉，2010 年结束 |
+| Nomad Riots | 游牧民骚乱 | 1996 年住房危机背景下的骚乱 |
+| Nomad March / The Long Walk | 游牧民长征 | 2010—2011 年第二次中美洲战争后民用承包人员被遗弃引发的长征 |
+| First Orbital War | 第一次轨道战争 | 2008 年美国与苏联/欧洲航天局阵营发生的太空冲突 |
+| Mideast Meltdown | 中东大熔断 | 1997—1998 年有限核战争，全球石油供应减少约一半 |
+| Wasting Plague | 消瘦瘟疫 | 1999—2000 年席卷欧美的瘟疫，设定资料估计疫苗开发前约 1,400 万人死亡 |
+| Food Crash | 食品崩溃（Food Crash） | 2002 年多个国家农作物受植物病毒感染，美国农业企业作物因抑制剂保护而幸免 |
+| Houston Incident | 休斯顿事件（休斯顿惨案） | 戒严期间军方炮击造成 2,000 多人死亡 |
 
 ## 六、夜之城主要帮派与流浪者
 
@@ -145,6 +162,10 @@
 | 不应混为一谈的术语 | 正确关系 |
 |---|---|
 | R.A.B.I.D.S. 与 DataKrash | R.A.B.I.D.S. 是自我复制的 AI 攻击程序群；DataKrash 是植入旧网的代码/协议及其引发的网络崩溃事件。不同设定资料有时会把 DataKrash 简称为病毒 |
+| 1996 Nomad Riots 与 2010—2011 Nomad March | 前者是美国住房危机引发的游牧民骚乱；后者是第二次中美洲战争后被遗弃的民用承包人员长征，两者不是同一事件 |
+| 1996 Armatech-Luccessi 与 Militech | Armatech-Luccessi 是公司前身，Militech 是其后续名称；创始人是意大利人，但公司在美国新罕布什尔州创立 |
+| 1992 EEC 与 Eurodollar | EEC 在 1992 年成立；Eurodollar 是虚构世界货币，不应直接写成现实欧元 |
+| Soulkiller 2013 与 Arasaka Tower 2023 | 2013 年是 Johnny 营救 Alt；2023 年是 Militech 支持的多小队数据库突袭和核爆，不是同一行动 |
 | Old NET 与 Blackwall | Old NET 是数据崩溃前的全球网络；Blackwall 是后来用于隔离危险旧网络区域的屏障 |
 | Soulkiller 与 Relic | Soulkiller 是意识数字化/复制相关技术；Relic 是承载人格印记的芯片技术产品 |
 | Night International、Night Foundation、Night Corp | 奈特国际是理查德·奈特的开发公司；奈特基金会由米莉亚姆·奈特建立；后续组织重组为夜氏集团 |
