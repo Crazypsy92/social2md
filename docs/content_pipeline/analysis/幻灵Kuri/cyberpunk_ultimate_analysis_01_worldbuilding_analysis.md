@@ -10,6 +10,9 @@ analysis_batch: 03
 original_preserved: true
 ---
 
+> 来源：幻灵Kuri｜Bilibili｜BV1nQNczNEgV  
+> [查看 GitHub 原始转录](https://github.com/Crazypsy92/social2md/blob/main/docs/archives/bilibili/%E5%B9%BB%E7%81%B5Kuri/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%202077%E3%80%90%E7%BB%88%E6%9E%81%E8%A7%A3%E8%AF%BB%E3%80%9101%20%7C%20%E5%85%AD%E4%B8%87%E4%BA%94%E5%8D%83%E5%AD%97%E6%B7%B1%E6%8C%96%E6%B8%B8%E6%88%8F%E4%B8%96%E7%95%8C%E8%A7%82%20%E5%9C%A8%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E4%B8%8B%E7%9A%842077%E5%B9%B4%E8%BF%98%E4%BC%9A%E6%9C%89%E6%96%A9%E6%9D%80%E7%BA%BF%E5%90%97%EF%BC%9F.md)
+
 ## 一、文章思想
 
 这篇长稿试图回答一个贯穿《赛博朋克 2077》世界观的问题：当企业拥有接近国家的资本、技术、武装和政治影响力时，普通人还能否通过个人努力摆脱贫困与危险？
