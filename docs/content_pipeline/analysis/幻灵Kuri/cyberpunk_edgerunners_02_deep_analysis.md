@@ -112,6 +112,19 @@ TRIGGER 编剧大冢雅彦在访谈中表示，第二季从一开始就确定一
 
 第二季的片头使用 The Cure 的《10:15 Saturday Night》，与第一季 Franz Ferdinand 的《This Fffire》形成明显差异。Ikarashi 解释，他希望音乐表达一种“对抗不可避免之事”的态度，并参考 post-punk、1980—1990 年代日本摇滚和 2000 年代初美国 hardcore；他选择今堀恒雄参与配乐，也希望音乐既理解旧时代，又能连接当下。第一季与第二季的音乐差异不是简单的“新歌替换旧歌”，而是两季创作方向变化的一部分。[Game*Spark 主创访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
 
+### 官方逐集制作访谈：可继续补充的第一手材料
+
+TRIGGER 官网目前列出四项《Cyberpunk: Edgerunners 2》制作视频，其中前三项是按集展开的 Staff Talk。它们比二手剧情复盘更适合核对分镜、作画、演出、角色设计和制作现场判断：
+
+| 官方材料 | 页面所示日期 / 时长 | 参与人员 / 内容 |
+|---|---|---|
+| [Making of EP: 1](https://www.youtube.com/watch?v=TfyPd4Lwfgg) | 2026-10-23，约 38 分钟 | Kai Ikarashi、Ichigo Kanno、Naoto Uchida、Shunsuke Shida、Kawa-D |
+| [Making of EP: 2](https://www.youtube.com/watch?v=S5AHzJ-vzEA) | 2026-11-06，约 31 分钟 | Ikarashi、Kanno、Uchida、Shimon Dohi、Shunpei Gunyasu、Shida、Kawa-D |
+| [Making of EP: 3](https://www.youtube.com/watch?v=awL8o2SkC9Y) | 2026-11-13，约 30 分钟 | Ikarashi、Kanno、Akihiro Sato、Shida、Kawa-D |
+| [The Last Day of Production](https://www.youtube.com/watch?v=IInN7q3p4vo) | 2026-10-30，约 28 分钟 | 第二季制作团队的最终制作日记录 |
+
+以上链接均由 TRIGGER 官方网站的 YouTube 栏目指向其官方频道。**当前可核实的是视频存在、标题、参与人员和时长；尚未完成视频逐段观看或字幕逐句提取。** 因此它们先作为下一轮原片级制作研究的第一手材料队列，不将其内容预先写成已核实结论。[TRIGGER 官方网站](https://www.st-trigger.co.jp/)
+
 ## 人物、技术与设定校正
 
 | 名称 | 官方简体中文与身份 | 需要区分的内容 |
