@@ -91,7 +91,7 @@ original_preserved: true
 企业提供的帮助是真实的，但它并不必然以公共利益为最终目标。收购资产、掌握供应链和建立雇佣关系，也意味着企业开始控制新的资源与社会关系。
 
 
-这场危机并没有在地震和海啸之后停止。设定时间线记载，1999 年开始出现千年末日邪教，数千人迁往偏远公社和寺庙等待 2000 年 1 月 1 日的“末日”；资料并未确认视频所说的“2000 年元旦大规模集体自杀”是统一事件。2000 年，消瘦瘟疫（Wasting Plague）席卷美国和欧洲，造成数百万人死亡；一份官方免费规则摘要称，仅美国就约有 1,400 万人死于瘟疫，直到日本研制出疫苗才得到控制。2002 年发生食品崩溃（Food Crash）：植物病毒感染多个国家的农作物，而美国农业企业的作物因拥有对应抑制剂而幸免，引发了生物战指控。这些事件继续削弱社会安全感，也让掌握能源、农业和生物技术的企业获得更大的战略价值。
+这场危机并没有在地震和海啸之后停止。设定时间线记载，1999 年开始出现千年末日邪教，数千人迁往偏远公社和寺庙等待 2000 年 1 月 1 日的“末日”；部分邪教在元旦当天发生自杀与暴力事件，但不宜将其概括成全美国统一的大规模集体自杀。消瘦瘟疫（Wasting Plague）在 1999—2000 年间席卷欧洲和美国，设定资料估计在日本研制出疫苗前造成约 1,400 万人死亡。2002 年发生食品崩溃（Food Crash）：植物病毒感染多个国家的农作物，而美国农业企业的作物因拥有对应抑制剂而幸免，引发了生物战指控。这些事件继续削弱社会安全感，也让掌握能源、农业和生物技术的企业获得更大的战略价值。
 
 #### 5. 战争再次爆发，国家最终把自己拖进更深的消耗
 
@@ -200,6 +200,8 @@ original_preserved: true
 - [Trauma Team｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Trauma_Team)——创伤小组国际成立背景与 2020 年业务状况。
 - [Kiroshi｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Kiroshi)——歧路司企业名称、沿革和轨道制造业务。
 - [The Long Walk｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/The_Long_Walk)——2010—2011 年游牧民长征的背景。
+- [Wasting Plague｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Wasting_Plague)——瘟疫时间、传播范围和约 1,400 万死亡估算。
+- [Food Crash｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Food_Crash)——2002 年食品崩溃事件。
 - [First Orbital War｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/First_Orbital_War)——2008 年轨道战争和泰科质量投射器事件。
 - [European Space Agency｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/European_Space_Agency)——2009 年 ESA 对水晶宫相关阴谋的反制。
 - [New United States｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/New_United_States)——自由州与统一战争相关沿革。
@@ -216,9 +218,9 @@ original_preserved: true
 | 四人帮由 NSA、CIA、FBI、DEA 和行政部门组成 | 四人帮由 NSA、CIA、FBI、DEA 四个机构组成，由副总统 Harold Harrison Hunt 领导 | “行政部门”不是第五个机构成员 |
 | 1996 年总统詹姆斯遇刺 | James Richard Allen 于 1996 年 8 月 17 日遇刺，Harold Harrison Hunt 接任代理总统 | 补齐全名和日期 |
 | 休斯顿惨案：军队向民众开枪 | Houston Incident：军方炮击造成 2,000 多人死亡 | 设定资料对事件方式的描述更具体 |
-| 1997 年中东大熔断 | 1997—1998 年 Mideast Meltdown | 有限核战争使全球石油供应减少约一半 |
+| 1997—1998 年中东大熔断 | Mideast Meltdown | 有限核战争使全球石油供应减少约一半；部分时间线简写为 1997 年 |
 | 1998 年洛杉矶地震 | 10.5 级地震，约 65,000 人死亡，海水淹没约 35% 城区 | 按设定时间线校正 |
-| 2000 年元旦大规模自杀 | 1999 年末日邪教出现，数千人迁往偏远公社等待末日 | 没有足够依据把它写成统一的大规模集体自杀事件 |
+| 2000 年元旦大规模自杀 | 1999 年末日邪教出现；2000 年 1 月 1 日部分邪教活动演变成自杀与暴力事件 | 可确认有相关自杀和暴力事件，但不应扩写成全美统一的大规模集体自杀 |
 | 2002 年加拿大和苏联农作物被突变病毒摧毁 | 2002 年 Food Crash：多个国家农作物感染植物病毒，美国农业企业的作物因抑制剂保护而幸免 | 按时间线调整范围和机制 |
 | 2003 年第二次中美洲战争 | 美国入侵哥伦比亚、厄瓜多尔、秘鲁和委内瑞拉；同年 Tesla Johanneson 曝光 NSA 秘密记录，四人帮被清除 | 补充战争对象与政治转折 |
 | 2008 年轨道战争、2009 年空间站被恐怖组织接管 | 2008 年第一次轨道战争；2009 年 ESA 发现 DIA 接管水晶宫的阴谋后投下质量武器警告 | 修正 2009 年事件主体和对象 |
@@ -238,6 +240,30 @@ original_preserved: true
 - 康陶员工“50 年忠诚承诺”、部分企业员工折扣和具体事故伤亡等细节，本轮未找到足够可靠的来源确认，保留为视频叙述或待核验内容。
 
 ### 八、术语与设定校正
+
+| 英文原名/原转录 | 本稿统一写法 | 校正说明 |
+|---|---|---|
+| First Central American Conflict | 第一次中美洲冲突 | 1990 年前后开始；不要与 2003 年的第二次中美洲战争混为一谈 |
+| Second Central American War | 第二次中美洲战争 | 2003 年美国入侵哥伦比亚、厄瓜多尔、秘鲁和委内瑞拉，2010 年结束 |
+| Gang of Four / GOF | 四人帮 | NSA、CIA、FBI、DEA 四个机构构成的联盟，由副总统 Harold Harrison Hunt 领导 |
+| James Richard Allen | 詹姆斯·理查德·艾伦 | 1996 年 8 月 17 日遇刺的美国总统 |
+| Harold Harrison Hunt | 哈罗德·哈里森·亨特 | 四人帮领导者，艾伦遇刺后成为代理总统 |
+| Tesla Johanneson | 特斯拉·约翰内森 | 2003 年公开第一次中美洲冲突期间 NSA 秘密记录的记者 |
+| Nomad Riots | 游牧民骚乱 | 1996 年住房危机背景下的骚乱，推动游牧民群体形成 |
+| Nomad March / The Long Walk | 游牧民长征 | 2010—2011 年第二次中美洲战争后，民用承包人员被遗弃引发的长征；不是 1996 年骚乱 |
+| First Orbital War | 第一次轨道战争 | 2008 年美国袭击苏联武器平台后爆发，ESA/泰科殖民地以质量投射器反击 |
+| Eurodollar | 欧元币 | 赛博朋克世界观中的货币名称，不等同现实欧元 |
+| Armatech-Luccessi International | Armatech-Luccessi International（军用科技前身） | 1996 年由 Antonio Luccessi 在美国新罕布什尔州创立；后发展为 Militech |
+| Antonio Luccessi | 安东尼奥·卢切西 | 意大利武器设计师，创立 Armatech-Luccessi International |
+| CHOOH2 | CHOOH2 合成燃料 | Biotechnica 开发的基因工程小麦/酵母谷物酒精燃料，不是石油 |
+| Food Crash | 食品崩溃（Food Crash） | 2002 年多个国家农作物受植物病毒感染，美国农业企业作物因抑制剂保护而幸免 |
+| Wasting Plague | 消瘦瘟疫（Wasting Plague） | 1999—2000 年席卷欧美的瘟疫，设定资料估计疫苗开发前约 1,400 万人死亡 |
+| New United States of America (NUSA) | 新美国（NUSA） | 2053 年新宪法生效后使用的国名 |
+| Kiroshi | 歧路司 | 日本光学与义体企业集团 |
+| Night Corp | 夜氏集团 | 夜之城相关企业，避免误写成“夜之城公司” |
+| Trauma Team International (TTI) | 创伤小组国际 | 2020 年前已在西雅图成立，不是 2020 年代才出现 |
+
+
 
 | 原转录或初稿写法 | 本稿统一写法 | 校正说明 |
 |---|---|---|
