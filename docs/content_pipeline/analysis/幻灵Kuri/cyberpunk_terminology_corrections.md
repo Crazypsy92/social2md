@@ -99,7 +99,7 @@
 | New United States of America (NUSA) | 新美国（NUSA） | 2053 年新宪法生效后使用的国名 |
 | Eurodollar | 欧元币 | 赛博朋克世界观中的货币名称，不是现实欧元 |
 
-## 五、公司战争与组织专名
+## 五、重大冲突与组织专名
 
 | 英文原名 | 统一中文写法 | 说明 |
 |---|---|---|
@@ -197,7 +197,18 @@
 8. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG 与荒坂、军用科技的关系。
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
 10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
-11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
+11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）]
+12. [Cyberpunk RPG｜Roll20 Free Basic Rules：Welcome to the Dark Future](https://app.roll20.net/compendium/cpunk/Rules%3AWelcome%20to%20the%20Dark%20Future)——《Cyberpunk RED》免费规则中的美国崩溃、四人帮、Nomad Riots、两次中美洲战争、公司战争和核爆时间线。
+13. [Major events in the Cyberpunk RPG timeline｜PC Gamer](https://www.pcgamer.com/major-events-in-the-cyberpunk-rpg-timeline/)——以 Cyberpunk RED Jumpstart Kit 为主的时间线整理。
+14. [Militech｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Militech)——Armatech-Luccessi International 的成立和军用科技沿革。
+15. [Biotechnica｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Biotechnica)——CHOOH2 的开发和生产许可。
+16. [Kang Tao｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Kang_Tao)——康陶的台湾起源和后续重组。
+17. [Trauma Team｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Trauma_Team)——创伤小组国际在 2020 年以前的成立与业务情况。
+18. [The Long Walk｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/The_Long_Walk)——2010—2011 年游牧民长征。
+19. [Wasting Plague｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Wasting_Plague)——1999—2000 年消瘦瘟疫与约 1,400 万死亡估算。
+20. [First Orbital War｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/First_Orbital_War)——2008 年第一次轨道战争。
+21. [New United States｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/New_United_States)——美国崩溃、自由州和 NUSA 沿革。
+(https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 
 ## 十、后续维护规则
 
