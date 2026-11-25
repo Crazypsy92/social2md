@@ -83,8 +83,8 @@
 | Kurt Hansen | 汉森（Kurt Hansen） | 狗镇统治者、幽冥犬领导者；官方中文资料常简称“汉森” |
 | Aurore Cassel | Aurore Cassel | 网络黑客双胞胎之一；没有稳定官方中文译名时保留英文 |
 | Aymeric Cassel | Aymeric Cassel | 网络黑客双胞胎之一；没有稳定官方中文译名时保留英文 |
-| Slider | Slider | 巫毒帮相关网络黑客；不要根据 ASR 的“华条”等近音字臆造中文名 |
-| Mr. Hands | Mr. Hands（汉兹） | 狗镇相关中间人；若引用资料译名不一致，首次并列英文 |
+| Slider | 滑条（Slider） | 巫毒帮相关网络黑客；不要根据 ASR 的“华条”等近音字臆造中文名 |
+| Mr. Hands | 汉兹先生（Mr. Hands） | 狗镇相关中间人；英文名首次并列，中文采用常见游戏本地化译名 |
 | Gabe Amatangelo | Gabe Amatangelo | 《赛博朋克 2077》游戏总监，负责 2.0 与《往日之影》相关开发阶段 |
 
 | 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
@@ -234,7 +234,7 @@
 | El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
 | Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
 | O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
-| Black Sapphire | Black Sapphire（黑曜石） | 狗镇的重要场所；中文译名不统一时保留英文 |
+| Black Sapphire | 宝石青（Black Sapphire） | 狗镇的重要场所；不要按字面误译为“黑曜石” |
 | Cynosure | Cynosure（小北斗设施） | 《往日之影》中相关地下设施；不要与黑墙本身或某个 AI 名称混为一谈 |
 
 ## 八、容易混淆的设定关系
@@ -311,6 +311,9 @@
 37. [CD PROJEKT RED：2026 年上半年业务总结](https://www.cdprojekt.com/en/media/news/cd-projekt-red-wraps-up-the-first-half-of-2026/)——本体超过 4000 万份、资料片超过 1500 万份的官方数据。
 38. [CD PROJEKT RED：Edgerunners 2 Update 2.5 发布公告](https://www.cyberpunk.net/index.php/en/news/52125/cyberpunk-2077s-edgerunners-2-update-2-5-is-out-now)——2026 年 10 月 22 日更新上线。
 39. [CD PROJEKT RED：Edgerunners 2 Update 2.5 更新说明](https://www.cyberpunk.net/en/news/52120/check-out-whats-coming-to-night-city-in-the-edgerunners-2-update-for-cyberpunk-2077)——新增任务、双持、模组支持等内容。
+40. [《往日之影》摄影游记——勇闯宝石青｜机核 GCORES](https://www.gcores.com/articles/172434)——游戏中文地点“宝石青”和“汉兹先生”译名。
+41. [《赛博朋克 2077：往日之影》图文攻略｜3DM](https://www.3dmgame.com/gl/3821803_589.html)——宝石青、汉兹先生及相关主线任务流程。
+42. [《赛博朋克 2077：往日之影》图文攻略｜游民星空](https://www.gamersky.com/handbook/202308/1640118_17.shtml)——“滑条”、宝石青和“汉兹先生”的游戏中文用语。
 
 ## 十、后续维护规则
 
