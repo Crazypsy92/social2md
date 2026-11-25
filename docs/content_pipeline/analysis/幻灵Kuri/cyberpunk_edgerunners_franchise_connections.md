@@ -41,6 +41,8 @@ updated: 2026-11-25
 
 需要注意：前传漫画的故事细节应以漫画实际出版内容为准。仅凭官方简介不能推演全部剧情，更不能把尚未公开的情节补成事实。
 
+截至 2026-11-25，KADOKAWA 官方连载页已列出第 3 话前后篇及第 4 话前篇（页面标注 2026-11-11，限时阅读至 2026-12-09 11:00），并提示下一次更新计划为 2026-11-27。该页面目前显示「全16話を表示」，但不能把 16 个分篇入口理解为 16 个完整章节已经公开或读完。当前研究稿已更新目录状态；漫画画面仍需通过正版阅读器实际阅读后才能做逐页分析。[官方连载目录](https://comic-walker.com/detail/KC_006137_S)
+
 ## 《Cyberpunk: Edgerunners Mission Kit》：把动画世界变成可玩的桌游
 
 R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Mission Kit》，基于《Cyberpunk RED》桌面角色扮演规则。官方内容包括 Edgerunners Handbook、2070 年代武器与义体规则、完整任务 The Jacket、七名预设边缘行者角色以及地图和游戏标记物。
@@ -55,11 +57,11 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 
 它的影响不只在动画观众群体中。游戏玩家通过 1.6 版本重新回到夜之城，动画观众则通过作品认识游戏世界；原声音乐、游戏任务、官方漫画和桌游扩展进一步延长了作品的传播周期。
 
-## 第二季《Cyberpunk: Edgerunners 2》：已上线，已追加十集主题分析
+## 第二季《Cyberpunk: Edgerunners 2》：已上线，已完成公开资料逐集分析
 
 截至 2026 年 11 月 25 日，第二季已于 2026 年 10 月 20 日在 Netflix 首播，十集全部上线。官方将其定位为独立新故事，采用全新角色阵容，继续发生在夜之城。导演为 Kai Ikarashi，主角群包括退役边缘行者 Weak、流浪者 D、年轻电影爱好者 Roman 等。[CDPR 首播公告](https://press.cdprojektred.com/en/news/1876/edgerunners-2-update-announced-for-cyberpunk-2077)；[Netflix 官方页面](https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news)
 
-第二季的制作思路与第一季不同。CDPR 主创在官方访谈中解释，采用全新角色与新导演，是为了避免直接续写第一季人物而变成粉丝向的重复；团队希望让新一代 TRIGGER 创作者建立自己的角色和视觉语言。[CDPR 主创访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)
+第二季的制作思路与第一季不同。CDPR 主创在官方访谈中解释，采用全新角色与新导演，是为了避免直接续写第一季人物而变成粉丝向的重复；团队希望让新一代 TRIGGER 创作者建立自己的角色和视觉语言。showrunner 将两季概括为“零到英雄”与“英雄到零”的镜像；导演 Ikarashi 则明确提出要避免把大卫的死亡继续浪漫化，并通过光线、画框和更粗粝的视觉语言建立新风格。[CDPR 官方访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)；[Game*Spark 制作访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
 
 编剧 Bartosz Sztybor 在 2026 年 11 月的访谈中还强调，第一季人物的行动会在之后的世界里留下后果；他不希望把联动内容仅仅当成彩蛋，而是希望不同作品共同构成一个有延续性的世界。同时，他表示不想为游戏指定唯一正史结局。[2026 年 11 月访谈](https://animecorner.me/roundtable-bartosz-sztybor-on-potential-edgerunners-season-3-retelling-david-and-lucys-relationship-and-romans-personal-inspirations/)
 
@@ -78,7 +80,7 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 - 第二季是否延续第一季的镜头语言，哪些地方有意改变。
 - 与 2077 游戏、MADNESS 漫画和桌游扩展之间的明确联系。
 
-以上是后续逐集分析清单，不代表已完成第二季正片的逐集研究。
+以上是后续原片核验清单。第二季已完成基于官方角色资料、十集分集文字、主创访谈和公开评论的逐集剧情分析与观点深读；仍未完成十集正片逐集重看、完整字幕核对和逐镜头记录。
 
 
 **新增独立研究：** [第二季十集与摩羯座计划](cyberpunk_edgerunners_02_deep_analysis.md)｜[MADNESS 版本和兄妹前史](cyberpunk_edgerunners_madness_research.md)｜[两季主旨对照](cyberpunk_edgerunners_cross_season_comparison.md)。这些文件只陈述公开资料能够支持的内容，仍需要原片和漫画全本进行更细的逐集逐章核验。
@@ -94,6 +96,8 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 - [CDPR：Edgerunners 2 首播公告](https://press.cdprojektred.com/en/news/1876/edgerunners-2-update-announced-for-cyberpunk-2077)
 - [Netflix：Edgerunners 2 上线信息](https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news)
 - [CDPR：Edgerunners 2 主创访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)
+- [CDPR：One City, Many Stories（2026-10-21）](https://www.cdprojektred.com/en/blog/199/one-city-many-stories-building-cyberpunk-edgerunners-2-and-update-2-5)
+- [Game*Spark：Kai Ikarashi、Masahiko Otsuka 制作访谈（2026-10-27）](https://en.gamespark.jp/article/2026/10/27/1670.html)
 - [Bartosz Sztybor 2026 年 11 月访谈](https://animecorner.me/roundtable-bartosz-sztybor-on-potential-edgerunners-season-3-retelling-david-and-lucys-relationship-and-romans-personal-inspirations/)
 
 **边界：** 本篇记录可确认的官方衍生作品、上线信息和跨媒介连接。没有实际阅读漫画全本或观看第二季正片的内容，不冒充逐章、逐集分析。
