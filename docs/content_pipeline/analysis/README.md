@@ -103,10 +103,13 @@
 | 世界观与技术机制 | [cyberpunk_edgerunners_lore_and_society.md](幻灵Kuri/cyberpunk_edgerunners_lore_and_society.md) | 义体、斯安威斯坦、赛博精神病、企业、佣兵、夜之城阶层、桌游规则边界 | 已完成（官方设定交叉研究） |
 | 动画制作与音乐 | [cyberpunk_edgerunners_production_and_music.md](幻灵Kuri/cyberpunk_edgerunners_production_and_music.md) | TRIGGER 制作、编剧协作、动作演出、色彩、网络潜入视觉、配乐与歌曲 | 已完成（创作者访谈与官方资料） |
 | 跨媒介衍生与续作 | [cyberpunk_edgerunners_franchise_connections.md](幻灵Kuri/cyberpunk_edgerunners_franchise_connections.md) | 游戏联动、MADNESS 漫画、桌游 Mission Kit、奖项、第二季官方信息 | 已完成（资料盘点；第二季逐集分析另列） |
+| 第二季十集分析 | [cyberpunk_edgerunners_02_deep_analysis.md](幻灵Kuri/cyberpunk_edgerunners_02_deep_analysis.md) | 第二季逐集剧情节点、人物网络、摩羯座计划、终局及事实边界 | 已完成公开资料深度整理；非逐镜头核看 |
+| MADNESS 前传漫画 | [cyberpunk_edgerunners_madness_research.md](幻灵Kuri/cyberpunk_edgerunners_madness_research.md) | 官方版本、第一卷目录、兄妹成长议题和 Safran 人物定位 | 已完成资料研究；漫画未全本逐章精读 |
+| 双季思想与设定对照 | [cyberpunk_edgerunners_cross_season_comparison.md](幻灵Kuri/cyberpunk_edgerunners_cross_season_comparison.md) | 身体、意识、家庭、复仇、影像记录与两季结局的比较 | 已完成公开材料对照 |
 
 - 本篇不是 Bilibili ASR 转录整理稿；没有原始视频转录，不伪称逐句核听或字幕校订。
 - 官方简体中文标题采用“赛博浪客”，中文玩家也常称“赛博朋克：边缘行者”；人物名称优先采用 CD PROJEKT RED 官方中文页面。
-- 截至 2026-11-25，《赛博浪客 2》（Cyberpunk: Edgerunners 2）已于 2026-10-20 在 Netflix 上线，十集全部可观看。当前分析稿以第一季为主体，续作只记录官方确认信息，不冒充逐集观后分析。
+- 截至 2026-11-25，《赛博浪客 2》（Cyberpunk: Edgerunners 2）已于 2026-10-20 在 Netflix 上线，十集全部可观看。第二季新增十集分集文字、人物与主题分析稿；资料来自官方档案、分集梗概和访谈，未逐镜头观看或核对完整字幕。
 - 原有 9 篇游戏分析稿、原始转录和系列交叉校对报告均保持独立，不因新增动画专题而改变原有数量口径。
 
 ### 动画专题的研究边界
@@ -114,9 +117,17 @@
 - 动画专题不是 9 篇 Bilibili 视频转录批次的一部分；没有原始 ASR 文件，不声称做过逐字音频校订或逐镜头复核。
 - 第一季已拆为总览、逐集分析、人物关系、世界观与技术、制作与音乐、跨媒介衍生六个层次，避免一篇总览代替全部研究。
 - 第一季剧情分析以 Netflix 十集分集信息、可访问的公开剧情资料和创作者访谈为依据；人物心理与主题属于明确标识的分析判断。
-- 《Cyberpunk: Edgerunners MADNESS》、游戏联动与桌游 Mission Kit 分别作为官方衍生材料处理，不把桌游任务混写成动画正片。
-- 第二季已于 2026-10-20 上线。当前只完成官方资料盘点，不声称完成十集正片逐集分析；后续若扩展，须以正片为依据。
+- 《Cyberpunk: Edgerunners MADNESS》已有日文与英文第一卷。研究稿依据官方简介、在线目录和出版数据，不虚构漫画没有读取的章节剧情；游戏联动与桌游 Mission Kit 仍分别处理。
+- 第二季已于 2026-10-20 上线：已整理十集分集信息与公开结局资料；仍缺完整正片/字幕核验，不能称为逐帧精读。
 - 原有 9 篇游戏分析稿及 9 份原始转录保持不动。
+
+### 后续研究记录（2026-11-25）
+
+- 新增第二季十集研究、MADNESS 官方漫画资料研究及第一／二季比较，总共新增 3 篇专题。
+- 第二季官方简体中文术语以 [CDPR 人物页面](https://www.cyberpunk.net/zh-cn/edgerunners2) 为准：微克、罗曼、塔莉亚、阿维达、基里尔、恭子、摩羯、摩羯座计划。**摩羯座计划（Project Capricorn）与《往日之影》的小北斗计划（Project Cynosure）严格区分。**
+- MADNESS 日文版于 2025-08-28 推出第一卷，英文第一卷于 2026-02-24 出版，共 248 页。明确保留“漫画未完整逐页阅读”边界。
+- 第二季大卫是否通过数字人格复活、D 的最终生死与游戏 V 是否已有唯一官方结局，均不得直接定论。
+- 原始视频转录与此前 9 篇游戏分析稿没有被修改。
 
 ## 系列复核记录
 
