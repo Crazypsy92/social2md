@@ -1,5 +1,5 @@
 ---
-title: 赛博朋克 2077 终极解读 03：CDPR 的口碑修复、人物支线与全部结局
+title: 赛博朋克 2077 终极解读 03：CDPR 的口碑修复、人物支线与本体主要结局
 creator: 幻灵Kuri
 platform: bilibili
 content_id: BV1ybXNBpEPT
@@ -16,6 +16,8 @@ original_preserved: true
 ## 一、文章思想
 
 这篇视频把《赛博朋克 2077》的故事分析和 CD PROJEKT RED 的口碑修复放在同一条叙事线上。前半部分通过帕南、朱迪、罗格、强尼和克里等人物支线，解释夜之城中的关系、承诺与代价；后半部分梳理本体结局，并回到游戏发售后的更新过程，说明一款首发评价严重受损的作品如何逐步恢复玩家信任。
+
+本篇的结局范围是《赛博朋克 2077》本体主要结局；《往日之影》的四种 King 结局与高塔结局另见本系列第 04 篇，避免把资料片新增结局混入本体结局统计。
 
 视频的核心观点可以归纳为两层：
 
@@ -319,6 +321,7 @@ V 想活下去，却必须在身体、意识、关系和自由之间不断作出
 14. [CD PROJEKT RED：2026 年上半年业务总结](https://www.cdprojekt.com/en/media/news/cd-projekt-red-wraps-up-the-first-half-of-2026/)——截至 2026 年 9 月公布的本体与资料片累计销量。
 15. [CD PROJEKT RED：Edgerunners 2 Update 2.5 发布公告](https://www.cyberpunk.net/index.php/en/news/52125/cyberpunk-2077s-edgerunners-2-update-2-5-is-out-now)——2026 年 10 月 22 日更新正式上线。
 16. [CD PROJEKT RED：Edgerunners 2 Update 2.5 更新内容](https://www.cyberpunk.net/en/news/52120/check-out-whats-coming-to-night-city-in-the-edgerunners-2-update-for-cyberpunk-2077)——新任务、双持、模组支持和其他更新内容。
-17. [Igor Sarzyński 的 2026 年 1 月 Bluesky 讨论](https://bsky.app/profile/srznsk.bsky.social/post/3mc35wsomo62a)——可核实的高塔结局开发调整发言；不支持视频中“只有两个结局能让 V 真正活下来”的归因。
+17. [Igor Sarzyński 的 2026 年 1 月 Bluesky 发言](https://bsky.app/profile/srznsk.bsky.social/post/3mc35wsohrs2a)——直接讨论《往日之影》高塔结局早期版本曾更黑暗、怪异，后因整体基调调整而改写。
+18. [Cyberpunk 2 Lead Reveals That Phantom Liberty Originally Had A “Much Darker and Weirder” Epilogue｜GamingBolt](https://gamingbolt.com/cyberpunk-2-lead-reveals-that-phantom-liberty-originally-had-a-much-darker-and-weirder-epilogue)——对 Igor Sarzyński 2026 年 1 月 Bluesky 讨论的报道；不支持“只有两个结局能让 V 真正活下来”的归因。
 
 **资料使用说明：** 本稿以原始转录为叙事基础，保留人物支线和结局讨论的顺序；对补丁日期、开发规模、销量、预算、结局分支和开发者发言进行外部校核。对无法确认的动机和象征解释保留为作者观点，不写成官方事实。原始转录未被覆盖。
