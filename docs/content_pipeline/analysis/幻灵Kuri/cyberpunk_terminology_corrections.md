@@ -76,6 +76,16 @@
 | Anthony Gilchrist | 安东尼·吉尔克里斯特 | 军用科技人员 |
 | Henry Stints | 亨利·斯廷茨 | NCPD 警探，街头小子出身线相关人物 |
 | Kaoru Fujioka | 藤冈薰 | 街头小子出身线中的荒坂企业人员/车辆所有者 |
+| Rosalind Myers | 迈尔斯（Rosalind Myers） | 新美国总统，曾任军用科技 CEO；官方中文资料简称“迈尔斯” |
+| Song So Mi / Songbird | 宋昭美／百灵鸟（Songbird） | 新美国联情局网络黑客；“百灵鸟”是代号，不是数字人格或 Relic Engram |
+| Solomon Reed | 所罗门·李德 | 联情局特工，长期在狗镇潜伏 |
+| Alena "Alex" Xenakis | 亚历克斯（Alex） | 联情局行动人员，长期在狗镇潜伏；官方中文资料使用“亚历克斯” |
+| Kurt Hansen | 汉森（Kurt Hansen） | 狗镇统治者、幽冥犬领导者；官方中文资料常简称“汉森” |
+| Aurore Cassel | Aurore Cassel | 网络黑客双胞胎之一；没有稳定官方中文译名时保留英文 |
+| Aymeric Cassel | Aymeric Cassel | 网络黑客双胞胎之一；没有稳定官方中文译名时保留英文 |
+| Slider | Slider | 巫毒帮相关网络黑客；不要根据 ASR 的“华条”等近音字臆造中文名 |
+| Mr. Hands | Mr. Hands（汉兹） | 狗镇相关中间人；若引用资料译名不一致，首次并列英文 |
+| Gabe Amatangelo | Gabe Amatangelo | 《赛博朋克 2077》游戏总监，负责 2.0 与《往日之影》相关开发阶段 |
 
 | 英文原名 | 统一中文写法 | 常见 ASR 错误或注意事项 |
 |---|---|---|
@@ -122,6 +132,12 @@
 | European Space Agency (ESA) | 欧洲航天局（ESA） | 与 European Space Council（ESC）不是同一个机构 |
 | REDengine 4 | REDengine 4 | CDPR 自研引擎第四代；不是 RAID Engine，也不是从零独立开发的新引擎 |
 | Trauma Team | 创伤小组（Trauma Team） | “创伤小队”也是常见资料译法；本项目采用 CD PROJEKT RED 官方中文网站用语“创伤小组” |
+| Federal Intelligence Agency (FIA) | 联情局（FIA） | 《往日之影》中的新美国情报机构；不要与现实国家机构混淆 |
+| Project Cynosure | 小北斗计划（Project Cynosure） | 军用科技相关研究项目；“小北斗计划”为中文设定资料常用译法，首次并列英文 |
+| Neural Matrix | 神经矩阵（Neural Matrix） | 《往日之影》中的治疗装置；剧情明确其只能使用一次 |
+| Black Sapphire | Black Sapphire（黑曜石） | 狗镇的重要场所；中文译名不统一时保留英文 |
+| Barghest | 幽冥犬（Barghest） | 汉森控制狗镇的民兵组织，不是夜之城普通街头帮派 |
+| Blackwall AI | 黑墙之外的 AI | 黑墙是隔离屏障，AI 是屏障之外的数字实体，二者不能混为一谈 |
 | NCPD | 夜之城警察局（NCPD） | 不与 MaxTac 混为一谈 |
 | MaxTac | 暴恐机动队（MaxTac） | 不写成爆孔机动队；是高危赛博精神病事件的专业战术力量 |
 | NUSA | 新美国（NUSA） | 正式全称语境可写“新美利坚合众国” |
@@ -205,6 +221,8 @@
 | El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
 | Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
 | O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
+| Cynosure | Cynosure（小北斗设施） | 《往日之影》中相关地下设施；不要与黑墙本身或某个 AI 名称混为一谈 |
+| Black Sapphire | Black Sapphire（黑曜石） | 狗镇内的高端场所；保留英文便于与游戏文本对应 |
 
 ## 八、容易混淆的设定关系
 
@@ -229,6 +247,15 @@
 | Trauma Team 与公共医疗 | 创伤小组是会员/合同制的专业救援服务，不等于普遍公共医疗 |
 | Unification War 与 Corporate Wars | 统一战争是新美国试图整合自由州的国家战争，不是第五次公司战争 |
 | 37% 与“完全付不起 400 美元” | 37% 来自 2024 年调查，指不能完全用现金或等价方式支付；2025 年调查中 12% 表示目前无法支付 |
+| Songbird 与 Engram | 百灵鸟是活着的网络黑客/联情局特工，不是 Relic 中的数字人格构造体；她与 V 的连接不等于强尼的 Engram 机制 |
+| Neural Matrix 与 Relic | 神经矩阵是治疗装置，Relic 是承载人格构造体的芯片技术；两者不是同一种设备 |
+| 四种 King 结局与 The Tower | 权杖国王、宝剑国王、圣杯国王、钱币国王是《往日之影》四种主要人物结局；高塔是资料片解锁的本体新结局 |
+| King of Swords 与 King of Pentacles | 两条路线都能让百灵鸟存活并交给新美国，从而获得高塔治疗路线的资格；但初始站队和人物代价不同 |
+| King of Wands 与 King of Cups | 两条路线均无法解锁高塔；前者让百灵鸟逃往月球，后者满足她在小北斗设施中的死亡请求 |
+| Don't Fear the Reaper | 是本体隐藏的单人突袭路线；成功后仍进入太阳或节制结局，不是独立的第五种常规结局 |
+| The Devil 的两个后续选择 | 签署协议是意识数字化存档；返回地球则只剩数月预期寿命；不能概括为“荒坂治愈 V” |
+| The Tower 与“完全恢复” | 高塔结局移除 Relic，但 V 经历两年昏迷并失去原有战斗义体能力，不等于恢复原状 |
+| 2026 年 1 月 Igor Sarzyński 发言 | 可核实帖子谈的是高塔结局早期版本被重新设计；未找到“只有恶魔和高塔能让 V 真正活下来”的原始发言 |
 
 ## 九、外部资料与术语依据
 
@@ -262,6 +289,15 @@
 28. [Evelyn Parker｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Evelyn_Parker)——艾芙琳、Relic 盗窃计划和网络监察交易。
 29. [Bakkers｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Bakkers)——巴克尔家族衰落及与蛇族合并。
 30. [The Corpo-Rat｜GamesAtlas](https://www.gamesatlas.com/cyberpunk-2077/main-quests-jobs-mission-walkthrough/the-corpo-rat)——公司员工序章任务和人物关系。
+31. [CD PROJEKT RED：《往日之影》官方简体中文页面](https://www.cyberpunk.net/us/zh-cn/phantom-liberty)——狗镇、迈尔斯、百灵鸟、李德、亚历克斯和汉森的官方中文人物名称。
+32. [CD PROJEKT RED：Update 2.0](https://www.cyberpunk.net/en/news/49060/update-2-0)——警察系统、技能树、载具战斗和敌人 AI 重构。
+33. [CD PROJEKT：Current Report No. 38/2023](https://www.cdprojekt.com/en/investors/regulatory-announcements/current-report-no-38-2023/)——《往日之影》制作预算、营销预算和首周销量。
+34. [Game File：Interview — CD Projekt RED has learned its lessons for the next Cyberpunk](https://www.gamefile.news/p/interview-cd-projekt-red-has-learned)——Gabe Amatangelo 对资料片开发团队和跨学科协作的访谈。
+35. [PowerPyx：Cyberpunk 2077 Endings Guide](https://www.powerpyx.com/cyberpunk-2077-endings-guide-all-endings/)——本体结局、隐藏突袭路线和资料片结局触发条件。
+36. [Cyberpunk 2077 Wiki：Phantom Liberty All Endings](https://cyberpunk2077wiki.com/phantom-liberty-all-endings-explained/)——四种 King 结局和高塔结局的分支关系。
+37. [CD PROJEKT RED：2026 年上半年业务总结](https://www.cdprojekt.com/en/media/news/cd-projekt-red-wraps-up-the-first-half-of-2026/)——本体超过 4000 万份、资料片超过 1500 万份的官方数据。
+38. [CD PROJEKT RED：Edgerunners 2 Update 2.5 发布公告](https://www.cyberpunk.net/index.php/en/news/52125/cyberpunk-2077s-edgerunners-2-update-2-5-is-out-now)——2026 年 10 月 22 日更新上线。
+39. [CD PROJEKT RED：Edgerunners 2 Update 2.5 更新说明](https://www.cyberpunk.net/en/news/52120/check-out-whats-coming-to-night-city-in-the-edgerunners-2-update-for-cyberpunk-2077)——新增任务、双持、模组支持等内容。
 
 ## 十、后续维护规则
 
