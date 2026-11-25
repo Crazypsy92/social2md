@@ -85,6 +85,16 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 
 **新增独立研究：** [第二季十集与摩羯座计划](cyberpunk_edgerunners_02_deep_analysis.md)｜[MADNESS 版本和兄妹前史](cyberpunk_edgerunners_madness_research.md)｜[两季主旨对照](cyberpunk_edgerunners_cross_season_comparison.md)。这些文件只陈述公开资料能够支持的内容，仍需要原片和漫画全本进行更细的逐集逐章核验。
 
+## 官方制作资料与纪念出版物
+
+除了正片和主创访谈，TRIGGER 还推出了两种值得纳入资料库的制作出版物：
+
+- **《The Art of Cyberpunk: Edgerunners》**：318 页官方美术设定集，收录概念设计、角色设定与色彩、背景美术设定与背景板、道具草图与设定、片头片尾分镜、主视觉与版权插画；各章开头还有今石洋之导演解说。该书也收录第二季导演 Ikarashi 绘制的片头分镜。它是第一季视觉研究的重要一手材料，但本轮只核实出版方介绍，尚未取得并逐页阅读整本。[TRIGGER 官方介绍](https://www.st-trigger.co.jp/news/2032/)
+- **《NIGHT CITY MAGAZINE 2》**：第二季上线纪念刊，官方介绍称收录 122 名制作人员为本书绘制的原创插画，封面由角色设计师菅野一期绘制。适合后续研究第二季角色设计、不同作画人员的风格差异；目前只核实出版信息，未取得实物或完整数字版。[TRIGGER 官方介绍](https://www.st-trigger.co.jp/news/20261020/)
+- **TRIGGER NIGHT Vol.18「パンクにサイバーをたたきこめ ２」**：官方公布于 2026-12-05 举办，出演者包括导演 Kai Ikarashi、角色设计师 Ichigo Kanno。活动在本次整理时尚未举行，后续可检查是否发布录像、访谈或文字记录。[TRIGGER 官方活动公告](https://www.st-trigger.co.jp/news/20261106/)
+
+这些出版物和活动是可继续追查的一手材料入口，不等于已经阅读书中全部内容或看过活动实录。
+
 ## 资料来源
 
 - [CDPR：Edgerunners MADNESS 前传漫画公告](https://press.cdprojektred.com/en/news/1717/cyberpunk-edgerunners-receives-a-manga-prequel-and-blu-ray-edition)
