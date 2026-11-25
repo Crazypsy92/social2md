@@ -33,6 +33,8 @@ source_basis: Netflix official episode synopses, creator interviews, official fr
 
 **本集的论证落点：** 斯安威斯坦带来的是能力，不是人生答案。大卫第一次把力量当成尊严来源，也因此更容易被下一次升级吸引。
 
+**制作补证：** 编剧什蒂博尔在 2026 年访谈中回忆，最初剧本没有足够清楚地表现大卫爱上露西的瞬间；他因此向今石洋之提出补充，救护车相关场景在第二集进入制作前被加入。它不是随意增加的浪漫桥段，而是创作团队为两人的情感转折补上的明确节点。[访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)
+
 ## 第三集：Smooth Criminal——从个人反击进入团队规则
 
 **本集作用：把大卫从孤立的学生变成佣兵团队的新人。**
@@ -76,6 +78,8 @@ source_basis: Netflix official episode synopses, creator interviews, official fr
 编剧巴托什·什蒂博尔在访谈中表示，曼因承载了自己很多情绪、恐惧和现实担忧；他也曾考虑过更黑暗的早期剧情版本，让大卫亲手杀死失控的曼因。最终版本没有采用这一方案，但曼因的死亡仍然成为大卫人物弧线的重要阴影。[访谈](https://animecorner.me/interview-exploring-the-world-of-cyberpunk-edgerunners-with-bartosz-sztybor/)
 
 **本集的论证落点：** 曼因不是一个简单的失败者，而是大卫可能成为的未来。大卫继承团队，也继承了“不能停下来”的错误示范。
+
+**分镜补证：** 2026 年 CDPR 主创访谈确认，第六集由 Kai Ikarashi 负责分镜与单集演出时，曼因的背景故事并未完整写入剧本；Ikarashi 在分镜阶段补出本集的开头和结尾，使它成为一段有独立起承转合的短篇。制作方称这一集是从剧本到分镜改动较多的集数之一。因此，本集不仅承担曼因崩溃这一剧情节点，也体现了导演通过单集结构补足人物背景的能力。[CDPR 主创访谈](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)；[Game*Spark 制作访谈](https://en.gamespark.jp/article/2026/10/27/1670.html)
 
 ## 第七集：Stronger——从幸存者变成领袖，责任开始压过自我
 
@@ -144,7 +148,8 @@ source_basis: Netflix official episode synopses, creator interviews, official fr
 
 - [Netflix 第一季官方分集简介](https://www.netflix.com/title/81054853)——十集标题与各集官方梗概。
 - [Bartosz Sztybor 2023 年访谈](https://animecorner.me/interview-exploring-the-world-of-cyberpunk-edgerunners-with-bartosz-sztybor/)——创作版本、人物关系、曼因和结局选择。
-- [Bartosz Sztybor 2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)——编剧对第一季人物和制作的回顾。
+- [Bartosz Sztybor 2026 年访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)——编剧对第一季人物、第二集救护车场景补写和结局方案的回顾。
+- [CDPR：Back to Night City – Cyberpunk: Edgerunners 2（2026-11-05）](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)——第六集《Girl on Fire》的分镜补写情况。
 - [Animation World Network：制作与视觉风格访谈](https://www.awn.com/animationworld/cyberpunk-edgerunners-vibrant-ode-retro-anime)——大卫设计、动作表现和复古动画参考。
 
 **边界：** Netflix 分集简介只是每集官方短梗概，不能代替逐镜头复盘。本篇围绕可核实的主要剧情节点进行结构分析，不补写不存在的台词和场景，也不将角色动机解释成唯一答案。
