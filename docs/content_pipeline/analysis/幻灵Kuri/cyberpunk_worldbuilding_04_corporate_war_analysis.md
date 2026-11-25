@@ -68,7 +68,7 @@ EBM 希望收购 TWA，以获得其航空运输和商业设施；轨道航空也
 
 这场冲突最终以沛卓石化撤出相关区域告终，但胜负并没有抵消战争造成的损失。能源设施被摧毁，沿海地区受到污染，周边国家也被卷入冲突。企业争夺的是油田和市场，承担后果的却不只是两家公司的股东与员工。
 
-原始视频还提到，Sabina Bravo 事件背后可能存在第三方挑拨，但相关公司名称和责任链在转录中存在明显错误。本稿不将这一说法当作已经核实的结论。
+后续对照《Firestorm: Shockwave》相关设定资料后，Sabina Bravo 平台爆炸被记载为事故，苏石油并未实施破坏；没有可靠依据支持“苏格兰石化公司策划爆炸”的说法。因此，本稿不再把它写成第三方挑拨或阴谋。
 
 #### 3. 第三次公司战争：金融系统和网络空间成为主战场
 
@@ -220,7 +220,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 
 ### 七、转录待核验与材料边界
 
-- 第二次公司战争中 Sabina Bravo 平台爆炸案的真正责任方，原转录称“苏格兰石化公司”，需要回听和对照原始设定资料，不能直接定论。
+- 第二次公司战争中 Sabina Bravo 平台爆炸，设定资料记载为事故，苏石油并非责任方；原转录所称“苏格兰石化公司”没有可靠依据。
 - 第三次公司战争的 MA&F 中文译名存在不同写法，本稿保留英文全称和缩写。
 - 第四次公司战争的“影子战争”“热战”等阶段划分，需注意不同版本设定资料的年份口径。
 - 2023 年荒坂塔核爆的行动队构成、核装置安放者和强尼的具体死亡过程存在版本差异；强尼在游戏中的记忆不应直接当作全知视角的历史记录。
@@ -231,6 +231,7 @@ OTEC 随后雇佣军用科技（Militech）保护自己的利益，CINO 则雇�
 
 1. [赛博朋克世界历史时间线｜机核 GCORES](https://www.gcores.com/articles/185013)——四次公司战争、数据崩溃、黑墙和统一战争的时间线。
 2. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG、荒坂与军用科技的冲突过程。
+3. [第二次公司战争｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Second_Corporate_War)——Sabina Bravo 平台爆炸被认定为事故、苏石油并非责任方。
 3. [Major events in the Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED 时间线为基础的事件节点。
 4. [Johnny Silverhand｜CD PROJEKT RED 官方中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——强尼·银手、武侍、亚当·重锤等官方中文名称。
 5. [Rache Bartmoss｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Rache_Bartmoss)——巴特莫斯生平、2014 年植入代码和 2022 年死亡节点。
