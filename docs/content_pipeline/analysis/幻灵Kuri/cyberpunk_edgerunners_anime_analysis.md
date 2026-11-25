@@ -163,3 +163,12 @@ TRIGGER 的视觉风格不是简单地把夜之城画得更炫。编剧什蒂博
 - [《往日之影》谍战叙事与人物选择分析](cyberpunk_ultimate_analysis_04_phantom_liberty_analysis.md)——黑墙、义体技术和国家权力。
 - [Cyberpunk 2077 专名与转录校正规范](cyberpunk_terminology_corrections.md)——游戏世界观通用术语；动画人物中文名以官方动画页面为准。
 
+[^1]: [CD PROJEKT RED《赛博浪客》官方简体中文页面](https://www.cyberpunk.net/zh-cn/edgerunners)。
+[^2]: [Bartosz Sztybor 访谈](https://animecorner.me/interview-bartosz-sztybor-on-cyberpunk-edgerunners-working-with-studio-trigger-and-happy-endings/)，重点参考关于曼因、露西、TRIGGER 风格、剧本协作和结局设计的回答。
+[^3]: [R. Talsorian Games《Cyberpunk RED》规则体系](https://rtalsoriangames.com/cyberpunk/)及其 [Corebook FAQ](https://rtalsoriangames.com/wp-content/uploads/2021/07/RTG-CPR-CoreBookFAQv1.3.pdf)。
+[^4]: [Mike Pondsmith 关于赛博精神病与大卫的原始回答](https://www.reddit.com/r/LowSodiumCyberpunk/comments/xklzsx/why_doesnt_v_get_cyberpsychosis/ipffmf4/)。
+[^5]: [Cyberpunk 2077 官方 Edgerunners Update 1.6 更新说明](https://www.cyberpunk.net/en/news/45280/edgerunners-update-patch-1-6-list-of-changes)；年份定位还结合游戏内 El Capitan 对话及 [Destructoid 的时间线说明](https://www.destructoid.com/when-did-cyberpunk-edgerunners-take-place-in-the-timeline/)。
+[^6]: [R. Talsorian Games《Cyberpunk: Edgerunners Mission Kit》](https://rtalsoriangames.com/cyberpunk-edgerunners-mission-kit/)及其[手册介绍](https://rtalsoriangames.com/2024/05/23/a-peek-inside-the-cyberpunk-edgerunners-mission-kit-the-edgerunners-handbook/)。
+[^7]: [CD PROJEKT RED《Edgerunners 2》首播公告](https://www.cdprojekt.com/en/media/news/cyberpunk-edgerunners-2-premieres-on-netflix-new-update-announced-for-cyberpunk-2077/)。
+[^8]: [CD PROJEKT RED：Back to Night City – Cyberpunk: Edgerunners 2](https://www.cdprojektred.com/en/blog/200/back-to-night-city-cyberpunk-edgerunners-2-transcript-included)，2026 年 11 月 5 日主创访谈文字稿。
+
