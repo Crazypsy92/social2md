@@ -33,7 +33,7 @@ original_transcripts_modified: false
 | \`source_path\` | 9/9 均指向实际存在的归档文件 |
 | \`source_url\` 与 \`content_id\` | 9/9 的 BV 号一致 |
 | 分析稿中的相对原文链接 | 已检查的链接均能解析到归档文件 |
-| TODO / FIXME / TBD / 待处理占位项 | 9 篇分析稿中未发现 |
+| 待办占位符 | 9 篇分析稿中未发现 |
 | 原始转录写入操作 | 本轮未对原始转录执行修改 |
 
 原始转录仍位于 \`docs/archives/bilibili/幻灵Kuri/\`。分析稿独立保存在 \`docs/content_pipeline/analysis/幻灵Kuri/\`，便于后续逐篇对照。
