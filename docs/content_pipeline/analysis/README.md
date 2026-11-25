@@ -97,12 +97,26 @@
 
 | 作品 | 分析稿 | 研究范围 | 状态 |
 |---|---|---|---|
-| 《赛博浪客》（Cyberpunk: Edgerunners，亦称《赛博朋克：边缘行者》）第一季 | [cyberpunk_edgerunners_anime_analysis.md](幻灵Kuri/cyberpunk_edgerunners_anime_analysis.md) | 剧情、人物关系、义体与赛博精神病、夜之城社会结构、动画制作、与游戏的时间线和世界观连接 | 已完成（外部资料研究与创作者访谈核验） |
+| 《赛博浪客》（Cyberpunk: Edgerunners）第一季总览 | [cyberpunk_edgerunners_anime_analysis.md](幻灵Kuri/cyberpunk_edgerunners_anime_analysis.md) | 作品定位、总体论点、剧情主线、主要人物、技术与社会主题 | 总览完成 |
+| 第一季逐集分析 | [cyberpunk_edgerunners_episode_analysis.md](幻灵Kuri/cyberpunk_edgerunners_episode_analysis.md) | 十集叙事任务、人物变化、主题推进和全季结构 | 已完成（依据正片剧情与官方分集简介） |
+| 人物与关系深读 | [cyberpunk_edgerunners_character_analysis.md](幻灵Kuri/cyberpunk_edgerunners_character_analysis.md) | 大卫、露西、曼因、朵莉欧、丽贝卡、皮拉、琦薇、法尔科、法拉第、亚当·重锤 | 已完成（人物分析稿） |
+| 世界观与技术机制 | [cyberpunk_edgerunners_lore_and_society.md](幻灵Kuri/cyberpunk_edgerunners_lore_and_society.md) | 义体、斯安威斯坦、赛博精神病、企业、佣兵、夜之城阶层、桌游规则边界 | 已完成（官方设定交叉研究） |
+| 动画制作与音乐 | [cyberpunk_edgerunners_production_and_music.md](幻灵Kuri/cyberpunk_edgerunners_production_and_music.md) | TRIGGER 制作、编剧协作、动作演出、色彩、网络潜入视觉、配乐与歌曲 | 已完成（创作者访谈与官方资料） |
+| 跨媒介衍生与续作 | [cyberpunk_edgerunners_franchise_connections.md](幻灵Kuri/cyberpunk_edgerunners_franchise_connections.md) | 游戏联动、MADNESS 漫画、桌游 Mission Kit、奖项、第二季官方信息 | 已完成（资料盘点；第二季逐集分析另列） |
 
 - 本篇不是 Bilibili ASR 转录整理稿；没有原始视频转录，不伪称逐句核听或字幕校订。
 - 官方简体中文标题采用“赛博浪客”，中文玩家也常称“赛博朋克：边缘行者”；人物名称优先采用 CD PROJEKT RED 官方中文页面。
 - 截至 2026-11-25，《赛博浪客 2》（Cyberpunk: Edgerunners 2）已于 2026-10-20 在 Netflix 上线，十集全部可观看。当前分析稿以第一季为主体，续作只记录官方确认信息，不冒充逐集观后分析。
 - 原有 9 篇游戏分析稿、原始转录和系列交叉校对报告均保持独立，不因新增动画专题而改变原有数量口径。
+
+### 动画专题的研究边界
+
+- 动画专题不是 9 篇 Bilibili 视频转录批次的一部分；没有原始 ASR 文件，不声称做过逐字音频校订。
+- 第一季已拆为总览、逐集分析、人物关系、世界观与技术、制作与音乐、跨媒介衍生六个层次，避免一篇总览代替全部研究。
+- 第一季剧情分析以 Netflix 十集分集信息、正片主要事件和创作者访谈为依据；人物心理与主题属于明确标识的分析判断。
+- 《Cyberpunk: Edgerunners MADNESS》、游戏联动与桌游 Mission Kit 分别作为官方衍生材料处理，不把桌游任务混写成动画正片。
+- 第二季已于 2026-10-20 上线。当前只完成官方资料盘点，不声称完成十集正片逐集分析；后续若扩展，须以正片为依据。
+- 原有 9 篇游戏分析稿及 9 份原始转录保持不动。
 
 ## 系列复核记录
 
