@@ -213,26 +213,26 @@
 
 ## 七、地区、服务与物品
 
-| 英文原名 | 统一中文写法 |
-|---|---|
-| Watson | 沃森区 |
-| Westbrook | 威斯特布鲁克 |
-| Heywood | 海伍德 |
-| Santo Domingo | 圣多明戈 |
-| Pacifica | 太平洲 |
-| Badlands | 恶土 |
-| Japantown | 日本街 |
-| Kabuki | 歌舞伎区 |
-| Little China | 小唐人街 |
-| Dogtown | 狗镇 |
-| Lizzie's Bar | 丽姿酒吧 |
+| 英文原名 | 统一中文写法 | 说明 |
+|---|---|---|
+| Watson | 沃森区 | |
+| Westbrook | 威斯特布鲁克 | |
+| Heywood | 海伍德 | |
+| Santo Domingo | 圣多明戈 | |
+| Pacifica | 太平洲 | |
+| Badlands | 恶土 | |
+| Japantown | 日本街 | |
+| Kabuki | 歌舞伎区 | |
+| Little China | 小唐人街 | |
+| Dogtown | 狗镇 | |
+| Lizzie's Bar | 丽姿酒吧 | |
 | Konpeki Plaza | 绀碧大厦 | Relic 盗窃任务的主要地点 |
 | Clouds | 云顶 | Doll 服务场所，Evelyn Parker 在此工作 |
 | Afterlife | 来生 | 夜之城佣兵酒吧 |
 | Grand Imperial Mall | 大帝国商场 | 巫毒帮、动物帮和网络监察任务地点 |
 | Sunset Motel | 落日旅店 | V 与 Anders Hellman 相关任务地点 |
 | El Coyote Cojo | El Coyote Cojo（酒吧名保留英文） | 海伍德酒吧，街头小子出身线相关地点 |
-| Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） |
+| Yaiba Kusanagi CT-3X | Yaiba Kusanagi CT-3X（车型名保留英文） | |
 | O'Neill Two | 奥尼尔二号空间站（O'Neill Two） | 2022 年七小时战争的发生地 |
 | Black Sapphire | 宝石青（Black Sapphire） | 狗镇的重要场所；不要按字面误译为“黑曜石” |
 | Cynosure | Cynosure（小北斗设施） | 《往日之影》中相关地下设施；不要与黑墙本身或某个 AI 名称混为一谈 |
