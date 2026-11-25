@@ -232,27 +232,17 @@
 
 ## 九、外部资料与术语依据
 
-
-- [荒坂公司｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂公司)——荒坂集团及其人物关系。
-- [荒坂敬｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_敬)——Kei 的中文名称与家族关系。
-- [荒坂赖宣｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_赖宣)——Yorinobu 的中文名称与家族关系。
-- [荒坂华子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_华子)——Hanako 的中文名称与家族关系。
-- [荒坂美智子｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/荒坂_美智子)——Kei 的女儿 Michiko。
-- [Michiko Arasaka（Saburo's wife）｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Arasaka_%28Saburo%27s_wife%29)——Saburo 的第三任妻子，与孙女 Michiko Sanderson 区分。
-- [Michiko Sanderson｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Michiko_Sanderson)——Kei 的女儿、Saburo 的孙女。
-
 1. [CD PROJEKT RED 官方简体中文网站](https://www.cyberpunk.net/cm/zh-cn/cyberpunk-2077)——角色名称、阿德卡多、莫克斯帮、武侍、强尼·银手等。
 2. [CD PROJEKT RED：创伤小组官方介绍](https://www.cyberpunk.net/zh-cn/news/22154/sai-bo-peng-ke-2077-e3-2018yu-gao-pian-zhu-zheng-jie-du-di-shi-er-ji-ep12-chuang-shang-xiao-zu)——Trauma Team 的中文名称和会员制服务说明。
 3. [赛博朋克 2077 WIKI：组织分类](https://wiki.biligame.com/cyberpunk2077/分类:组织)——主要帮派、流浪者、企业和执法力量的中文分类。
 4. [歧路司｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/歧路司)——Kiroshi 的中文名称和企业业务。
 5. [夜氏集团｜赛博朋克 2077 WIKI](https://wiki.biligame.com/cyberpunk2077/夜氏集团)——Night Corp 的中文名称和沿革。
-6. [Night City Gangs｜Low Life Lore](https://lowlifelore.com/night-city-gangs)——2026-11-01 更新的帮派/流浪者分类和组织特征；该站为非官方资料，作为交叉核对来源。
+6. [Night City Gangs｜Low Life Lore](https://lowlifelore.com/night-city-gangs)——帮派/流浪者分类和组织特征；该站为非官方资料，作为交叉核对来源。
 7. [赛博朋克世界历史时间线｜机核 GCORES](https://www.gcores.com/articles/185013)——公司战争、数据崩溃、黑墙和统一战争时间线。
 8. [第四次公司战争｜VG百科](https://www.vgbaike.com/cyberpunk_2077/baike1626?wid=1118)——CINO、OTEC、IHAG 与荒坂、军用科技的关系。
 9. [Cyberpunk RPG timeline｜Steam](https://store.steampowered.com/news/posts/?appids=1091500&enddate=1565705025)——以 Cyberpunk RED Jumpstart Kit 为主要依据的世界时间线。
 10. [美国联邦储备委员会 2024 年家庭经济状况报告](https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm)——37% 不会完全用现金或等价方式支付 400 美元，以及 13% 无法以任何方式支付的旧口径。
-11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）]
-
+11. [美国联邦储备委员会 2025 年调查附录（2026 年发布）](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 12. [Cyberpunk RPG｜Roll20 Free Basic Rules：Welcome to the Dark Future](https://app.roll20.net/compendium/cpunk/Rules%3AWelcome%20to%20the%20Dark%20Future)——《Cyberpunk RED》免费规则中的美国崩溃、四人帮、Nomad Riots、两次中美洲战争、公司战争和核爆时间线。
 13. [Major events in the Cyberpunk RPG timeline｜PC Gamer](https://www.pcgamer.com/major-events-in-the-cyberpunk-rpg-timeline/)——以 Cyberpunk RED Jumpstart Kit 为主的时间线整理。
 14. [Militech｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Militech)——Armatech-Luccessi International 的成立和军用科技沿革。
@@ -272,8 +262,6 @@
 28. [Evelyn Parker｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Evelyn_Parker)——艾芙琳、Relic 盗窃计划和网络监察交易。
 29. [Bakkers｜Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Bakkers)——巴克尔家族衰落及与蛇族合并。
 30. [The Corpo-Rat｜GamesAtlas](https://www.gamesatlas.com/cyberpunk-2077/main-quests-jobs-mission-walkthrough/the-corpo-rat)——公司员工序章任务和人物关系。
-
-(https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-b.htm)——2025 年 400 美元意外支出的支付方式及 12% 目前无法支付的最新数据。
 
 ## 十、后续维护规则
 
