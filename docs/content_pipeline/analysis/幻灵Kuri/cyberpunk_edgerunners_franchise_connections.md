@@ -55,7 +55,7 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 
 它的影响不只在动画观众群体中。游戏玩家通过 1.6 版本重新回到夜之城，动画观众则通过作品认识游戏世界；原声音乐、游戏任务、官方漫画和桌游扩展进一步延长了作品的传播周期。
 
-## 第二季《Cyberpunk: Edgerunners 2》：已上线，但不是大卫的复活续篇
+## 第二季《Cyberpunk: Edgerunners 2》：已上线，已追加十集主题分析
 
 截至 2026 年 11 月 25 日，第二季已于 2026 年 10 月 20 日在 Netflix 首播，十集全部上线。官方将其定位为独立新故事，采用全新角色阵容，继续发生在夜之城。导演为 Kai Ikarashi，主角群包括退役边缘行者 Weak、流浪者 D、年轻电影爱好者 Roman 等。[CDPR 首播公告](https://press.cdprojektred.com/en/news/1876/edgerunners-2-update-announced-for-cyberpunk-2077)；[Netflix 官方页面](https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news)
 
@@ -65,7 +65,7 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 
 因此，第二季不应被理解成“重新让大卫活过来”。它通过新角色讲述另一段夜之城故事，第一季的遗产则体现在城市记忆、人物后果和世界观连接中。
 
-## 第二季的后续研究范围
+## 第二季后续的正片／镜头核验范围
 
 第二季既然已经上线，后续不能只根据预告片和官方简介做观后分析。若要纳入完整专题，需要以十集正片为基础，分别记录：
 
@@ -79,6 +79,9 @@ R. Talsorian Games 与 CD PROJEKT RED 合作推出《Cyberpunk: Edgerunners Miss
 - 与 2077 游戏、MADNESS 漫画和桌游扩展之间的明确联系。
 
 以上是后续逐集分析清单，不代表已完成第二季正片的逐集研究。
+
+
+**新增独立研究：** [第二季十集与摩羯座计划](cyberpunk_edgerunners_02_deep_analysis.md)｜[MADNESS 版本和兄妹前史](cyberpunk_edgerunners_madness_research.md)｜[两季主旨对照](cyberpunk_edgerunners_cross_season_comparison.md)。这些文件只陈述公开资料能够支持的内容，仍需要原片和漫画全本进行更细的逐集逐章核验。
 
 ## 资料来源
 
