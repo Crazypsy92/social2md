@@ -10,6 +10,9 @@ analysis_batch: 03
 original_preserved: true
 ---
 
+> 来源：幻灵Kuri｜Bilibili｜BV1XNwmzGELY  
+> [查看 GitHub 原始转录](https://github.com/Crazypsy92/social2md/blob/main/docs/archives/bilibili/%E5%B9%BB%E7%81%B5Kuri/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%202077%E3%80%90%E7%BB%88%E6%9E%81%E8%A7%A3%E8%AF%BB%E3%80%91%2002%20%7C%204%20%E4%B8%87%E5%AD%97%E6%B7%B1%E6%8C%96%E7%AB%8B%E9%A1%B9%E5%A7%8B%E6%9C%AB%E4%B8%8E%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85%E5%85%A8%E8%B2%8C.md)
+
 ## 一、文章思想
 
 这篇长稿分为两个部分：
