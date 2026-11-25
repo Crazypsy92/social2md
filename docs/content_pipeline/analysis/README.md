@@ -104,6 +104,7 @@
 | 动画制作与音乐 | [cyberpunk_edgerunners_production_and_music.md](幻灵Kuri/cyberpunk_edgerunners_production_and_music.md) | TRIGGER 制作、编剧协作、动作演出、色彩、网络潜入视觉、配乐与歌曲 | 已完成（创作者访谈与官方资料） |
 | 跨媒介衍生与续作 | [cyberpunk_edgerunners_franchise_connections.md](幻灵Kuri/cyberpunk_edgerunners_franchise_connections.md) | 游戏联动、MADNESS 漫画、桌游 Mission Kit、奖项、第二季官方信息 | 已完成（资料盘点；第二季逐集分析另列） |
 | 第二季十集分析 | [cyberpunk_edgerunners_02_deep_analysis.md](幻灵Kuri/cyberpunk_edgerunners_02_deep_analysis.md) | 第二季逐集剧情节点、人物网络、摩羯座计划、终局及事实边界 | 已完成公开资料深度整理；非逐镜头核看 |
+| 第二季十集观点深读 | [cyberpunk_edgerunners_s2_episode_themes_extended.md](幻灵Kuri/cyberpunk_edgerunners_s2_episode_themes_extended.md) | 每集论点—证据—推理、人物选择与五项跨集专题 | 已完成公开文字观点分析；非逐镜头核看 |
 | MADNESS 前传漫画 | [cyberpunk_edgerunners_madness_research.md](幻灵Kuri/cyberpunk_edgerunners_madness_research.md) | 官方版本、第一卷目录、兄妹成长议题和 Safran 人物定位 | 已完成资料研究；漫画未全本逐章精读 |
 | 双季思想与设定对照 | [cyberpunk_edgerunners_cross_season_comparison.md](幻灵Kuri/cyberpunk_edgerunners_cross_season_comparison.md) | 身体、意识、家庭、复仇、影像记录与两季结局的比较 | 已完成公开材料对照 |
 
@@ -118,16 +119,17 @@
 - 第一季已拆为总览、逐集分析、人物关系、世界观与技术、制作与音乐、跨媒介衍生六个层次，避免一篇总览代替全部研究。
 - 第一季剧情分析以 Netflix 十集分集信息、可访问的公开剧情资料和创作者访谈为依据；人物心理与主题属于明确标识的分析判断。
 - 《Cyberpunk: Edgerunners MADNESS》已有日文与英文第一卷。研究稿依据官方简介、在线目录和出版数据，不虚构漫画没有读取的章节剧情；游戏联动与桌游 Mission Kit 仍分别处理。
-- 第二季已于 2026-10-20 上线：已整理十集分集信息与公开结局资料；仍缺完整正片/字幕核验，不能称为逐帧精读。
+- 第二季已于 2026-10-20 上线：已整理十集分集信息、公开结局资料及逐集观点深读；仍缺完整正片/字幕核验，不能称为逐帧精读。
 - 原有 9 篇游戏分析稿及 9 份原始转录保持不动。
 
 ### 后续研究记录（2026-11-25）
 
-- 新增第二季十集研究、MADNESS 官方漫画资料研究及第一／二季比较，总共新增 3 篇专题。
+- 已新增第二季十集剧情研究、MADNESS 官方漫画资料研究、第一／二季比较及第二季十集扩展观点深读；动画相关分析文档现为 10 篇。
 - 第二季官方简体中文术语以 [CDPR 人物页面](https://www.cyberpunk.net/zh-cn/edgerunners2) 为准：微克、罗曼、塔莉亚、阿维达、基里尔、恭子、摩羯、摩羯座计划。**摩羯座计划（Project Capricorn）与《往日之影》的小北斗计划（Project Cynosure）严格区分。**
 - MADNESS 日文版于 2025-08-28 推出第一卷，英文第一卷于 2026-02-24 出版，共 248 页。明确保留“漫画未完整逐页阅读”边界。
 - 第二季大卫是否通过数字人格复活、D 的最终生死与游戏 V 是否已有唯一官方结局，均不得直接定论。
-- 原始视频转录与此前 9 篇游戏分析稿没有被修改。
+- 原始视频转录与 9 篇游戏分析稿没有被修改。
+- `docs/content_pipeline/` 是独立的 ASR 转录校订试验，不等于本目录的观点分析任务：其中 BV1ybXNBpEPT 仍为 `REVIEW_REQUIRED` 且未人工核音，其余 8 条 2077 转录仍处于 `QUEUED` / `LONG_PENDING`。这不代表 9 篇观点分析稿缺失；若要求所有转录也完成逐句核听与校订，则该项尚未完成。
 
 ## 系列复核记录
 
