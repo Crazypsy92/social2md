@@ -32,13 +32,14 @@ updated: 2026-11-27
 > [!summary] 现有处理结果
 > 　　这 9 篇已经建立独立分析稿，并与 B 站源转录分开。跨篇译名、设定版本与结局口径可查阅 [系列交叉校对](cyberpunk_series_consistency_audit.md) 和 [专名与转录校正规范](cyberpunk_terminology_corrections.md)。它们属于对视频文案与外部资料的整理，不等同于逐句核听视频声音；音译存疑处应继续以视频音频和游戏官方中文实物资料核对。
 
-## 二、游戏人物志专题（2026-11-26 新增）
+## 二、游戏人物志专题（2026-11-27 扩充）
 
 > [!abstract] 人物档案入口
 >
 > | 人物志 | 范围 | 用途 |
 > | --- | --- | --- |
-> | [本体主要角色人物志](cyberpunk_2077_character_dossiers.md) | V、强尼、杰克、朱迪、帕南、罗格、竹村、荒坂家族等 | 集中查阅本体主要人物的身份、经历、关系、人物变化和结局关联 |
+> | [本体主要角色人物志](cyberpunk_2077_character_dossiers.md) | V、强尼、杰克、朱迪、帕南、罗格、竹村、荒坂家族等 | 核心人物、人物变化和结局关联 |
+> | [本体配角、势力与支线人物补编](cyberpunk_2077_supporting_character_dossiers.md) | 中间人、帮派骨干、阿德卡多成员、佩拉雷斯夫妇、德拉曼、约书亚、克莱尔等 | 补全夜之城中间人网络、帮派人物和重要支线角色 |
 > | [《往日之影》主要角色人物志](cyberpunk_phantom_liberty_character_dossiers.md) | 百灵鸟、李德、亚历克斯、迈尔斯、汉森、汉兹先生等 | 集中查阅资料片人物关系、狗镇权力结构和四种 King 结局 |
 > | [《边缘行者》人物深读](cyberpunk_edgerunners_character_analysis.md) | 大卫、露西、曼因、瑞贝卡及团队 | 动画角色专题，和游戏人物志分开保存 |
 
