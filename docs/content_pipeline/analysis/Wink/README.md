@@ -32,14 +32,14 @@
 | 010 | ZIP 顺序 271—300 | 30 | [wink_opinion_analysis_batch_010.md](2026-11-15/wink_opinion_analysis_batch_010.md) | 已完成 |
 | 011 | ZIP 顺序 301—330 | 30 | [wink_opinion_analysis_batch_011.md](2026-11-15/wink_opinion_analysis_batch_011.md) | 已完成 |
 | 012 | ZIP 顺序 331—360 | 30 | [wink_opinion_analysis_batch_012.md](2026-11-15/wink_opinion_analysis_batch_012.md) | 已完成 |
-| 013 | ZIP 顺序 361—390 | 30 | — | 待处理 |
+| 013 | ZIP 顺序 361—390 | 30 | [wink_opinion_analysis_batch_013.md](2026-11-15/wink_opinion_analysis_batch_013.md) | 已完成 |
 | 014 | ZIP 顺序 391—420 | 30 | — | 待处理 |
 | 015 | ZIP 顺序 421—450 | 30 | — | 待处理 |
 | 016 | ZIP 顺序 451—480 | 30 | — | 待处理 |
 | 017 | ZIP 顺序 481—510 | 30 | — | 待处理 |
 | 018 | ZIP 顺序 511—522 | 12 | — | 待处理 |
 
-**当前进度：360 / 522（68.97%）；剩余 162 篇。**
+**当前进度：390 / 522（74.71%）；剩余 132 篇。**
 
 ## 观点分析边界
 
