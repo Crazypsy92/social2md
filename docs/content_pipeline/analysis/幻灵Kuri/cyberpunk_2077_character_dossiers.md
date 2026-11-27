@@ -291,6 +291,6 @@ updated: 2026-11-27
 4. [终极解读 03：CDPR 与本体主要结局](cyberpunk_ultimate_analysis_03_cdpr_and_endings_analysis.md)——帕南、朱迪、罗格、强尼、克里与本体结局分支。
 5. [专名与转录校正规范](cyberpunk_terminology_corrections.md)——本项目人物、企业、组织和技术术语的统一译名。
 6. [本体配角、势力与支线人物补编](cyberpunk_2077_supporting_character_dossiers.md)——中间人、帮派骨干、阿德卡多成员、政治人物、普通人支线和 AI 角色。
-8. [赛博浪客人物深读](cyberpunk_edgerunners_character_analysis.md)——动画第一季人物专题，与本体人物志分开阅读。
+7. [赛博浪客人物深读](cyberpunk_edgerunners_character_analysis.md)——动画第一季人物专题，与本体人物志分开阅读。
 
 **资料边界：** 官方简介用于核对角色身份和基础设定；剧情经历以游戏任务和现有分析稿为依据；人物理解属于基于行动、关系与后果的解释。没有在游戏或可靠资料中明确交代的私人经历、心理活动和隐藏动机，不作为确定事实补写。
