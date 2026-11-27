@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "selection_reason": "当前保留两个 UP 主样本：ASR-01 技术术语样本与求职方法口播样本。原第三个《赛博朋克 2077》长篇样本已迁移至 Crazypsy92/book-relay 游戏专区，不再纳入本仓库加工队列。",
+  "selection_reason": "当前保留两个 UP 主各一篇：ASR-01 已知技术术语样本，以及一个存在普通话近音候选的求职口播样本。",
   "samples": [
     {
       "content_id": "BV1tqsF65Eks",
